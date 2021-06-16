@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube coding</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/all.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+            <span class="title">Youtube</span>
+        </div>
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+    </header>
+    <!-- //header -->
+    
+    <section class="player">
+        <video controls src="assets/video/walts.mp4"></video>
+    </section>
+    <!-- //video -->
+    <div class="introAndList">
+        <section class="intro">
+            <div class="metadata">
+                <div class="hashtag">
+                    <ul>
+                        <li>#뮤지컬</li>
+                        <li>#번지점프를 하다</li>
+                        <li>#MUSIC ESSAY</li>
+                    </ul>
+                </div>
+                <div class="viedotitle">
+                    <span class="vtitle clamp">[뮤지컬 번지점프를 하다 : MUSIC ESSAY] 왈츠 | 강필석, 성두섭, 전미도, 김지현, 이재균, 윤소호, 박란주, 임기홍, 진상현, 박범정, 김성현, 안재영, 이지호, 김찬호, 황호진, 노희찬, 이효림, 신혜원, 진보람, 안소연  | 뮤지컬 달 컴퍼니</span>
+                    <button class="tbutton">
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                </div>
+                <span class="views">조회수 15,745회 · 2013. 10. 4.</span>
+            </div>
+            <ul class="actions">
+                <li><button><i class="fas fa-thumbs-up active"></i><span>92</span></button></li>
+                <li><button><i class="fas fa-thumbs-down"></i><span>1</span></button></li>
+                <li><button><i class="fas fa-share"></i><span>공유</span></button></li>
+                <li><button><i class="fas fa-plus"></i><span>저장</span></button></li>
+                <li><button><i class="fab fa-font-awesome-flag"></i><span>신고</span></button></li>
+            </ul>
+            <div class="channel_info">
+                <div class="profile">
+                    <img src="assets/images/pofile.jpg" alt="프로필 이미지">
+                    <div class="pinfo">
+                        <span class="name">뮤지컬 달 컴퍼니</span>
+                        <span class="member">구독자 2.73천명</span>
+                    </div>
+                </div>
+                <span class="subscribe">구독</span>
+                
+            </div>
+        </section>
+        <!-- //intro -->
+        <section class="list">
+            <span class="next">다음 동영상</span>
+            <ul>
+                <li class="item">
+                    <div class="img">
+                        <img src="assets/images/goddness.jpg" alt="여신님이 보고계셔">
+                    </div>
+                    <div class="iteminfo">
+                        <span class="itemtitle">뮤지컬 '여신님이 보고계셔' 프레스콜 하이라이트 1부 - 김종구, 조형균, 박정원, 손미영 외 </span>
+                        <span class="itemname">연우 무대</span>
+                        <span class="itemviews">35,217회</span>
+                    </div>
+                    <button class="itembtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <div class="img">
+                        <img src="assets/images/elizabeth.jpg" alt="엘리자벳">
+                    </div>
+                    <div class="iteminfo">
+                        <span class="itemtitle">뮤지컬 '엘리자벳' 프레스콜 하이라이트 - 옥주현, 김소현, 박효신 외</span>
+                        <span class="itemname">emk musical</span>
+                        <span class="itemviews">47,222회</span>
+                    </div>
+                    <button class="itembtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <div class="img">
+                        <img src="assets/images/pli.jpg" alt="프리실라">
+                    </div>
+                    <div class="iteminfo">
+                        <span class="itemtitle">뮤지컬 프리실라 '남자들이 비처럼 쏟아져' (프레스콜 현장)</span>
+                        <span class="itemname">cj musical</span>
+                        <span class="itemviews">24,248회</span>
+                    </div>
+                    <button class="itembtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+            </ul>
+        </section>
+        <!-- //list -->
+    </div>
+    <!-- //introAndList -->
+
+    <!-- script -->
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script src="assets/js/jquery-ui-1.12.1.min.js"></script>
+    <script src="assets/js/jquery.min_1.12.4.js"></script>
+    <script>
+        var more = $(".tbutton");
+        var title = $(".vtitle");
+
+        more.click(function(){
+            $(this).toggleClass('clicked');
+            $(title).toggleClass('clamp');
+        });
+
+        var aBtn = $(".actions > li > button");
+        var i = $(".actions > li > button > i")
+        aBtn.eq(0).click(function(){
+            $(i).eq(0).toggleClass('active');
+            $(i).eq(1).removeClass('active');
+        });
+        aBtn.eq(1).click(function(){
+            $(i).eq(1).toggleClass('active');
+            $(i).eq(0).removeClass('active');
+        });
+    </script>
+</body>
+</html>

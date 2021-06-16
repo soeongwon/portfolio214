@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>flex 유형 레이아웃</title>
+    <style>
+        .flex {background: #f7f7f7; border-radius: 3px; padding: 20px;}
+        .item {border-radius: 3px; background-color: #a2cbfa; border: 1px solid #4390e1; box-sizing: border-box; text-align: center; color: #fff;}
+    </style>
+</head>
+<body>
+    <style>
+        .flex1 {display: flex; }
+        .item1 {flex-grow: 1; height: 100px;}
+        .item1 + .item1 {margin-left: 2%;}
+    </style>
+    <h2>flex 유형 1</h2>
+    <div class="flex flex1">
+        <div class="item item1">1</div>
+        <div class="item item1">2</div>
+        <div class="item item1">3</div>
+        <div class="item item1">4</div>
+        <div class="item item1">5</div>
+        <div class="item item1">6</div>
+        <div class="item item1">7</div>
+        <div class="item item1">8</div>
+    </div>
+    <br><br>
+
+
+    <style>
+        .flex2 {display: flex;}
+        .item2 {flex-grow: 1;  height: 100px;}
+        .item2.select2 {flex-grow: 2;} /* flex-grow와 width값을 적절히 쓰면 반응형에서도 깨지지 않는다 */
+        .item2 + .item2 {margin-left: 2%;}
+
+    </style>
+    <h2>flex 유형 2</h2>
+    <div class="flex flex2">
+        <div class="item item2">1</div>
+        <div class="item item2">2</div>
+        <div class="item item2 select2">3</div>
+        <div class="item item2">4</div>
+        <div class="item item2">5</div>
+    </div>
+    <br><br>
+
+    <style>
+        .flex3 {display: flex; flex-wrap: wrap; justify-content: space-between;}
+        .item3 {width: 49%; margin-bottom: 2%; height: 100px;}
+        .item3:nth-child(3) {width: 100%;}
+    </style>
+    <h2>flex 유형 3</h2>
+    <div class="flex flex3">
+        <div class="item item3">1</div>
+        <div class="item item3">2</div>
+        <div class="item item3">3</div>
+        <div class="item item3">4</div>
+        <div class="item item3">5</div>
+    </div>
+    <br><br>
+
+    <style>
+        .flex4 {display: flex; flex-wrap: wrap; justify-content: space-between;}
+        .item4 {flex: 0 32%; margin-bottom: 2%; height: 100px;}
+    </style>
+    <h2>flex 유형 4</h2>
+    <div class="flex flex4">
+        <div class="item item4">1</div>
+        <div class="item item4">2</div>
+        <div class="item item4">3</div>
+        <div class="item item4">4</div>
+        <div class="item item4">5</div>
+        <div class="item item4">6</div>
+        <div class="item item4">7</div>
+        <div class="item item4">8</div>
+        <div class="item item4">9</div>
+    </div>
+    <br><br>
+
+    <style>
+        .flex5 {display: flex; flex-wrap: wrap; justify-content: space-between;}
+        .item5 {width: 32%; margin-bottom: 2%; padding-bottom: 32%;}
+    </style>
+    <h2>flex 유형 5</h2>
+    <div class="flex flex5">
+        <div class="item item5"></div>
+        <div class="item item5"></div>
+        <div class="item item5"></div>
+        <div class="item item5"></div>
+        <div class="item item5"></div>
+        <div class="item item5"></div>
+        <div class="item item5"></div>
+        <div class="item item5"></div>
+        <div class="item item5"></div>
+    </div>
+    <br><br>
+
+    <style>
+        .flex6 {display: flex; justify-content: space-between; align-items: flex-end; height: 300px;}
+        .item6-1 {width: 14%; height: 20%;}
+        .item6-2 {width: 14%; height: 30%;}
+        .item6-3 {width: 14%; height: 40%;}
+        .item6-4 {width: 14%; height: 50%;}
+        .item6-5 {width: 14%; height: 10%;}
+        .item6-6 {width: 14%; height: 70%;}
+
+    </style>
+    <h2>flex 유형 6</h2>
+    <div class="flex flex6">
+        <div class="item item6-1">1</div>
+        <div class="item item6-2">2</div>
+        <div class="item item6-3">3</div>
+        <div class="item item6-4">4</div>
+        <div class="item item6-5">5</div>
+        <div class="item item6-6">6</div>
+    </div>
+    <br><br>
+
+    <style>
+        .flex7 {display: flex; justify-content: space-between; height: 300px; flex-direction: column;}
+        .item7-1 {height: 14%; width: 20%;}
+        .item7-2 {height: 14%; width: 30%;}
+        .item7-3 {height: 14%; width: 40%;}
+        .item7-4 {height: 14%; width: 50%;}
+        .item7-5 {height: 14%; width: 10%;}
+        .item7-6 {height: 14%; width: 70%;}
+
+    </style>
+    <h2>flex 유형 7</h2>
+    <div class="flex flex7">
+        <div class="item item7-1">1</div>
+        <div class="item item7-2">2</div>
+        <div class="item item7-3">3</div>
+        <div class="item item7-4">4</div>
+        <div class="item item7-5">5</div>
+        <div class="item item7-6">6</div>
+    </div>
+    <br><br>
+
+    <style>
+        .flex8 {display: flex; flex-direction: column; align-items: center;}
+        .item8 {width: 60%; height: 40px; margin-bottom: 2%;}
+    </style>
+    <h2>flex 유형 8</h2>
+    <div class="flex flex8">
+        <div class="item item8">1</div>
+        <div class="item item8">2</div>
+        <div class="item item8">3</div>
+        <div class="item item8">4</div>
+        <div class="item item8">5</div>
+        <div class="item item8">6</div>
+    </div>
+
+
+    <style>
+        .flex9 {display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;}
+        .item9 {flex-grow: 1; height: 100px; width: 30%; margin-bottom: 2%;}
+        .item9-1 {flex-basis: 100%; margin-bottom: 2%; height: 100px;}
+        .item9 + .item9 {margin-left: 2%;}
+    </style>
+    <h2>flex 유형 9</h2>
+    <div class="flex flex9">
+        <div class="item item9"></div>
+        <div class="item item9"></div>
+        <div class="item item9"></div>
+        <div class="item item9-1"></div>
+        <div class="item item9"></div>
+        <div class="item item9"></div>
+    </div>
+    <br><br>
+
+    <style>
+        .flex10 {display: flex; flex-wrap: wrap; justify-content: space-between; counter-reset: items;}
+        .item10 {width: 30%; height: 100px; margin-bottom: 2%;}
+        .item10:nth-child(3n+1) {height: 150px;}
+        .item10:nth-child(3n+2) {height: 100px;}
+        .item10:nth-child(3n+3) {height: 200px;}
+        .item10::before {counter-increment: items; content: counter(items);}
+    </style>
+    <h2>flex 유형 10</h2>
+    <div class="flex flex10">
+        <div class="item item10"></div>
+        <div class="item item10"></div>
+        <div class="item item10"></div>
+        <div class="item item10"></div>
+        <div class="item item10"></div>
+        <div class="item item10"></div>
+    </div>
+    <br><br>
+
+    <style>
+        .flex11 {display: flex; flex-flow: column wrap; align-content: space-between; height: 700px; counter-reset: items;}
+        .flex11::before, .flex11::after  {content: ''; flex-basis: 100%; width: 0; order: 2;}
+        .item11 {width: 32%; height: 100px; margin-bottom: 2%;}
+        .item11::before {counter-increment: items; content: counter(items);}
+        .item11:nth-child(1) {height: 140px;}
+        .item11:nth-child(2) {height: 160px;}
+        .item11:nth-child(3) {height: 180px;}
+        .item11:nth-child(4) {height: 120px;}
+        .item11:nth-child(5) {height: 190px;}
+        .item11:nth-child(6) {height: 130px;}
+        .item11:nth-child(7) {height: 150px;}
+        .item11:nth-child(8) {height: 190px;}
+        .item11:nth-child(9) {height: 110px;}
+
+        .item11:nth-child(3n+1) {order: 1;}
+        .item11:nth-child(3n+2) {order: 2;}
+        .item11:nth-child(3n) {order: 3;}
+    </style>
+    <h2>flex 유형 11</h2>
+    <div class="flex flex11">
+        <div class="item item11"></div>
+        <div class="item item11"></div>
+        <div class="item item11"></div>
+        <div class="item item11"></div>
+        <div class="item item11"></div>
+        <div class="item item11"></div>
+        <div class="item item11"></div>
+        <div class="item item11"></div>
+        <div class="item item11"></div>
+    </div>
+    <br><br>
+
+    <style>
+        .flex12 {display: flex; flex-flow: column wrap;
+        align-content: space-between; height: 900px; counter-reset: items;}
+        .item12 {width: 24%; margin-bottom: 2%; height: 100px;} 
+        .item12::before {counter-increment: items; content: counter(items);}
+        .item12:nth-child(4n+1) {order: 1;}
+        .item12:nth-child(4n+2) {order: 2;}
+        .item12:nth-child(4n+3) {order: 3;}
+        .item12:nth-child(4n) {order: 4;}
+        .item12.break {flex-basis: 100%; width: 0; margin: 0; padding: 0; border: 1px solid #ddd;} 
+        .item12:nth-of-type(1) {height: 80px;}
+        .item12:nth-of-type(3) {height: 120px;}
+        .item12:nth-of-type(5) {height: 110px;}
+        .item12:nth-of-type(7) {height: 150px;}
+        .item12:nth-of-type(9) {height: 90px;}
+        .item12:nth-of-type(11) {height: 140px;}
+        .item12:nth-of-type(12) {height: 110px;}
+        .item12:nth-of-type(15) {height: 80px;}
+        .item12:nth-of-type(16) {height: 150px;}
+        .item12:nth-of-type(18) {height: 140px;}
+    </style>
+    <h2>flex 유형 12</h2>
+    <div class="flex flex12">
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+        <div class="item item12"></div>
+
+        <span class="item item12 break"></span>
+        <span class="item item12 break"></span>
+        <span class="item item12 break"></span>
+    </div>
+    <br><br>
+
+    <style>
+        .flex13 {display: flex; flex-flow: column wrap; align-content: space-between; height: 900px; counter-reset: items;}
+        .item13 {width: 19%;  margin-bottom: 2%; height: 100px;}
+        .item13::before {counter-increment: items; content: counter(items);}
+        .item13:nth-child(5n+1) {order: 1;}
+        .item13:nth-child(5n+2) {order: 2;}
+        .item13:nth-child(5n+3) {order: 3;}
+        .item13:nth-child(5n+4) {order: 4;}
+        .item13:nth-child(5n) {order: 5;}
+
+        .item13.break {flex-basis: 100%; width: 0; margin: 0; padding: 0; border: 1px solid #ddd;}
+
+        .item13:nth-of-type(1) {height: 90px;}
+        .item13:nth-of-type(3) {height: 150px;}
+        .item13:nth-of-type(5) {height: 140px;}
+        .item13:nth-of-type(7) {height: 180px;}
+        .item13:nth-of-type(9) {height: 160px;}
+        .item13:nth-of-type(11) {height: 120px;}
+        .item13:nth-of-type(13) {height: 90px;}
+        .item13:nth-of-type(15) {height: 190px;}
+        .item13:nth-of-type(16) {height: 180px;}
+        .item13:nth-of-type(18) {height: 110px;}
+        .item13:nth-of-type(20) {height: 170px;}
+    </style>
+    <h2>flex 유형 13</h2>
+    <div class="flex flex13">
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+        <div class="item item13"></div>
+
+        <span class="item item13 break"></span>
+        <span class="item item13 break"></span>
+        <span class="item item13 break"></span>
+        <span class="item item13 break"></span>
+    </div>
+    <br><br>
+    
+    <style>
+        .flex14 {display: flex; flex-flow: column wrap; justify-content: space-between; height: 400px;}
+        .item14 {flex-grow: 1; width: 30%; margin-bottom: 2%; }
+
+        .item14.break {flex-basis: 100%; width: 0; margin: 0; border: 1px solid #ddd; margin-bottom: 2%;}
+
+    </style>
+    <h2>flex 유형 14</h2>
+    <div class="flex flex14">
+        <div class="item item14"></div>
+        <div class="item item14"></div>
+        <div class="item item14"></div>
+        <div class="item item14 break"></div>
+        <div class="item item14"></div>
+        <div class="item item14 break"></div>
+        <div class="item item14"></div>
+        <div class="item item14"></div>
+        <div class="item item14"></div>
+    </div>
+    <br><br>
+</body>
+</html>

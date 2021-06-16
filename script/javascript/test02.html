@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //상수(str1)에 javascript를 저장하고 출력하세요!
+        const str1 = "javascript";
+
+        document.write(str1, "<br><br>");
+
+        //변수(str2)에 숫자 100, 변수(str3)에 숫자 200을 저장하고, 더한 값을 출력하세요
+        let str2 = 100;
+        let str3 = 200;
+
+        document.write(str2 + str3, "<br><br>");
+
+        //배열에 100,200,300을 저장하고 곱한 값을 출력하세요
+        let str4 = [100,200,300];
+
+        document.write(str4[0] * str4[1] * str4[2], "<br><br>");
+
+        //함수(str5)를 정의하고 변수(str6)에 숫자 500, 변수(str7)에 숫자 700을 저장하고 더한 값을 출력하시오
+        function str5(){
+            let str6 = 500;
+            let str7 = 700;
+
+            document.write(str6 + str7, "<br><br>");
+        }
+        str5();
+
+        //함수(str8)을 정의하고 변수(str9)에 숫자 999의 홀수 작수 구별하는 조건문을 완성하시오
+        function str8(){
+            let str9 = 999;
+            if(str9 % 2 == 0){
+            document.write("이 숫자는 짝수입니다.");
+        } else {
+            document.write("이 숫자는 홀수입니다.");
+        }
+        }
+        str8();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

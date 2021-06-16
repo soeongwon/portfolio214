@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style> 
+        * {margin: 0; padding: 0;}
+        body {height: 10000px;}
+        .rectangle {width: 100%; height: 400px; line-height: 400px; color: #c7254e; background: #f9f2f4; border: 1px dashed #a51a3d; text-align: center; border-radius: 5px; margin-bottom: 100px; position: relative;}
+        .circle {position: fixed; right: 20px; top: 20px; width: 80px; height: 80px; color: #3d90b7; text-align: center; line-height: 80px; background: #e7f6fd; border: 1px dashed #3d90b7; border-radius: 50%;  z-index: 1;}
+        .rectangle .circle2 {position: absolute; left: 10px; top: 10px; width: 80px; height: 80px; color: #3d90b7; text-align: center; line-height: 80px; background: #e7f6fd; border: 1px dashed #3d90b7; border-radius: 50%;}
+    </style>
+</head>
+<body>
+    <h1>scroll</h1>
+    <div class="circle">0</div>
+
+    <div class="rectangle">
+        rectangle
+    </div>
+    <div class="rectangle r2">
+        rectangle2
+        <div class="circle2">0</div>
+    </div>
+
+    <p class="desc">
+        <span>rectangle scrollLeft() :</span> <span class="rl">0</span>px<br>
+        <span>rectangle scrollTop() :</span> <span class="rt">0</span>px<br>
+        <span>window scrollLeft() :</span> <span class="wl">0</span>px<br>
+        <span>window scrollTop() :</span> <span class="wt">0</span>px<br>
+    </p>
+    <button class="btn1">btn1</button>
+    <!-- jQuery -->
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="jquery-ui-1.12.1.min.js"></script>
+    <script>
+        $(window).scroll(function(){
+            $(".rl").text($(".rectangle").scrollLeft());
+            $(".rt").text($(".rectangle").scrollTop());
+            $(".wl").text($(window).scrollLeft());
+            $(".wt").text($(window).scrollTop());
+            $(".circle").text($(window).scrollTop());
+            $(".circle2").text($(".rectangle.r2").offset().top);
+
+            let wScroll = $(window).scrollTop();
+            let wOffset = $(".rectangle.r2").offset().top;
+
+            $("circle").text(wScroll);
+            $("circle2").text(wOffset);
+
+            if(wScroll >= wOffset){
+                $(".rectangle.r2").css("backgroundColor","black");
+            } else {
+                $(".rectangle.r2").css("backgroundColor","#f9f2f4");
+            }
+            
+        });
+    </script>
+</body>
+</html>

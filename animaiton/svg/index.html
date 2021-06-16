@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords"
+        content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>황성원 | Study | CSS ANIMATION</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon_114.png">
+    <link rel="icon" href="../../assets/ico/icon.png">
+    <link rel="icon" href="../../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="웹스토리보이" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="웹스토리보이" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet:800&display=swap" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../../assets2/js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../../index.html" class="navbar-brand">황성원 &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://wiss.tistory.com/">Design</a></li>
+                    <li><a href="https://webzz.tistory.com/">Coding</a></li>
+                    <li><a href="https://wtss.tistory.com/">Tutor</a></li>
+                    <li><a href="https://wtss.tistory.com/">Tutor</a></li>
+                    <li><a href="https://wess.tistory.com/">Edu</a></li>
+                    <li><a href="https://wsss.tistory.com/">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs5" id="content">
+        <div class="container">
+            <h1>SVG Animation Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="portfolio214.dothome.co.kr" target="_blank">portfolio214.dothome.co.kr</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+
+            <div class="col-md-9" role="main">
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">SVG</h2>
+                    <p>스케일러블 벡터 그래픽스(Scalable Vector Graphics, SVG)는 2차원 벡터 그래픽을 표현하기 위한 XML 기반의 파일 형식으로, 1999년
+                        W3C(World Wide Web Consortium)의 주도하에 개발된 오픈 표준의 벡터 그래픽 파일 형식이다. SVG 형식의 이미지와 그 작동은 XML 텍스트 파일들로
+                        정의 되어 검색화·목록화·스크립트화가 가능하며 필요하다면 압축도 가능하다.
+
+                        SVG 형식의 파일은 어도비 일러스트레이터와 같은 벡터 드로잉 프로그램을 사용하여 편집이 가능하다. 물론 XML 형식으로 되어 있으므로 메모장과 같은 문서 편집기로도 편집이
+                        가능하다.
+
+                        현재 마이크로소프트의 인터넷 익스플로러 8 및 이전 버전을 제외한 대부분의 주요 웹 브라우저들은 SVG를 지원한다. 인터넷 익스플로러 8 및 이전 버전에서는 SVG 파일을
+                        보기 위해 별도의 플러그인을 수동으로 설치하여야 하며, 그렇지 않은 경우에는 웹 페이지 제작자가 구글 코드에서 개발중인 자바스크립트 라이브러리, SVG Web 을 웹 페이지
+                        코드에 포함시켜야 한다.</p>
+                    <ul>
+                        <li>IE9 이상 지원</li>
+                        <li>XML을 이용하여 라인,곡선,기하학적인 그래픽 표현 가능</li>
+                        <li>벡터 방식이기 때문에 확대하거나 축소 가능</li>
+                        <li>DOM단위로 컨트롤이 되기때문에 문서 복잡도가 증가되어 렌더링이 느림</li>
+                    </ul>
+                </div>
+                <!-- //Intro1 -->
+                <style>
+                    svg {
+                        width: 160px;
+                        height: 160px;
+                        background: #ffebee;
+                    }
+
+                    .rect1 {
+                        fill: #f48fb1;
+                        width: 100px;
+                        height: 100px;
+                        x: 30;
+                        y: 30;
+                    }
+
+                    .rect2 {
+                        fill: #f48fb1;
+                        width: 100px;
+                        height: 100px;
+                        x: 30;
+                        y: 30;
+                        stroke: #880e4f;
+                        stroke-width: 5;
+                    }
+                </style>
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Rect</h2>
+                    <div class="sBox">
+                        <svg>
+                            <rect class="rect1"></rect>
+                        </svg>
+                        <svg>
+                            <rect class="rect2"></rect>
+                        </svg>
+                    </div>
+<pre class="line-numbers language-css"><code>svg {width: 160px; height: 160px; background: #ffebee;}
+.rect1 {
+    fill: #f48fb1; 
+    width: 100px; height: 100px; 
+    x: 30; y: 30;
+}
+.rect2 {
+    fill: #f48fb1; 
+    width: 100px; height: 100px; 
+    x: 30; y: 30;
+    stroke: #880e4f;
+    stroke-width: 5;
+}
+</code></pre>
+                </div>
+                <!-- //Intro2 -->
+
+                <style>
+                    .circle1 {
+                        fill: #f48fb1;
+                        cx: 80;
+                        cy: 80;
+                        r: 60;
+                    }
+
+                    .circle2 {
+                        fill: #f48fb1;
+                        cx: 80;
+                        cy: 80;
+                        r: 60;
+                        stroke: #880e4f;
+                        stroke-width: 5;
+                    }
+
+                    .circle3 {
+                        fill: #f48fb1;
+                        cx: 80;
+                        cy: 80;
+                        rx: 60;
+                        ry: 50;
+                    }
+
+                    .circle4 {
+                        fill: #f48fb1;
+                        cx: 80;
+                        cy: 80;
+                        rx: 60;
+                        ry: 30;
+                    }
+                </style>
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Circle</h2>
+                    <div class="sBox">
+                        <svg>
+                            <circle class="circle1"></circle>
+                        </svg>
+                        <svg>
+                            <circle class="circle2"></circle>
+                        </svg>
+                        <svg>
+                            <ellipse class="circle3"></ellipse>
+                        </svg>
+                        <svg>
+                            <ellipse class="circle4"></ellipse>
+                        </svg>
+
+                    </div>
+<pre class="line-numbers language-css"><code>.circle1 {fill: #f48fb1; cx: 80; cy: 80; r:60; }
+.circle2 {fill: #f48fb1; cx: 80; cy: 80; r:60; stroke: #880e4f; stroke-width: 5;}
+.circle3 {fill: #f48fb1; cx: 80; cy: 80; rx: 60; ry: 50;}
+.circle4 {fill: #f48fb1; cx: 80; cy: 80; rx: 60; ry: 30;}
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+                <style>
+                    .polygon1 {
+                        fill: #f48fb1;
+                    }
+
+                    .polygon2 {
+                        fill: #f48fb1;
+                    }
+
+                    .polygon3 {
+                        fill: #f48fb1;
+                    }
+
+                    .polygon4 {
+                        fill: #f48fb1;
+                    }
+                </style>
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">Polygon</h2>
+                    <div class="sBox">
+                        <svg>
+                            <polygon points="120,142 9,93 107 22" class="polygon1"></polygon>
+                        </svg>
+                        <svg>
+                            <polygon points="123,134 46.463,142 15,71 
+                            73,19 140,59" class="polygon2"></polygon>
+                        </svg>
+                        <svg>
+                            <polygon points="128,117 72,139 25,101
+                            35,41 91,20 138,58 " class="polygon3"></polygon>
+                        </svg>
+                        <svg>
+                            <polygon points="133,108 94,102 67,131.604 
+                            61,92 26,75 61,57 66,18 94,46 132,39 114,74" class="polygon4"></polygon>
+                        </svg>
+                    </div>
+<pre class="line-numbers language-markup"><code>&lt;div class="sBox"&gt;
+    &lt;svg&gt;
+        &lt;polygon points="120,142 9,93 107 22" class="polygon1"&gt;&lt;/polygon&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polygon points="123,134 46.463,142 15,71 
+        73,19 140,59" class="polygon2"&gt;&lt;/polygon&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polygon points="128,117 72,139 25,101
+        35,41 91,20 138,58 " class="polygon3"&gt;&lt;/polygon&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polygon points="133,108 94,102 67,131.604 
+        61,92 26,75 61,57 66,18 94,46 132,39 114,74" class="polygon4"&gt;&lt;/polygon&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+&lt;style&gt;
+    .polygon1 {fill: #f48fb1;}
+    .polygon2 {fill: #f48fb1;}
+    .polygon3 {fill: #f48fb1;}
+    .polygon4 {fill: #f48fb1;}
+&lt;/style&gt;
+</code></pre>
+                </div>
+                <!-- //Intro4 -->
+                <style>
+                    .line1 {
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 2;
+                    }
+
+                    .line2 {
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 2;
+                    }
+
+                    .line3 {
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 2;
+                    }
+
+                    .line4 {
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 2;
+                    }
+                </style>
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">Line</h2>
+                    <div class="sBox">
+                        <svg>
+                            <line x1="0" y1="0" x2="160" y2="160" class="line1"></line>
+                        </svg>
+                        <svg>
+                            <line x1="80" y1="80" x2="160" y2="160" class="line2"></line>
+                        </svg>
+                        <svg>
+                            <polyline points="22,60 75,121 123,56" class="line3"></polyline>
+                        </svg>
+                        <svg>
+                            <polyline points="22,60 75,121 123,56 
+                            22,76 94,112 72,23 " class="line4"></polyline>
+                        </svg>
+                    </div>
+<pre class="line-numbers language-markup"><code>&lt;div class="sBox"&gt;
+    &lt;svg&gt;
+        &lt;line x1="0" y1="0" x2="160"  y2="160" class="line1"&gt;&lt;/line&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;line x1="80" y1="80" x2="160"  y2="160" class="line2"&gt;&lt;/line&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polyline points="22,60 75,121 123,56"  class="line3"&gt;&lt;/polyline&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;polyline points="22,60 75,121 123,56 
+        22,76 94,112 72,23 " class="line4"&gt;&lt;/polyline&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+&lt;style&gt;
+    .line1 {fill: none; stroke: #880e4f; stroke-width: 2;}
+    .line2 {fill: none; stroke: #880e4f; stroke-width: 2;}
+    .line3 {fill: none; stroke: #880e4f; stroke-width: 2;}
+    .line4 {fill: none; stroke: #880e4f; stroke-width: 2;}
+&lt;/style&gt;
+</code></pre>
+                </div>
+                <!-- //Intro5 -->
+                <style>
+                    .path1 {
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 2;
+                    }
+
+                    .path2 {
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 2;
+                    }
+
+                    .path3 {
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 2;
+                    }
+
+                    .path4 {
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 2;
+                    }
+
+                    .path5 {
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 2;
+                    }
+                </style>
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">Path</h2>
+                    <div class="sBox">
+                        <svg>
+                            <path d="M29.376,136.292c0-58.519,46.915-105.871,104.893-105.871" class="path1"></path>
+                        </svg>
+                        <svg>
+                            <path
+                                d="M129.754,112.953c-25.398,22.372-64.125,19.919-86.498-5.479
+                            c-17.898-20.319-15.936-51.3,4.384-69.198c16.255-14.318,41.04-12.748,55.358,3.507c11.455,13.004,10.199,32.832-2.806,44.287
+                            c-10.403,9.163-26.265,8.159-35.429-2.244c-7.331-8.323-6.527-21.013,1.796-28.344c6.658-5.865,16.81-5.222,22.674,1.437
+                            c4.692,5.327,4.178,13.448-1.149,18.14c-4.261,3.753-10.758,3.342-14.511-0.919c-3.003-3.409-2.674-8.607,0.735-11.61"
+                                class="path2"></path>
+                        </svg>
+                        <svg>
+                            <path d="M122.078,107.262c10.787,9.77-12.277,25.906-17.758,12.424
+                            c5.48,13.482-22.302,18.013-21.39,3.489c-0.912,14.523-27.908,6.551-20.784-6.139c-7.124,12.689-27.988-6.205-16.063-14.547
+                            c-11.925,8.342-22.524-17.736-8.161-20.078C23.56,84.753,25.324,56.66,39.281,60.782c-13.957-4.122-0.178-28.667,10.609-18.898
+                            c-10.787-9.77,12.278-25.906,17.757-12.423c-5.479-13.482,22.302-18.013,21.39-3.488c0.912-14.524,27.909-6.553,20.784,6.138
+                            c7.125-12.69,27.987,6.205,16.063,14.548c11.924-8.343,22.523,17.734,8.16,20.077c14.363-2.343,12.599,25.751-1.358,21.63
+                            C146.645,92.486,132.865,117.031,122.078,107.262z" class="path3"></path>
+                        </svg>
+                        <svg>
+                            <path d="M136.871,128.158c-47.5-44.023-51.682-41.169-27.986,19.104
+                            c-23.695-60.273-28.702-59.516-33.505,5.068c4.804-64.584-0.036-66.074-32.385-9.97c32.35-56.104,28.636-59.546-24.852-23.034
+                            C71.63,82.815,69.778,78.103,5.745,87.791c64.033-9.688,64.409-14.737,2.513-33.792c61.896,19.055,64.425,14.668,16.927-29.355
+                            c47.498,44.023,51.68,41.169,27.987-19.104c23.693,60.272,28.7,59.515,33.504-5.069c-4.805,64.584,0.034,66.074,32.386,9.97
+                            C86.71,66.545,90.424,69.987,143.912,33.476C90.424,69.987,92.276,74.699,156.31,65.012c-64.033,9.688-64.408,14.737-2.512,33.792
+                            C91.901,79.749,89.371,84.135,136.871,128.158z" class="path4"></path>
+                        </svg>
+                        <svg>
+                            <path
+                                d="M101.053,93.423c51.664,38.102,25.577,61.874-7.573,6.901
+                            c33.15,54.973-0.049,66.952-9.639,3.478c9.59,63.475-25.667,61.837-10.236-0.476c-15.431,62.313-47.376,47.309-9.274-4.355
+                            c-38.102,51.664-61.874,25.576-6.901-7.574c-54.973,33.15-66.952-0.049-3.478-9.639c-63.474,9.59-61.836-25.666,0.476-10.235
+                            C-7.885,56.092,7.12,24.146,58.783,62.248C7.12,24.146,33.207,0.374,66.356,55.347c-33.149-54.973,0.049-66.952,9.638-3.478
+                            c-9.589-63.474,25.667-61.836,10.236,0.476c15.432-62.312,47.378-47.307,9.274,4.356c38.104-51.663,61.874-25.576,6.901,7.574
+                            c54.973-33.149,66.952,0.049,3.478,9.639c63.475-9.59,61.836,25.666-0.475,10.236C167.72,99.578,152.717,131.524,101.053,93.423z"
+                                class="path5"></path>
+                        </svg>
+                    </div>
+<pre class="line-numbers language-markup"><code>&lt;div class="sBox"&gt;
+    &lt;svg&gt;
+        &lt;path d="M29.376,136.292c0-58.519,46.915-105.871,104.893-105.871" class="path1"&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;path d="M129.754,112.953c-25.398,22.372-64.125,19.919-86.498-5.479
+        c-17.898-20.319-15.936-51.3,4.384-69.198c16.255-14.318,41.04-12.748,55.358,3.507c11.455,13.004,10.199,32.832-2.806,44.287
+        c-10.403,9.163-26.265,8.159-35.429-2.244c-7.331-8.323-6.527-21.013,1.796-28.344c6.658-5.865,16.81-5.222,22.674,1.437
+        c4.692,5.327,4.178,13.448-1.149,18.14c-4.261,3.753-10.758,3.342-14.511-0.919c-3.003-3.409-2.674-8.607,0.735-11.61" class="path2"&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;path d="M122.078,107.262c10.787,9.77-12.277,25.906-17.758,12.424
+        c5.48,13.482-22.302,18.013-21.39,3.489c-0.912,14.523-27.908,6.551-20.784-6.139c-7.124,12.689-27.988-6.205-16.063-14.547
+        c-11.925,8.342-22.524-17.736-8.161-20.078C23.56,84.753,25.324,56.66,39.281,60.782c-13.957-4.122-0.178-28.667,10.609-18.898
+        c-10.787-9.77,12.278-25.906,17.757-12.423c-5.479-13.482,22.302-18.013,21.39-3.488c0.912-14.524,27.909-6.553,20.784,6.138
+        c7.125-12.69,27.987,6.205,16.063,14.548c11.924-8.343,22.523,17.734,8.16,20.077c14.363-2.343,12.599,25.751-1.358,21.63
+        C146.645,92.486,132.865,117.031,122.078,107.262z" class="path3"&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;path d="M136.871,128.158c-47.5-44.023-51.682-41.169-27.986,19.104
+        c-23.695-60.273-28.702-59.516-33.505,5.068c4.804-64.584-0.036-66.074-32.385-9.97c32.35-56.104,28.636-59.546-24.852-23.034
+        C71.63,82.815,69.778,78.103,5.745,87.791c64.033-9.688,64.409-14.737,2.513-33.792c61.896,19.055,64.425,14.668,16.927-29.355
+        c47.498,44.023,51.68,41.169,27.987-19.104c23.693,60.272,28.7,59.515,33.504-5.069c-4.805,64.584,0.034,66.074,32.386,9.97
+        C86.71,66.545,90.424,69.987,143.912,33.476C90.424,69.987,92.276,74.699,156.31,65.012c-64.033,9.688-64.408,14.737-2.512,33.792
+        C91.901,79.749,89.371,84.135,136.871,128.158z" class="path4"&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;path d="M101.053,93.423c51.664,38.102,25.577,61.874-7.573,6.901
+        c33.15,54.973-0.049,66.952-9.639,3.478c9.59,63.475-25.667,61.837-10.236-0.476c-15.431,62.313-47.376,47.309-9.274-4.355
+        c-38.102,51.664-61.874,25.576-6.901-7.574c-54.973,33.15-66.952-0.049-3.478-9.639c-63.474,9.59-61.836-25.666,0.476-10.235
+        C-7.885,56.092,7.12,24.146,58.783,62.248C7.12,24.146,33.207,0.374,66.356,55.347c-33.149-54.973,0.049-66.952,9.638-3.478
+        c-9.589-63.474,25.667-61.836,10.236,0.476c15.432-62.312,47.378-47.307,9.274,4.356c38.104-51.663,61.874-25.576,6.901,7.574
+        c54.973-33.149,66.952,0.049,3.478,9.639c63.475-9.59,61.836,25.666-0.475,10.236C167.72,99.578,152.717,131.524,101.053,93.423z" class="path5"&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;
+&lt;style&gt;
+    .path1 {fill: none; stroke: #880e4f; stroke-width: 2;}
+    .path2 {fill: none; stroke: #880e4f; stroke-width: 2;}
+    .path3 {fill: none; stroke: #880e4f; stroke-width: 2;}
+    .path4 {fill: none; stroke: #880e4f; stroke-width: 2;}
+    .path5 {fill: none; stroke: #880e4f; stroke-width: 2;}
+&lt;/style&gt;
+</code></pre>
+                </div>
+                <!-- //Intro6 -->
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">Linecap / Dasharray</h2>
+                    <div class="sBox">
+                        <svg>
+                            <path stroke-width="1" fill="none" stroke="#e65100" d="m20 20 l120 00"></path>
+                            <path stroke-width="2" fill="none" stroke="#e65100" d="m20 40 l120 00"></path>
+                            <path stroke-width="3" fill="none" stroke="#e65100" d="m20 60 l120 00"></path>
+                            <path stroke-width="4" fill="none" stroke="#e65100" d="m20 80 l120 00"></path>
+                            <path stroke-width="5" fill="none" stroke="#e65100" d="m20 100 l120 00"></path>
+                            <path stroke-width="6" fill="none" stroke="#e65100" d="m20 120 l120 00"></path>
+                            <path stroke-width="7" fill="none" stroke="#e65100" d="m20 140 l120 00"></path>
+                        </svg>
+                        <svg>
+                            <path stroke-width="1" stroke-linecap="round" fill="none" stroke="#e65100"
+                                d="m20 20 l120 00"></path>
+                            <path stroke-width="2" stroke-linecap="round" fill="none" stroke="#e65100"
+                                d="m20 40 l120 00"></path>
+                            <path stroke-width="3" stroke-linecap="round" fill="none" stroke="#e65100"
+                                d="m20 60 l120 00"></path>
+                            <path stroke-width="4" stroke-linecap="round" fill="none" stroke="#e65100"
+                                d="m20 80 l120 00"></path>
+                            <path stroke-width="5" stroke-linecap="round" fill="none" stroke="#e65100"
+                                d="m20 100 l120 00"></path>
+                            <path stroke-width="6" stroke-linecap="round" fill="none" stroke="#e65100"
+                                d="m20 120 l120 00"></path>
+                            <path stroke-width="7" stroke-linecap="round" fill="none" stroke="#e65100"
+                                d="m20 140 l120 00"></path>
+                        </svg>
+                        <svg>
+                            <path stroke-width="1" stroke-linecap="butt" fill="none" stroke="#e65100"
+                                d="m20 20 l120 00"></path>
+                            <path stroke-width="2" stroke-linecap="square" fill="none" stroke="#e65100"
+                                d="m20 40 l120 00"></path>
+                            <path stroke-width="3" stroke-linecap="round" fill="none" stroke="#e65100"
+                                d="m20 60 l120 00"></path>
+                            <path stroke-width="4" stroke-linecap="butt" fill="none" stroke="#e65100"
+                                d="m20 80 l120 00"></path>
+                            <path stroke-width="5" stroke-linecap="square" fill="none" stroke="#e65100"
+                                d="m20 100 l120 00"></path>
+                            <path stroke-width="6" stroke-linecap="round" fill="none" stroke="#e65100"
+                                d="m20 120 l120 00"></path>
+                            <path stroke-width="7" stroke-linecap="butt" fill="none" stroke="#e65100"
+                                d="m20 140 l120 00"></path>
+                        </svg>
+                        <svg>
+                            <path stroke-width="1" stroke-dasharray="5,5" fill="none" stroke="#e65100"
+                                d="m20 20 l120 00"></path>
+                            <path stroke-width="2" stroke-dasharray="5,5" fill="none" stroke="#e65100"
+                                d="m20 40 l120 00"></path>
+                            <path stroke-width="3" stroke-dasharray="5,5" fill="none" stroke="#e65100"
+                                d="m20 60 l120 00"></path>
+                            <path stroke-width="4" stroke-dasharray="5,5" fill="none" stroke="#e65100"
+                                d="m20 80 l120 00"></path>
+                            <path stroke-width="5" stroke-dasharray="5,5" fill="none" stroke="#e65100"
+                                d="m20 100 l120 00"></path>
+                            <path stroke-width="6" stroke-dasharray="5,5" fill="none" stroke="#e65100"
+                                d="m20 120 l120 00"></path>
+                            <path stroke-width="7" stroke-dasharray="5,5" fill="none" stroke="#e65100"
+                                d="m20 140 l120 00"></path>
+                        </svg>
+                        <svg>
+                            <path stroke-width="1" stroke-linecap="round" stroke-dasharray="0,15" fill="none"
+                                stroke="#e65100" d="m20 20 l120 00"></path>
+                            <path stroke-width="2" stroke-linecap="round" stroke-dasharray="0,15" fill="none"
+                                stroke="#e65100" d="m20 40 l120 00"></path>
+                            <path stroke-width="3" stroke-linecap="round" stroke-dasharray="0,15" fill="none"
+                                stroke="#e65100" d="m20 60 l120 00"></path>
+                            <path stroke-width="4" stroke-linecap="round" stroke-dasharray="0,15" fill="none"
+                                stroke="#e65100" d="m20 80 l120 00"></path>
+                            <path stroke-width="5" stroke-linecap="round" stroke-dasharray="0,15" fill="none"
+                                stroke="#e65100" d="m20 100 l120 00"></path>
+                            <path stroke-width="6" stroke-linecap="round" stroke-dasharray="0,15" fill="none"
+                                stroke="#e65100" d="m20 120 l120 00"></path>
+                            <path stroke-width="7" stroke-linecap="round" stroke-dasharray="0,15" fill="none"
+                                stroke="#e65100" d="m20 140 l120 00"></path>
+                        </svg>
+                        <svg>
+                            <path stroke-width="1" stroke-linecap="round" stroke-dasharray="10,10" fill="none"
+                                stroke="#e65100" d="m20 20 l120 00"></path>
+                            <path stroke-width="2" stroke-linecap="round" stroke-dasharray="10,10" fill="none"
+                                stroke="#e65100" d="m20 40 l120 00"></path>
+                            <path stroke-width="3" stroke-linecap="round" stroke-dasharray="10,10" fill="none"
+                                stroke="#e65100" d="m20 60 l120 00"></path>
+                            <path stroke-width="4" stroke-linecap="round" stroke-dasharray="10,10" fill="none"
+                                stroke="#e65100" d="m20 80 l120 00"></path>
+                            <path stroke-width="5" stroke-linecap="round" stroke-dasharray="10,10" fill="none"
+                                stroke="#e65100" d="m20 100 l120 00"></path>
+                            <path stroke-width="6" stroke-linecap="round" stroke-dasharray="10,10" fill="none"
+                                stroke="#e65100" d="m20 120 l120 00"></path>
+                            <path stroke-width="7" stroke-linecap="round" stroke-dasharray="10,10" fill="none"
+                                stroke="#e65100" d="m20 140 l120 00"></path>
+                        </svg>
+                        <svg>
+                            <path stroke-width="1" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none"
+                                stroke="#e65100" d="m20 20 l120 00"></path>
+                            <path stroke-width="2" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none"
+                                stroke="#e65100" d="m20 40 l120 00"></path>
+                            <path stroke-width="3" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none"
+                                stroke="#e65100" d="m20 60 l120 00"></path>
+                            <path stroke-width="4" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none"
+                                stroke="#e65100" d="m20 80 l120 00"></path>
+                            <path stroke-width="5" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none"
+                                stroke="#e65100" d="m20 100 l120 00"></path>
+                            <path stroke-width="6" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none"
+                                stroke="#e65100" d="m20 120 l120 00"></path>
+                            <path stroke-width="7" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none"
+                                stroke="#e65100" d="m20 140 l120 00"></path>
+                        </svg>
+                    </div>
+<pre class="line-numbers language-markup"><code>&lt;svg&gt;
+    &lt;path stroke-width="1" fill="none" stroke="#e65100" d="m20 20 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="2" fill="none" stroke="#e65100" d="m20 40 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="3" fill="none" stroke="#e65100" d="m20 60 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="4" fill="none" stroke="#e65100" d="m20 80 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="5" fill="none" stroke="#e65100" d="m20 100 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="6" fill="none" stroke="#e65100" d="m20 120 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="7" fill="none" stroke="#e65100" d="m20 140 l120 00"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;path stroke-width="1" stroke-linecap="round" fill="none" stroke="#e65100" d="m20 20 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="2" stroke-linecap="round" fill="none" stroke="#e65100" d="m20 40 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="3" stroke-linecap="round" fill="none" stroke="#e65100" d="m20 60 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="4" stroke-linecap="round" fill="none" stroke="#e65100" d="m20 80 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="5" stroke-linecap="round" fill="none" stroke="#e65100" d="m20 100 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="6" stroke-linecap="round" fill="none" stroke="#e65100" d="m20 120 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="7" stroke-linecap="round" fill="none" stroke="#e65100" d="m20 140 l120 00"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;path stroke-width="1" stroke-linecap="butt" fill="none" stroke="#e65100" d="m20 20 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="2" stroke-linecap="square" fill="none" stroke="#e65100" d="m20 40 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="3" stroke-linecap="round" fill="none" stroke="#e65100" d="m20 60 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="4" stroke-linecap="butt" fill="none" stroke="#e65100" d="m20 80 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="5" stroke-linecap="square" fill="none" stroke="#e65100" d="m20 100 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="6" stroke-linecap="round" fill="none" stroke="#e65100" d="m20 120 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="7" stroke-linecap="butt" fill="none" stroke="#e65100" d="m20 140 l120 00"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;path stroke-width="1" stroke-dasharray="5,5" fill="none" stroke="#e65100" d="m20 20 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="2" stroke-dasharray="5,5" fill="none" stroke="#e65100" d="m20 40 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="3" stroke-dasharray="5,5" fill="none" stroke="#e65100" d="m20 60 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="4" stroke-dasharray="5,5" fill="none" stroke="#e65100" d="m20 80 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="5" stroke-dasharray="5,5" fill="none" stroke="#e65100" d="m20 100 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="6" stroke-dasharray="5,5" fill="none" stroke="#e65100" d="m20 120 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="7" stroke-dasharray="5,5" fill="none" stroke="#e65100" d="m20 140 l120 00"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;path stroke-width="1" stroke-linecap="round" stroke-dasharray="0,15" fill="none" stroke="#e65100" d="m20 20 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="2" stroke-linecap="round" stroke-dasharray="0,15" fill="none" stroke="#e65100" d="m20 40 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="3" stroke-linecap="round" stroke-dasharray="0,15" fill="none" stroke="#e65100" d="m20 60 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="4" stroke-linecap="round" stroke-dasharray="0,15" fill="none" stroke="#e65100" d="m20 80 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="5" stroke-linecap="round" stroke-dasharray="0,15" fill="none" stroke="#e65100" d="m20 100 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="6" stroke-linecap="round" stroke-dasharray="0,15" fill="none" stroke="#e65100" d="m20 120 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="7" stroke-linecap="round" stroke-dasharray="0,15" fill="none" stroke="#e65100" d="m20 140 l120 00"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;path stroke-width="1" stroke-linecap="round" stroke-dasharray="10,10" fill="none" stroke="#e65100" d="m20 20 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="2" stroke-linecap="round" stroke-dasharray="10,10" fill="none" stroke="#e65100" d="m20 40 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="3" stroke-linecap="round" stroke-dasharray="10,10" fill="none" stroke="#e65100" d="m20 60 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="4" stroke-linecap="round" stroke-dasharray="10,10" fill="none" stroke="#e65100" d="m20 80 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="5" stroke-linecap="round" stroke-dasharray="10,10" fill="none" stroke="#e65100" d="m20 100 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="6" stroke-linecap="round" stroke-dasharray="10,10" fill="none" stroke="#e65100" d="m20 120 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="7" stroke-linecap="round" stroke-dasharray="10,10" fill="none" stroke="#e65100" d="m20 140 l120 00"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;path stroke-width="1" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none" stroke="#e65100" d="m20 20 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="2" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none" stroke="#e65100" d="m20 40 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="3" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none" stroke="#e65100" d="m20 60 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="4" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none" stroke="#e65100" d="m20 80 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="5" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none" stroke="#e65100" d="m20 100 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="6" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none" stroke="#e65100" d="m20 120 l120 00"&gt;&lt;/path&gt;
+    &lt;path stroke-width="7" stroke-linecap="round" stroke-dasharray="20,10,1,5,5" fill="none" stroke="#e65100" d="m20 140 l120 00"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+</code></pre>
+                </div>
+                <!-- //Intro7 -->
+                <style>
+                    .s {
+                        background-image: linear-gradient(45deg, #333 0%, #444 100%);
+                    }
+                </style>
+                <!-- Intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">Gradient</h2>
+                    <div class="sBox">
+                        <svg>
+                            <linearGradient id="linearGradient1" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" style="stop-color: #84fab0;" />
+                                <stop offset="1" style="stop-color: #8fd3f4;" />
+                            </linearGradient>
+                            <polygon fill="url(#linearGradient1)" points="128,117 72,139 25,101
+        35,41 91,20 138,58 " class="polygon"></polygon>
+                        </svg>
+                        <svg>
+                            <linearGradient id="linearGradient2" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" style="stop-color: #fa709a;" />
+                                <stop offset="1" style="stop-color: #fee140;" />
+                            </linearGradient>
+                            <path fill="url(#linearGradient2)" d="M122.078,107.262c10.787,9.77-12.277,25.906-17.758,12.424
+        c5.48,13.482-22.302,18.013-21.39,3.489c-0.912,14.523-27.908,6.551-20.784-6.139c-7.124,12.689-27.988-6.205-16.063-14.547
+        c-11.925,8.342-22.524-17.736-8.161-20.078C23.56,84.753,25.324,56.66,39.281,60.782c-13.957-4.122-0.178-28.667,10.609-18.898
+        c-10.787-9.77,12.278-25.906,17.757-12.423c-5.479-13.482,22.302-18.013,21.39-3.488c0.912-14.524,27.909-6.553,20.784,6.138
+        c7.125-12.69,27.987,6.205,16.063,14.548c11.924-8.343,22.523,17.734,8.16,20.077c14.363-2.343,12.599,25.751-1.358,21.63
+        C146.645,92.486,132.865,117.031,122.078,107.262z" class="path"></path>
+                        </svg>
+                        <svg>
+                            <radialGradient id="radialGradient1" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" style="stop-color: #fa709a;" />
+                                <stop offset="1" style="stop-color: #fee140;" />
+                            </radialGradient>
+                            <path fill="url(#radialGradient1)" d="M122.078,107.262c10.787,9.77-12.277,25.906-17.758,12.424
+        c5.48,13.482-22.302,18.013-21.39,3.489c-0.912,14.523-27.908,6.551-20.784-6.139c-7.124,12.689-27.988-6.205-16.063-14.547
+        c-11.925,8.342-22.524-17.736-8.161-20.078C23.56,84.753,25.324,56.66,39.281,60.782c-13.957-4.122-0.178-28.667,10.609-18.898
+        c-10.787-9.77,12.278-25.906,17.757-12.423c-5.479-13.482,22.302-18.013,21.39-3.488c0.912-14.524,27.909-6.553,20.784,6.138
+        c7.125-12.69,27.987,6.205,16.063,14.548c11.924-8.343,22.523,17.734,8.16,20.077c14.363-2.343,12.599,25.751-1.358,21.63
+        C146.645,92.486,132.865,117.031,122.078,107.262z" class="path"></path>
+                        </svg>
+                        <svg>
+                            <radialGradient id="radialGradient2" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" style="stop-color: #84fab0;" />
+                                <stop offset="1" style="stop-color: #8fd3f4;" />
+                            </radialGradient>
+                            <polygon fill="url(#radialGradient2)" points="128,117 72,139 25,101
+        35,41 91,20 138,58 " class="polygon"></polygon>
+                        </svg>
+                    </div>
+<pre class="line-numbers language-markup"><code>&lt;style&gt;
+    .s {background-image: linear-gradient(45deg, #333 0%, #444 100%);}
+&lt;/style&gt; //html로 표현할 때
+
+&lt;svg&gt;
+    &lt;linearGradient id="linearGradient1" gradientUnits="userSpaceOnUse"&gt;
+        &lt;stop offset="0" style="stop-color: #84fab0;" /&gt;
+        &lt;stop offset="1" style="stop-color: #8fd3f4;" /&gt;
+    &lt;/linearGradient&gt;
+    &lt;polygon fill="url(#linearGradient1)" points="128,117 72,139 25,101
+35,41 91,20 138,58 " class="polygon"&gt;&lt;/polygon&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;linearGradient id="linearGradient2" gradientUnits="userSpaceOnUse"&gt;
+        &lt;stop offset="0" style="stop-color: #fa709a;" /&gt;
+        &lt;stop offset="1" style="stop-color: #fee140;" /&gt;
+    &lt;/linearGradient&gt;
+    &lt;path fill="url(#linearGradient2)" d="M122.078,107.262c10.787,9.77-12.277,25.906-17.758,12.424
+c5.48,13.482-22.302,18.013-21.39,3.489c-0.912,14.523-27.908,6.551-20.784-6.139c-7.124,12.689-27.988-6.205-16.063-14.547
+c-11.925,8.342-22.524-17.736-8.161-20.078C23.56,84.753,25.324,56.66,39.281,60.782c-13.957-4.122-0.178-28.667,10.609-18.898
+c-10.787-9.77,12.278-25.906,17.757-12.423c-5.479-13.482,22.302-18.013,21.39-3.488c0.912-14.524,27.909-6.553,20.784,6.138
+c7.125-12.69,27.987,6.205,16.063,14.548c11.924-8.343,22.523,17.734,8.16,20.077c14.363-2.343,12.599,25.751-1.358,21.63
+C146.645,92.486,132.865,117.031,122.078,107.262z" class="path"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;radialGradient id="radialGradient1" gradientUnits="userSpaceOnUse"&gt;
+        &lt;stop offset="0" style="stop-color: #fa709a;" /&gt;
+        &lt;stop offset="1" style="stop-color: #fee140;" /&gt;
+    &lt;/radialGradient&gt;
+    &lt;path fill="url(#radialGradient1)" d="M122.078,107.262c10.787,9.77-12.277,25.906-17.758,12.424
+c5.48,13.482-22.302,18.013-21.39,3.489c-0.912,14.523-27.908,6.551-20.784-6.139c-7.124,12.689-27.988-6.205-16.063-14.547
+c-11.925,8.342-22.524-17.736-8.161-20.078C23.56,84.753,25.324,56.66,39.281,60.782c-13.957-4.122-0.178-28.667,10.609-18.898
+c-10.787-9.77,12.278-25.906,17.757-12.423c-5.479-13.482,22.302-18.013,21.39-3.488c0.912-14.524,27.909-6.553,20.784,6.138
+c7.125-12.69,27.987,6.205,16.063,14.548c11.924-8.343,22.523,17.734,8.16,20.077c14.363-2.343,12.599,25.751-1.358,21.63
+C146.645,92.486,132.865,117.031,122.078,107.262z" class="path"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;radialGradient id="radialGradient2" gradientUnits="userSpaceOnUse"&gt;
+        &lt;stop offset="0" style="stop-color: #84fab0;" /&gt;
+        &lt;stop offset="1" style="stop-color: #8fd3f4;" /&gt;
+    &lt;/radialGradient&gt;
+    &lt;polygon fill="url(#radialGradient2)" points="128,117 72,139 25,101
+35,41 91,20 138,58 " class="polygon"&gt;&lt;/polygon&gt;
+&lt;/svg&gt;
+</code></pre>
+                </div>
+                <!-- //Intro8 -->
+                <!-- Intro9 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro9" class="page-header">Clip-path</h2>
+                    <div class="sBox">
+                        <svg>
+                            <image xlink:href="1.jpg" width="200" height="200" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="1.jpg" width="100%" height="100%" clip-path="circle(50px at center)" />
+                        </svg>
+                        <svg>
+                            <clipPath id="clipPath1">
+                                <polygon points="120,142 9,93 107 22"></polygon>
+                            </clipPath>
+                            <image xlink:href="1.jpg" width="100%" height="100%" clip-path="url(#clipPath1)" />
+                        </svg>
+                        <svg>
+                            <clipPath id="clipPath2">
+                                <polygon points="133,108 94,102 67,131.604 
+                                61,92 26,75 61,57 66,18 94,46 132,39 114,74"></polygon>
+                            </clipPath>
+                            <image xlink:href="1.jpg" width="100%" height="100%" clip-path="url(#clipPath2)" />
+                        </svg>
+
+                    </div>
+<pre class="line-numbers language-markup"><code>&lt;svg&gt;
+    &lt;image xlink:href="1.jpg" width="200" height="200" /&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;image xlink:href="1.jpg" width="100%" height="100%" clip-path="circle(50px at center)" /&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;clipPath id="clipPath1"&gt;
+        &lt;polygon points="120,142 9,93 107 22"&gt;&lt;/polygon&gt;
+    &lt;/clipPath&gt;
+    &lt;image xlink:href="1.jpg" width="100%" height="100%" clip-path="url(#clipPath1)" /&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;clipPath id="clipPath2"&gt;
+        &lt;polygon points="133,108 94,102 67,131.604 
+        61,92 26,75 61,57 66,18 94,46 132,39 114,74"&gt;&lt;/polygon&gt;
+    &lt;/clipPath&gt;
+    &lt;image xlink:href="1.jpg" width="100%" height="100%" clip-path="url(#clipPath2)" /&gt;
+&lt;/svg&gt;
+</code></pre>
+                </div>
+                <!-- //Intro9 -->
+                <style>
+                    .sBox {
+                        display: flex; flex-wrap: wrap;
+                    }
+
+                    .sBox > div,
+                    .sBox > svg {
+                        margin-right: 5px; margin-bottom: 10px; 
+                    }
+
+                    .sBox > svg {width: 160px;}
+                    .text-wrap {
+                        background-color: #ffebee;
+                    }
+
+                    .text-clip {
+                        width: 160px;
+                        height: 160px;
+                        font-size: 45px;
+                        font-family: "Sniglet";
+                        background-image: url(1.jpg);
+                        -size: cover;
+                        text-align: center;
+                        line-height: 165px;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-background-clip: text;
+                    }
+
+                    .text-clip.s2 {
+                        background-image: linear-gradient(-60deg, #fa709a 0%, #fee140 100%);
+                    }
+                </style>
+                <!-- Intro10 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro10" class="page-header">Text Clip-path</h2>
+                    <div class="sBox">
+                        <svg>
+                            <text x="10" y="100" font-size="45" font-family="Sniglet">TEXT</text>
+                        </svg>
+                        <svg>
+                            <pattern id="pattern1" patternUnits="userSpaceOnUse" width="160" height="160">
+                                <image xlink:href="1.jpg" width="100%" height="100%" />
+                            </pattern>
+                            <text x="30" y="100" font-size="45" font-family="Sniglet" fill="url(#pattern1)">SVG</text>
+                        </svg>
+                        <div class="text-wrap">
+                            <div class="text-clip">
+                                CSS
+                            </div>
+                        </div>
+                        <div class="text-wrap">
+                            <div class="text-clip s2">
+                                CSS
+                            </div>
+                        </div>
+
+<pre class="line-numbers language-markup"><code>&lt;svg&gt;
+    &lt;text x="10" y="100" font-size="45" font-family="Sniglet"&gt;TEXT&lt;/text&gt;
+&lt;/svg&gt;
+&lt;svg&gt;
+    &lt;pattern id="pattern1" patternUnits="userSpaceOnUse" width="160" height="160"&gt;
+        &lt;image xlink:href="1.jpg" width="100%" height="100%"/&gt;
+    &lt;/pattern&gt;
+    &lt;text x="30" y="100" font-size="45" font-family="Sniglet" fill="url(#pattern1)"&gt;SVG&lt;/text&gt;
+&lt;/svg&gt;
+&lt;div class="text-wrap"&gt;
+    &lt;div class="text-clip"&gt;
+        CSS
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="text-wrap"&gt;
+    &lt;div class="text-clip s2"&gt;
+        CSS
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    .sBox {display: flex;}
+    .sBox &gt; div, .sBox&gt; svg {margin-right: 10px;}
+    .text-wrap {background-color: #ffebee;}
+    .text-clip {
+        width: 160px; height: 160px; 
+        font-size: 45px; font-family: "Sniglet"; 
+        background-image: url(1.jpg); 
+        -size: cover; 
+        text-align: center; line-height: 165px; 
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text;
+        }
+    .text-clip.s2 {background-image: linear-gradient(-60deg, #fa709a 0%, #fee140 100%);}
+&lt;/style&gt;
+</code></pre>
+                </div>
+                <!-- //Intro10 -->
+                <style>
+                    .aniRect1 {
+                        width: 120px;
+                        height: 120px;
+                        x: 20px;
+                        y: 20px;
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 4;
+                        animation: rect1 4s infinite linear;
+                    }
+
+                    .aniRect2 {
+                        width: 120px;
+                        height: 120px;
+                        x: 20px;
+                        y: 20px;
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 4;
+                        animation: rect2 4s infinite linear;
+                        stroke-dasharray: 100;
+                        stroke-dashoffset: 100;
+                    }
+
+                    .aniRect3 {
+                        width: 120px;
+                        height: 120px;
+                        x: 20px;
+                        y: 20px;
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 4;
+                        animation: rect3 4s infinite linear;
+                        stroke-dasharray: 480;
+                        stroke-dashoffset: 480;
+                    }
+
+                    .aniRect4 {
+                        width: 120px;
+                        height: 120px;
+                        x: 20px;
+                        y: 20px;
+                        fill: none;
+                        stroke: #880e4f;
+                        stroke-width: 4;
+                        animation: rect4 4s infinite linear;
+                        stroke-dasharray: 100;
+                        stroke-dashoffset: 100;
+                    }
+
+                    @keyframes rect1 {
+                        0% {
+                            stroke: #880e4f;
+                        }
+
+                        35% {
+                            stroke: #4527a0;
+                        }
+
+                        70% {
+                            stroke: #004d40;
+                        }
+
+                        100% {
+                            stroke: #880e4f;
+                        }
+                    }
+
+                    @keyframes rect2 {
+                        0% {
+                            stroke: #880e4f;
+                            stroke-dashoffset: 100;
+                        }
+
+                        35% {
+                            stroke: #4527a0;
+                        }
+
+                        70% {
+                            stroke: #004d40;
+                        }
+
+                        100% {
+                            stroke: #880e4f;
+                            stroke-dashoffset: 0;
+                        }
+                    }
+
+                    @keyframes rect3 {
+                        0% {
+                            stroke: #880e4f;
+                            stroke-dashoffset: 480;
+                        }
+
+                        35% {
+                            stroke: #4527a0;
+                        }
+
+                        70% {
+                            stroke: #004d40;
+                        }
+
+                        100% {
+                            stroke: #880e4f;
+                            stroke-dashoffset: 0;
+                        }
+                    }
+
+                    @keyframes rect4 {
+                        0% {
+                            stroke: #880e4f;
+                            stroke-dasharray: 100;
+                        }
+
+                        35% {
+                            stroke: #4527a0;
+                        }
+
+                        70% {
+                            stroke: #004d40;
+                        }
+
+                        100% {
+                            stroke: #880e4f;
+                            stroke-dasharray: 0;
+                        }
+                    }
+                </style>
+                <!-- Intro11 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro11" class="page-header">Animation</h2>
+                    <div class="sBox">
+                        <svg>
+                            <rect class="aniRect1"></rect>
+                        </svg>
+                        <svg>
+                            <rect class="aniRect2"></rect>
+                        </svg>
+                        <svg>
+                            <rect class="aniRect3"></rect>
+                        </svg>
+                        <svg>
+                            <rect class="aniRect4"></rect>
+                        </svg>
+
+                    </div>
+
+
+<pre class="line-numbers language-markup"><code>&lt;style&gt;
+.aniRect1 {
+    width: 120px;
+    height: 120px;
+    x: 20px;
+    y: 20px;
+    fill: none;
+    stroke: #880e4f;
+    stroke-width: 4;
+    animation: rect1 4s infinite linear;
+}
+.aniRect2 {
+    width: 120px;
+    height: 120px;
+    x: 20px;
+    y: 20px;
+    fill: none;
+    stroke: #880e4f;
+    stroke-width: 4;
+    animation: rect2 4s infinite linear;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+}
+.aniRect3 {
+    width: 120px;
+    height: 120px;
+    x: 20px;
+    y: 20px;
+    fill: none;
+    stroke: #880e4f;
+    stroke-width: 4;
+    animation: rect3 4s infinite linear;
+    stroke-dasharray: 480;
+    stroke-dashoffset: 480;
+}
+.aniRect4 {
+    width: 120px;
+    height: 120px;
+    x: 20px;
+    y: 20px;
+    fill: none;
+    stroke: #880e4f;
+    stroke-width: 4;
+    animation: rect4 4s infinite linear;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+}
+
+@keyframes rect1 {
+    0% {
+        stroke: #880e4f;
+    }
+
+    35% {
+        stroke: #4527a0;
+    }
+
+    70% {
+        stroke: #004d40;
+    }
+
+    100% {
+        stroke: #880e4f;
+    }
+}
+@keyframes rect2 {
+    0% {
+        stroke: #880e4f;
+        stroke-dashoffset: 100;
+    }
+
+    35% {
+        stroke: #4527a0;
+    }
+
+    70% {
+        stroke: #004d40;
+    }
+
+    100% {
+        stroke: #880e4f;
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes rect3 {
+    0% {
+        stroke: #880e4f;
+        stroke-dashoffset: 480;
+    }
+
+    35% {
+        stroke: #4527a0;
+    }
+
+    70% {
+        stroke: #004d40;
+    }
+
+    100% {
+        stroke: #880e4f;
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes rect4 {
+    0% {
+        stroke: #880e4f;
+        stroke-dasharray: 100;
+    }
+
+    35% {
+        stroke: #4527a0;
+    }
+
+    70% {
+        stroke: #004d40;
+    }
+
+    100% {
+        stroke: #880e4f;
+        stroke-dasharray: 0;
+    }
+}
+&lt;/style&gt;
+&lt;div class="sBox"&gt;
+    &lt;svg&gt;
+        &lt;rect class="aniRect1"&gt;&lt;/rect&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;rect class="aniRect2"&gt;&lt;/rect&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;rect class="aniRect3"&gt;&lt;/rect&gt;
+    &lt;/svg&gt;
+    &lt;svg&gt;
+        &lt;rect class="aniRect4"&gt;&lt;/rect&gt;
+    &lt;/svg&gt;
+
+&lt;/div&gt;
+</code></pre>
+            </div>
+                <!-- //Intro11 -->
+                <style>
+                    .aniPath1 {
+                        fill: none;
+                        stroke: #0d47a1;
+                        stroke-width: 2;
+                        stroke-linecap: round;
+                        animation: path1 1s infinite linear alternate;
+                        stroke-dasharray: 189;
+                        stroke-dashoffset: 189;
+                    }
+
+                    @keyframes path1 {
+                        0% {
+                            stroke-dashoffset: 189;
+                        }
+
+                        100% {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                    .aniPath2 {
+                        fill: none;
+                        stroke: #0d47a1;
+                        stroke-width: 2;
+                        stroke-linecap: round;
+                        animation: path2 2s infinite linear alternate;
+                        stroke-dasharray: 537;
+                        stroke-dashoffset: 537;
+                    }
+
+                    @keyframes path2 {
+                        0% { stroke-dashoffset: 537;}
+                        50% { stroke-dashoffset: 0;}
+                        100% { stroke-dashoffset: 537;}
+                    }
+                    .aniPath3 {
+                        fill: none;
+                        stroke: #0d47a1;
+                        stroke-width: 2;
+                        stroke-linecap: round;
+                        animation: path3 3s infinite linear alternate;
+                        stroke-dasharray: 975;
+                        stroke-dashoffset: 975;
+                    }
+
+                    @keyframes path3 {
+                        0% { stroke-dashoffset: 975;}
+                        100% { stroke-dashoffset: 0;}
+                    }
+                   
+                    .aniPath4 {
+                        fill: none;
+                        stroke: #0d47a1;
+                        stroke-width: 2;
+                        stroke-linecap: round;
+                        animation: path4 4s infinite linear alternate;
+                        stroke-dasharray: 975;
+                        stroke-dashoffset: 975;
+                    }
+
+                    @keyframes path4 {
+                        0% { stroke-dashoffset: 975;}
+                        100% { stroke-dashoffset: 0;}
+                    }
+                   
+                   
+                </style>
+                <!-- Intro12 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro12" class="page-header">Animation2</h2>
+                    <div class="sBox">
+                        <svg style="background-color: #e2f2fd;">
+                            <path class="aniPath1" d="M29.376,136.292c0-58.519,46.915-105.871,104.893-105.871"></path>
+                        </svg>
+                        <svg style="background-color: #e2f2fd;">
+                            <path class="aniPath2" d="M129.754,112.953c-25.398,22.372-64.125,19.919-86.498-5.479
+                            c-17.898-20.319-15.936-51.3,4.384-69.198c16.255-14.318,41.04-12.748,55.358,3.507c11.455,13.004,10.199,32.832-2.806,44.287
+                            c-10.403,9.163-26.265,8.159-35.429-2.244c-7.331-8.323-6.527-21.013,1.796-28.344c6.658-5.865,16.81-5.222,22.674,1.437
+                            c4.692,5.327,4.178,13.448-1.149,18.14c-4.261,3.753-10.758,3.342-14.511-0.919c-3.003-3.409-2.674-8.607,0.735-11.61"></path>
+                        </svg>
+                        <svg style="background-color: #e2f2fd;">
+                            <path class="aniPath3" d="M122.078,107.262c10.787,9.77-12.277,25.906-17.758,12.424
+                            c5.48,13.482-22.302,18.013-21.39,3.489c-0.912,14.523-27.908,6.551-20.784-6.139c-7.124,12.689-27.988-6.205-16.063-14.547
+                            c-11.925,8.342-22.524-17.736-8.161-20.078C23.56,84.753,25.324,56.66,39.281,60.782c-13.957-4.122-0.178-28.667,10.609-18.898
+                            c-10.787-9.77,12.278-25.906,17.757-12.423c-5.479-13.482,22.302-18.013,21.39-3.488c0.912-14.524,27.909-6.553,20.784,6.138
+                            c7.125-12.69,27.987,6.205,16.063,14.548c11.924-8.343,22.523,17.734,8.16,20.077c14.363-2.343,12.599,25.751-1.358,21.63
+                            C146.645,92.486,132.865,117.031,122.078,107.262z"></path>
+                        </svg>
+                        <svg style="background-color: #e2f2fd;">
+                            <path class="aniPath4" d="M136.871,128.158c-47.5-44.023-51.682-41.169-27.986,19.104
+                            c-23.695-60.273-28.702-59.516-33.505,5.068c4.804-64.584-0.036-66.074-32.385-9.97c32.35-56.104,28.636-59.546-24.852-23.034
+                            C71.63,82.815,69.778,78.103,5.745,87.791c64.033-9.688,64.409-14.737,2.513-33.792c61.896,19.055,64.425,14.668,16.927-29.355
+                            c47.498,44.023,51.68,41.169,27.987-19.104c23.693,60.272,28.7,59.515,33.504-5.069c-4.805,64.584,0.034,66.074,32.386,9.97
+                            C86.71,66.545,90.424,69.987,143.912,33.476C90.424,69.987,92.276,74.699,156.31,65.012c-64.033,9.688-64.408,14.737-2.512,33.792
+                            C91.901,79.749,89.371,84.135,136.871,128.158z"></path>
+                        </svg>
+                       
+
+                    </div>
+
+
+<pre class="line-numbers language-markup"><code>&lt;style&gt;
+    .aniPath1 {
+        fill: none;
+        stroke: #0d47a1;
+        stroke-width: 2;
+        stroke-linecap: round;
+        animation: path1 1s infinite linear alternate;
+        stroke-dasharray: 189;
+        stroke-dashoffset: 189;
+    }
+
+    @keyframes path1 {
+        0% {
+            stroke-dashoffset: 189;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+    .aniPath2 {
+        fill: none;
+        stroke: #0d47a1;
+        stroke-width: 2;
+        stroke-linecap: round;
+        animation: path2 1s infinite linear alternate;
+        stroke-dasharray: 1089;
+        stroke-dashoffset: 1089;
+    }
+
+    @keyframes path2 {
+        0% {
+            stroke-dashoffset: 1089;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+    .aniPath3 {
+        fill: none;
+        stroke: #0d47a1;
+        stroke-width: 2;
+        stroke-linecap: round;
+        animation: path3 1s infinite linear alternate;
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+    }
+
+    @keyframes path3 {
+        0% {
+            stroke-dashoffset: 2000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+   
+    .aniPath4 {
+        fill: none;
+        stroke: #0d47a1;
+        stroke-width: 2;
+        stroke-linecap: round;
+        animation: path4 1s infinite linear alternate;
+        stroke-dasharray: 3000;
+        stroke-dashoffset: 3000;
+    }
+
+    @keyframes path4 {
+        0% {
+            stroke-dashoffset: 3000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+   
+&lt;/style&gt;
+</code></pre>
+                </div>
+                <!-- //Intro12 -->
+                <style>
+                    .svgWrap {font-family: "Sniglet"; width: 100% !important; height: 200px;}
+                    .aniText {font-size: 140px;  stroke: #365fa0; stroke-width: 4; animation: stroke 5s infinite alternate;}
+
+                    @keyframes stroke {
+                        0% {
+                            fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+                            stroke-dashoffset: 25%; 
+                            stroke-dasharray: 0 50%;
+                            stroke-width: 4;
+                            }
+                        70% {
+                            fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+                            }
+                        80% {
+                            fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+                            stroke-width: 5;
+                            }
+                        100% {
+                            fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0);
+                            stroke-dashoffset: -25%; 
+                            stroke-dasharray: 50% 0;
+                            stroke-width: 0;
+                            }
+                    }
+                </style>
+                <!-- Intro13 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro13" class="page-header">Text Animation</h2>
+                    <div class="sBox">
+                        <svg class="svgWrap" viewBox="0 0 1000 300">
+                            <text class="aniText" x="50%" y="50%" dy=".35em" text-anchor="middle">seongwon</text>
+                        </svg>
+                        
+
+                    </div>
+
+
+<pre class="line-numbers language-markup"><code>&lt;style&gt;
+.svgWrap {font-family: "Sniglet"; width: 100% !important; height: 200px;}
+.aniText {font-size: 140px;  stroke: #365fa0; stroke-width: 4; animation: stroke 5s infinite alternate;}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+        stroke-dashoffset: 25%; 
+        stroke-dasharray: 0 50%;
+        stroke-width: 4;
+        }
+    70% {
+        fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+        }
+    80% {
+        fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+        stroke-width: 5;
+        }
+    100% {
+        fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0);
+        stroke-dashoffset: -25%; 
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+        }
+}
+&lt;/style&gt;
+&lt;div class="sBox"&gt;
+    &lt;svg class="svgWrap" viewBox="0 0 1000 300"&gt;
+        &lt;text class="aniText" x="50%" y="50%" dy=".35em" text-anchor="middle"&gt;seongwon&lt;/text&gt;
+    &lt;/svg&gt;
+    
+
+&lt;/div&gt;
+</code></pre>
+                </div>
+                <!-- //Intro13 -->
+                <style>
+                    .svgWrap2 {font-family: "Sniglet"; width: 100% !important; height: 200px; background: #000;}
+                    .aniText2 {font-size: 140px;}
+                    .copyText {
+                        fill: none; 
+                        stroke: white; 
+                        stroke-width: 2; 
+                        stroke-dashoffset: 7% 28%; 
+                        animation: stroke2 9s infinite linear;
+                    }
+                    .copyText:nth-child(1) {stroke: #360756; stroke-dasharray: 7%;}
+                    .copyText:nth-child(2) {stroke: #d61c59; stroke-dasharray: 14%;}
+                    .copyText:nth-child(3) {stroke: #e7d84b; stroke-dasharray: 21%;}
+                    .copyText:nth-child(4) {stroke: #efeac5; stroke-dasharray: 28%;}
+                    .copyText:nth-child(5) {stroke: #1b8798; stroke-dasharray: 35%;}
+
+                    @keyframes stroke2 {
+                        50% {stroke-dashoffset: 35%; stroke-dasharray: 0 7.5%;}
+                    }
+                </style>
+                <!-- Intro14 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro14" class="page-header">Text Animation2</h2>
+                    <div class="sBox">
+                        <svg class="svgWrap2" viewBox="0 0 1000 300">
+                            <symbol id="symbol">
+                                <text class="aniText2" x="50%" y="50%" dy=".35em" text-anchor="middle">seongwon</text>
+                            </symbol>
+                            <g class="group">
+                                <use xlink:href="#symbol" class="copyText"></use>
+                                <use xlink:href="#symbol" class="copyText"></use>
+                                <use xlink:href="#symbol" class="copyText"></use>
+                                <use xlink:href="#symbol" class="copyText"></use>
+                                <use xlink:href="#symbol" class="copyText"></use>
+                            </g>
+                        </svg>
+                        
+
+                    </div>
+
+
+<pre class="line-numbers language-markup"><code>&lt;style&gt;
+    .svgWrap2 {font-family: "Sniglet"; width: 100% !important; height: 200px; background: #000;}
+    .aniText2 {font-size: 140px;}
+    .copyText {
+        fill: none; 
+        stroke: white; 
+        stroke-width: 2; 
+        stroke-dashoffset: 7% 28%; 
+        animation: stroke2 9s infinite linear;
+    }
+    .copyText:nth-child(1) {stroke: #360756; stroke-dasharray: 7%;}
+    .copyText:nth-child(2) {stroke: #d61c59; stroke-dasharray: 14%;}
+    .copyText:nth-child(3) {stroke: #e7d84b; stroke-dasharray: 21%;}
+    .copyText:nth-child(4) {stroke: #efeac5; stroke-dasharray: 28%;}
+    .copyText:nth-child(5) {stroke: #1b8798; stroke-dasharray: 35%;}
+
+    @keyframes stroke2 {
+        50% {stroke-dashoffset: 35%; stroke-dasharray: 0 7.5%;}
+    }
+&lt;/style&gt;
+
+&lt;div class="sBox"&gt;
+    &lt;svg class="svgWrap2" viewBox="0 0 1000 300"&gt;
+        &lt;symbol id="symbol"&gt;
+            &lt;text class="aniText2" x="50%" y="50%" dy=".35em" text-anchor="middle"&gt;seongwon&lt;/text&gt;
+        &lt;/symbol&gt;
+        &lt;g class="group"&gt;
+            &lt;use xlink:href="#symbol" class="copyText"&gt;&lt;/use&gt;
+            &lt;use xlink:href="#symbol" class="copyText"&gt;&lt;/use&gt;
+            &lt;use xlink:href="#symbol" class="copyText"&gt;&lt;/use&gt;
+            &lt;use xlink:href="#symbol" class="copyText"&gt;&lt;/use&gt;
+            &lt;use xlink:href="#symbol" class="copyText"&gt;&lt;/use&gt;
+        &lt;/g&gt;
+    &lt;/svg&gt;
+    
+
+&lt;/div&gt;
+</code></pre>
+                </div>
+                <!-- //Intro14 -->
+
+            </div>
+            </div>
+            <!-- //col-md-9 -->
+
+            <!-- //col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">SVG</a></li>
+                        <li><a href="#intro2">Rect</a></li>
+                        <li><a href="#intro3">Circle</a></li>
+                        <li><a href="#intro4">Polygon</a></li>
+                        <li><a href="#intro5">Line</a></li>
+                        <li><a href="#intro6">Path</a></li>
+                        <li><a href="#intro7">Linecap / Dasharray</a></li>
+                        <li><a href="#intro8">Gradient</a></li>
+                        <li><a href="#intro9">Clip-path</a></li>
+                        <li><a href="#intro10">Text Clip-path</a></li>
+                        <li><a href="#intro11">Animation</a></li>
+                        <li><a href="#intro12">Animation2</a></li>
+                        <li><a href="#intro13">Text Animation</a></li>
+                        <li><a href="#intro14">Text Animation2</a></li>
+                        
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <script src="../../assets/js/prism.js"></script>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.arc(60, 60, 50, 0, Math.PI * 2);
+        ctx.fillStyle = "#880e4f"
+        ctx.fill();
+        //캔버스 이용
+        // var canvas =document.getElementById("canvas");
+        // var ctx = canvas.getContext("2d");
+        // ctx.arc(60,60,50,0,Math.PI*2);
+        // ctx.fillStyle = "#0e3131"
+        // ctx.fill();
+        //길이값알아내기
+        //let path = document.getElementById("aniPath1")  //..
+        // let path = document.querySelectorAll("li") ; // li 전체 불러오기
+        var path = document.querySelector(".aniPath3") ; //클래스 불러오기
+        var lenght =  path.getTotalLength();
+       // alert(lenght);
+    </script>
+
+
+</body>
+
+</html>

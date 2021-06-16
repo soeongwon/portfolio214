@@ -1,0 +1,103 @@
+/* container */
+.container {width: 1000px; margin: 0 auto;}
+
+/* row */
+.row {position: relative; margin: 0 20px; }
+
+/* header */
+#header {height: 50px; margin-bottom: 25px;}
+.header {position: relative; }
+.header h2 {font-size: 17px; color: #FD2E54; position: absolute; left: 17px; top: 17px;}
+.header img {position: absolute; top: 15px; left: 0; width: 13px;}
+
+/* forM */
+.forM .row {padding: 10px 0;}
+.forM .forM_head {display: flex; flex-wrap: wrap;  justify-content: space-between; padding-bottom: 20px; }
+.forM .forM_head .forM_img {width: 38%;}
+.forM .forM_head .forM_img img {width: 100%; border-radius: 10px;}
+.forM .forM_head .fortit {width: 58%; position: relative;}
+.forM .forM_head .fortit h2 { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+.forM .forM_head .fortit p { color: #818183; padding-bottom: 50px; }
+.forM .forM_head .fortit p strong { display: block; font-weight: normal; padding-bottom: 5px; }
+.forM .forM_head .btnA {position: absolute; bottom: 17px; margin-left: 20px; width: 70px; height: 28px; border-radius: 30px; background: #FD2E54; text-decoration: none; color: #fff; font-size: 17px; text-align: center; }
+.forM .forM_head .btnDot {position: absolute; bottom: 17px;  right: 0; width: 30px; height: 30px; border-radius: 50%; background: #FD2E54; background-image: url(../../assets/img/more.png);}
+.forM .fortxt p {margin-top: 17px; padding-bottom: 45px; border-bottom: 1px solid #ccc; position: relative; }
+.forM p .more {text-decoration: none;  font-size: 17px; color: #D54662; position: absolute; right: 0;}
+.forM .forM_head .forM_plus {background: #FC2E55; padding: 8px 20px 10px 20px;  border-radius: 50px; color: #fff; position: absolute; bottom: 0; left: 0; font-size: 16px; }
+.forM .forM_head .forM_plus img{width: 16px; margin:3px 5px 0 0;}
+.forM .forM_head .forM_plus2 {position: absolute; bottom: 0; left: 20px; display: none;}
+.forM .forM_head .forM_plus2 img{width: 50px; }
+
+/* playM */
+.playM {display: inline; }
+.btn_p {width: 49%; height: 46px; background: #F3F2F8; float: left; margin-right: 2%; border-radius: 5px; text-align: center; line-height: 46px;}
+.btn_p .btn_play {text-decoration: none; color: #D54662;}
+.btn_r {margin-bottom: 17px; width: 49%; height: 46px; background: #F3F2F8; float: left; border-radius: 5px; text-align: center; line-height: 46px; }
+.btn_r .btn_ran { text-decoration: none; color: #D54662; }
+
+/* forListM */
+.forListM {clear: both; overflow: hidden; }
+.forListM .list {padding-bottom: 20px; margin-bottom: 10px; position: relative;}
+.forListM .list img {width: 49px; border-radius: 5px;float: left; margin-right: 18px;}
+.forListM .list .list_tit h2 {font-size: 17px; margin-bottom: 10px; font-weight: bold; } 
+.forListM .list .list_tit p {float: left; font-size: 16px; color: #A2A2A4;  width: calc(100% - 78px); padding-bottom: 5px; border-bottom: 1px solid #ccc;   }
+.forListM .list .more {position: absolute; right: 0; top: 0px; }
+.forListM .list .more img {width: 40px;}
+.forListM .total {font: none; padding: 30px 0; font-size: 16px; color: #A2A2A4;}
+
+/* artistM */
+.artistM {padding: 10px 0; padding-bottom: 100px; background: rgb(221, 221, 221); overflow: hidden;}
+.artistM .row {display: flex; justify-content: space-between; padding-bottom: 20px;}
+.artistM .art_tit {font-size: 18px; font-weight: bold; }
+.artistM .more {color: #FC2E55; font-size: 16px;}
+.swiper-container {height: 580px;}
+.artistM .swiper-slide:first-child {margin-left: 20px;}
+.swiper-slide picture img {border-radius: 50%;}
+.sw-title  {text-align: center; margin-top: 10px;  font-size: 16px;}
+.swiper-slide picture {
+	text-align:center;
+	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+	align-items:center; /* 위아래 기준 중앙정렬 */
+	justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+
+/* layer_plus */
+#layer_plus {position: fixed; width: 300px; height: 300px; top: 50%; left: 50%; transform: translate(-50%,-50%); padding: 20px; border-radius: 10px; display: none;z-index: 100; background-color: rgba(165,165,165,.3);
+    backdrop-filter: saturate(180%) blur(20px);}
+#layer_plus img {width: 50%;  display: block; margin-bottom: 60px; padding-left: 80px; padding-top: 50px; }
+#layer_plus p {text-align: center; font-size: 18px; font-weight: bold; color:#818183;}
+
+/* layer_top */
+#layer_top {position: fixed; bottom: -150%; left: 50%; transform: translatex(-54%); z-index: 100000;  width: 90%; background: #f6f6f6; padding: 20px; margin: 0px 4%; border-radius: 5px; }
+#layer_top .top_bg {width: 100%; }
+#layer_top .top_tit {overflow: hidden; border-bottom: 1px solid #dcdcdd; padding-bottom: 10px;}
+#layer_top .top_tit img{float: left;width: 50px; border-radius: 5px;}
+#layer_top .top_tit .top_tit_text{float: left; margin: 5px 0 0 10px;}
+#layer_top .top_tit .top_tit_text h2 {font-weight: bold;}
+#layer_top .top_tit .top_tit_text p {color: #818183;}
+#layer_top .top_list {margin: 20px 0px; }
+#layer_top .top_list ul li {padding: 15px 10px ; display: block; position: relative;}
+#layer_top .top_list ul li a {font-size: 16px;}
+#layer_top .top_list li em {position: absolute; right: 15px; top: 0;}
+#layer_top .top_list li em img {width: 50px;}
+#layer_top .top_list .list_one {margin-bottom: 10px; border-radius: 5px; background: #fff;}
+#layer_top .top_list .list_one li:first-child{border-bottom: 2px solid #f6f6f6;}
+#layer_top .top_list .list_two {border-radius: 5px; background: #fff; } 
+#layer_top .top_list .list_two li {border-bottom: 2px solid #f6f6f6;}
+#layer_top .top_list .list_two li:last-child {border-bottom: 0;}
+#layer_top .top_close { position: absolute; top: 20px; right: 20px; background: rgba(230,230,230,.4); width: 40px; height: 40px; border-radius: 50%; color: #000; text-align: center; line-height: 40px; font-size: 18px;}
+
+
+/* play_btn */
+.play_btn {position: fixed; bottom: 0; left: 0; width: 100%; height: 62px; background-color: rgba(255,255,255,.7); backdrop-filter: saturate(180%) blur(20px);  z-index: 9000; display: flex; align-items: center;}
+.play_btn  .play_btn__img {width: 48px; height: 48px; padding: 8px 20px;}
+.play_btn  .play_btn__img img {width: 48px; height: 48px;  border-radius: 3px; box-shadow: 2px 2px 4px 0 rgba(0,0,0,0,.12);}
+.play_btn  .play_btn__tit {font-size: 16px;}
+.play_btn  .play_btn__play {margin-left: auto; padding-right: 10px; cursor: pointer;}
+.play_btn  .play_btn__next {margin-right: 10px; cursor: pointer;}
+
+
+/* mediaquery */
+@media (max-width: 1040px){
+    .container {width: 100%;}
+}

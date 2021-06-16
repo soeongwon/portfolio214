@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP 07</title>
+</head>
+<body>
+    <select name="birthMonth" id="birthMonth">
+        <!-- <option value="1" selected>1월</option> -->
+        <!-- <?php
+            for($i=1; $i<=12; $i++){ ?>
+                <option value="<?=$i?>"><?=$i?>월</option>
+        <?php } ?> -->
+       
+        <?php
+            $selectMonth = 4;
+
+            for($i=1; $i<=12; $i++){ 
+                $selected = "";
+                if($i == $selectMonth){
+                    $selected = "selected";
+                }
+                ?>
+                <option value="<?=$i?>"<?=$selected?>><?=$i?>월</option>
+        <?php } ?>
+    </select>  
+</body>
+</html>

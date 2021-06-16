@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery12</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    li {list-style: none;}
+    a{text-decoration: none; color: #666;}
+    .tab_menu {width: 350px; margin: 100px auto;}
+    .tab_btn ul{overflow: hidden;}
+    .tab_btn li { float: left; width: 20%; text-align: center;}
+    .tab_btn li a{ background: #1e88e5; padding: 14px 10px 10px 10px; color: #fff; display: block;}
+    .tab_cont img {width: 100%;}
+    </style>
+</head>
+<body>
+    <div class="tab_menu">
+        <div class="tab_btn">
+            <ul>
+                <li><a href="#">Tab1</a></li>
+                <li><a href="#">Tab2</a></li>
+                <li><a href="#">Tab3</a></li>
+                <li><a href="#">Tab4</a></li>
+                <li><a href="#">Tab5</a></li>
+            </ul>
+        </div>
+        <div class="tab_cont">
+            <img src="img/recentM01@2x.jpg" alt="이미지">
+        </div>
+    </div>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        // //글씨를 클릭하면 menu로 변경하기
+        // $(".tab_btn ul li").click(function(){
+        //     $(this).find("a").text("Menu")
+        // })
+        //글씨를 클릭하면 tab3 -> menu3으로 변경
+        //index 메소드
+        // $(".tab_btn ul li").click(function(){
+        //     let target = $(this);
+        //     let index = target.index() +1;
+        //     target.find("a").text("Menu"+index)
+        // })
+        // //버튼을 클릭하면 이미지 변경
+        // $(".tab_btn ul li:eq(0)").click(function(){
+        //     $(".tab_cont img").attr({'src':"img/recentM02@2x.jpg" , "alt":"이미지1"})
+        // })
+        // $(".tab_btn ul li:eq(1)").click(function(){
+        //     $(".tab_cont img").attr({'src':"img/recentM03@2x.jpg" , "alt":"이미지2"})
+        // })
+        // $(".tab_btn ul li:eq(2)").click(function(){
+        //     $(".tab_cont img").attr({'src':"img/recentM04@2x.jpg" , "alt":"이미지3"})
+        // })
+        // $(".tab_btn ul li:eq(3)").click(function(){
+        //     $(".tab_cont img").attr({'src':"img/recentM05@2x.jpg" , "alt":"이미지4"})
+        // })
+        // $(".tab_btn ul li:eq(4)").click(function(){
+        //     $(".tab_cont img").attr({'src':"img/02.jpg" , "alt":"이미지5"})
+        // })
+
+        //한번에 쓰기
+        $(".tab_btn ul li").click(function(){
+            let target = $(this);
+            let index = target.index()+1;
+            target.find("a").text("Menu"+index);
+            $(".tab_cont img").attr({'src':"img/0"+index+".jpg" , "alt":"이미지"+index});
+        });
+
+    </script>
+</body>
+</html>

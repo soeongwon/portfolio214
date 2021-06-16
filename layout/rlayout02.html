@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>rlayout02</title>
+	<style>
+		* {margin: 0; padding: 0;}
+		#wrap {width: 1200px; }
+		header {width: 100%; height: 200px; background-color: #222;}
+		aside {width: 30%; height: 800px; background-color: #333; float: left;}
+		section {width: 70%; height: 800px; background-color: #444; float: left;}
+		footer {width: 100%; height: 200px; background-color: #555;clear: both;}
+
+		/* 화면 너비 769 ~ 1200px */
+		@media (max-width: 1220px){
+				#wrap {width: 95%;}
+		}
+
+		/* 화면 너비 481 ~ 768px */
+		@media (max-width: 768px){
+				#wrap {width: 100%;}
+		}
+
+		/* 화면 너비 0 ~ 480px */
+		@media (max-width: 480px){
+				aside {float: none; width: 100%; height: 300px;}
+				section {float: none; width: 100%; height: 300px;}
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap"></div>
+		<header></header>
+		<aside></aside>
+		<section></section>
+		<footer></footer>
+</body>
+</html>

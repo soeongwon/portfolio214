@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP 06</title>
+    <script>
+        //가장 기본적인 for문
+        for( let i = 1; i<=5; i++){
+            document.write(i +"for문이 실행되었습니다.<br>");
+        }
+        document.write("<br><br>");
+
+        //배열을 이용한 for문
+        const for1 = [1,2,3,4,5];
+        for( let i = 0; i<for1.length; i++){
+            document.write(for1[i] +"for문이 실행되었습니다.<br>");
+        }
+        document.write("<br><br>");
+
+        //배열을 이용한 for문2
+        const for2 = [1,2,3,4,5,6];
+        const for2New = [];
+        for(let i = 0; i<for2.length; i++){
+            if(for2[i] % 2 == 0){
+                for2New.push(for2[i]);
+            }
+        }
+        document.write(for2, "<br>");
+        document.write(for2New, "<br><br>");
+
+        //forEach
+        const for3 = [1,2,3,4,5,6];
+        for3.forEach(function(num){
+            document.write(num + "for문이 실행되었습니다.<br>");
+        });
+        document.write("<br><br>");
+        
+        //forEach2
+        const for4 = [1,2,3,4,5,6];
+        const for4New = [];
+        for4.forEach(function(num){
+            if(num % 2 == 0){
+                for4New.push(num);
+            }
+        });
+        document.write(for4, "<br>");
+        document.write(for4New, "<br><br>");
+
+        //forEach3
+        const for5 = [1,2,3,4,5,6];
+        const for5New = [];
+        for5.forEach((num) => {if(num % 2 ==0) for5New.push(num)});
+        document.write(for5, "<br>");
+        document.write(for5New, "<br><br>");
+
+        //for in
+        const for6 = {a:100, b:200, c:300};
+        for(let prop in for6){
+            document.write(prop, for6[prop]);
+        }
+        document.write("<br><br>");
+
+        //for of
+        const for7 = [1,2,3];
+        for(let value7 of for7){
+            document.write(value7);
+        }
+        document.write("<br><br>");
+    </script>
+</head>
+<body>
+    <?php
+        for( $i = 1; $i<=5; $i++){
+            echo $i, "for문이 실행되었습니다.<br>";
+        } 
+        echo "<br>";
+
+        //forEach
+        $for2 = array();
+
+        $for2[0] = array();
+        $for2[0]['name'] = '성원';
+        $for2[0]['userID'] = 'swon';
+        $for2[0]['userPW'] = '1234';
+        
+        $for2[1] = array();
+        $for2[1]['name'] = '성원1';
+        $for2[1]['userID'] = 'swon1';
+        $for2[1]['userPW'] = '12341';
+       
+        $for2[2] = array();
+        $for2[2]['name'] = '성원2';
+        $for2[2]['userID'] = 'swon2';
+        $for2[2]['userPW'] = '123412';
+
+        forEach($for2 as $data){
+            echo $data['name'], "<br>";
+        }
+    ?>
+</body>
+</html>

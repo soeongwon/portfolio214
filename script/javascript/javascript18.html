@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //100보다 작은 수 출력하기
+        let num = 0; //초기값 설정
+        while( true ) {
+            if( num >= 100 ){ //실행문 설정
+                break;
+            }
+            num++; //증감값 설정
+            document.write(num, "<br>");
+        }
+        //100보다 작은 수에서 짝수만 출력하기
+        let num2 = 1;
+        while( num2 <= 100 ){
+            if( num2 % 2 == 0 ){
+                document.write(num2, "<br>");
+            }
+            num2++;
+            
+        }
+
+        //100보다 작은 수에서 4의 배수와 6의 배수 출력하기
+        let num3 = 1;
+        while( num3 <= 100 ){
+            if( num3 % 4 == 0 || num3 % 6 == 0 ) {
+                document.write(num3, "<br>");
+            }
+            num3++;
+        }
+        //1~100까지 짝수는 파란색으로 홀수는 빨간색으로 출력
+        let num4 = 1;
+        while( num4 <= 100 ){
+            if( num4 % 2 == 0 ){
+                document.write("<span style='color:blue'>"+num4+"</span>");
+            } else {
+                document.write("<span style='color:red'>"+num4+"</span>");
+            }
+            num4++;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

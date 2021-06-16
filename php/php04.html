@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP 04</title>
+    <script>
+        const data1 = 100;
+        document.write(data1, "<br>");
+        document.write(typeof(data1), "<br><br>");
+
+        const data2 = "100";
+        document.write(data2, "<br>");
+        document.write(typeof(data2), "<br><br>");
+
+        const data3 = ""+100; //숫자를 문자로 형변환
+        document.write(data3, "<br>");
+        document.write(typeof(data3), "<br><br>");
+        
+        const data4 = Number("100"); //내장 객체를 이용한 형 변환
+        document.write(data4, "<br>");
+        document.write(typeof(data4), "<br><br>");
+        
+        const data5 = String(100); //내장 객체를 이용한 형 변환
+        document.write(data5, "<br>");
+        document.write(typeof(data5), "<br><br><br>");
+    </script>
+</head>
+<body>
+    <?php 
+        $dat1 = 100;
+        echo $dat1, "<br>";
+        echo gettype($dat1), "<br><br>";
+        
+        $dat2 = "100";
+        echo $dat2, "<br>";
+        echo gettype($dat2), "<br><br>";
+        
+        $dat3 = "PHP";
+        echo $dat3, "<br>";
+        echo gettype($dat3), "<br><br>";
+        
+        $dat4 = array();
+        echo $dat4, "<br>";
+        echo gettype($dat4), "<br><br>";
+        
+        $dat5 = null;
+        echo $dat5, "<br>";
+        echo gettype($dat5), "<br><br>";
+        
+        $dat6 = true;
+        echo $dat6, "<br>";
+        echo gettype($dat6), "<br><br>";
+        
+        $dat7 = false;
+        echo $dat7, "<br>";
+        echo gettype($dat7), "<br><br>";
+        
+        $dat8 = "100"; //문자열
+        echo $dat8, "<br>";
+        echo gettype($dat8), "<br><br>";
+
+        $dat8 = (int) $dat8; //문자열 --> 숫자
+        echo $dat8, "<br>";
+        echo gettype($dat8), "<br><br>";
+
+        $dat9 = 100; //숫자
+        echo $dat9, "<br>";
+        echo gettype($dat9), "<br><br>";
+
+        $dat9 = (string) 100; //숫자 --> 문자
+        echo $dat9, "<br>";
+        echo gettype($dat9), "<br><br>";
+
+    ?>
+</body>
+</html>

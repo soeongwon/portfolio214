@@ -1,0 +1,171 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;meta name="author" content="webstoryboy"&gt;
+    &lt;meta name="description" content="메가박스 사이트 따라하면서 배우는 튜토리얼입니다."&gt;
+    &lt;meta name="keywords" content="메가박스, 유투브, 영화, 최신영화, 영화관, CGV, 롯데시네마, 웹스토리보이, 웹스, 사이트 만들기, 따라하기"&gt;
+    &lt;title&gt;메가박스 사이트 코딩하기&lt;/title&gt;
+
+
+    &lt;!-- css --&gt;
+    &lt;link rel="stylesheet" href="assets/css/reset.css"&gt;
+    &lt;link rel="stylesheet" href="assets/css/style5.css"&gt;
+    &lt;link rel="stylesheet" href="assets/css/swiper.css"&gt;
+
+    &lt;!-- 파비콘 --&gt;
+    &lt;link rel="shortcut icon" href="assets/icons/favicon.ico"&gt;
+    &lt;link rel="apple-touch-icon-precomposed" href="assets/icons/favicon_72.png" /&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icons/favicon_96.png" /&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/favicon_144.png" /&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icons/favicon_192.png" /&gt;
+
+    &lt;!-- 페이스북 메타 태그 --&gt;
+    &lt;meta property="og:title" content="메가박스 사이트 만들기" /&gt;
+    &lt;meta property="og:url" content="https://github.com/webstoryboy/megabox2019" /&gt;
+    &lt;meta property="og:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg" /&gt;
+    &lt;meta property="og:description" content="메가박스 사이트 따라하면서 배우는 튜토리얼입니다." /&gt;
+
+    &lt;!-- 트위터 메타 태그 --&gt;
+    &lt;meta name="twitter:card" content="summary"&gt;
+    &lt;meta name="twitter:title" content="메가박스 사이트 만들기"&gt;
+    &lt;meta name="twitter:url" content="https://github.com/webstoryboy/megabox2019/"&gt;
+    &lt;meta name="twitter:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg"&gt;
+    &lt;meta name="twitter:description" content="메가박스 사이트 따라하면서 배우는 튜토리얼입니다."&gt;
+
+    &lt;!-- 웹폰트 --&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"&gt;
+
+
+    &lt;!-- HTLM5shiv ie6~8 --&gt;
+    &lt;!--[if lt IE 9]&gt; 
+      &lt;script src="assets/js/html5shiv.min.js"&gt;&lt;/script&gt;
+      &lt;script type="text/javascript"&gt;
+         alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
+      &lt;/script&gt;
+    &lt;![endif]--&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;header id="header"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="header clearfix"&gt;
+                    &lt;h1&gt;
+                        &lt;a href="#"&gt;
+                            &lt;em&gt;&lt;img src="assets/img/logo.png" alt="MEGABOX"&gt;&lt;/em&gt;
+                            &lt;strong&gt;&lt;img src="assets/img/logo-sub.png" alt="LIFE THEATER"&gt;&lt;/strong&gt;
+                        &lt;/a&gt;
+                    &lt;/h1&gt;
+                    &lt;nav id="mNav"&gt;
+                        &lt;h2 class="ir_so"&gt;메가박스 전체메뉴&lt;/h2&gt;
+                        &lt;a href="#" class="ham"&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;/nav&gt;
+                    &lt;nav class="nav"&gt;
+                        &lt;ul class="clearfix"&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;영화&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;큐레이션&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;영화관&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;특별관&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;스토어&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;이벤트&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;로그인&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;!-- //header --&gt;
+
+
+    &lt;section id="banner"&gt;
+        &lt;div class="banner_menu"&gt;
+            &lt;h2 class="ir_so"&gt;배너 영역&lt;/h2&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="bm_left"&gt;
+                        &lt;ul&gt;
+                            &lt;li class="total"&gt;&lt;a href="#"&gt;전체메뉴&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class="line"&gt;&lt;a href="#"&gt;필름 소사이어티&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;클래식 소사이어티&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;div class="bm_right"&gt;
+                        &lt;ul&gt;
+                            &lt;li class="line"&gt;&lt;a href="custom/faq.html"&gt;고객센터&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class="line"&gt;&lt;a href="#"&gt;멤버쉽&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;VIP&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;ul&gt;
+                            &lt;li class="white"&gt;&lt;a href="#"&gt;상영시간표&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class="purple"&gt;&lt;a href="#"&gt;빠른예매&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="slider"&gt;
+            &lt;div class="swiper-container"&gt;
+                &lt;div class="swiper-wrapper"&gt;
+                    &lt;div class="swiper-slide ss1"&gt;
+                        &lt;div class="container"&gt;
+                            &lt;div class="row"&gt;
+                                &lt;h3&gt;어벤져스 : 앤드게임&lt;/h3&gt;
+                                &lt;p&gt;역대 최단 기간 1000만 관객 돌파 기록 &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="swiper-slide ss2"&gt;
+                        &lt;div class="container"&gt;
+                            &lt;div class="row"&gt;
+                                &lt;h3&gt;어벤져스 : 앤드게임&lt;/h3&gt;
+                                &lt;p&gt;역대 최단 기간 1000만 관객 돌파 기록 &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="swiper-slide ss3"&gt;
+                        &lt;div class="container"&gt;
+                            &lt;div class="row"&gt;
+                                &lt;h3&gt;어벤져스 : 앤드게임&lt;/h3&gt;
+                                &lt;p&gt;역대 최단 기간 1000만 관객 돌파 기록 &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+                &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+                &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- //banner --&gt;
+
+
+    &lt;!-- 자바스크립트 라이브러리 --&gt;
+    &lt;script src="assets/js/jquery.min_1.12.4.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/modernizr-custom.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/ie-checker.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/swiper.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+            },
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;

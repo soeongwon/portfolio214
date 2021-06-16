@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="asset/css/reset.css">
+    <!-- 웹폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+    <!-- 200,300,400,700  -->
+    <style>
+        /* 전체 영역 */
+        * {margin: 0;padding: 0;}
+        .wrap {}
+        .container {width: 1200px;height: 100%;margin: 0 auto;}
+
+        /*section1*/
+        #sec1 {height: 400px;}
+        .developer {overflow: hidden;padding: 100px 0;}
+        .play {width: 50%;float: left;position: relative;}
+        .play h3 {text-align: left;padding-bottom: 30px;font-weight: bold;font-size: 30px;}
+        .play p {width: 50%;text-align: left;font-size: 17px;word-break: keep-all;padding: 0 0 20px 0;}
+        .play img {width: 150px;height: 120px;position: absolute;top: 60px;right: 70px;}
+        .play .more {font-size: 15px;color: #b6b9be;margin-top: 50px;}
+        .biz {width: 50%;float: left;position: relative;padding: 0 0 0 75px;box-sizing: border-box;}
+        .biz::before {content: '';position: absolute;height: 200px; left: 0;border-left: 1px dashed #ccc;}
+        .biz h3 {text-align: left;padding-bottom: 30px;font-weight: bold;font-size: 30px;}
+        .biz p {width: 50%;text-align: left;font-size: 17px;word-break: keep-all;padding: 0 0 20px 0;}
+        .biz img {width: 150px;height: 120px;position: absolute;top: 60px;right: 30px;}
+        .biz .more {font-size: 15px;color: #b6b9be;padding-top: 50px;position: relative;}
+
+        /* section2 */
+        #sec2 {background: #f7f9fa;}
+        .guide {padding: 70px 0;overflow: hidden;}
+        .guide h3 {font-weight: bold;font-size: 30px;padding-bottom: 35px;}
+        .guide article {float: left;width: 24%;height: 300px;margin-right: 1%;border: 1px solid #ccc;box-sizing: border-box;background: #fff;border-radius: 5px;background: url(asset/img/3.png) no-repeat;background-size: contain;}
+        .guide article .title {text-align: center;font-size: 22px;font-weight: bold;padding-top: 75px;}
+        .guide article .title em {color: #009dff}
+        .guide article p {font-size: 16px;margin: 100px 0 33px 33px;font-weight: bold;}
+        .guide article .more {font-size: 15px;color: #b6b9be;margin: 150px 0 0 33px;}
+    </style>
+</head>
+
+<body>
+    <section id="wrap">
+        <section id="section1">
+            <h2 class="ir_so">NUGU 디벨로퍼</h2>
+            <div class="container">
+                <div class="developer">
+                    <div class="play">
+                        <h3>Play Builder</h3>
+                        <p>NUGU는 간단한 코드 정의와 예시 문장 입력만으로 손쉽게 NUGU 디바이스 및 애플리케이션에서 사용 가능한 AI 서비스를 만들 수 있는 개발 툴을 지원합니다.
+                        </p>
+                        <figure>
+                            <img src="asset/img/6.png" alt="이미지1">
+                        </figure>
+                        <a href="#" class="more" title="더보기">더보기 &gt;</a>
+                    </div>
+                    <div class="biz">
+                        <h3>NUGU biz</h3>
+                        <p>회의실, 병원, 호텔처럼 공용의 공간에서 모두가 NUGU 서비스를 이용하거나, 내가 초대한 사용자에게만 AI 서비스를 제공할 수 있습니다.</p>
+                        <figure>
+                            <img src="asset/img/4.png" alt="이미지1">
+                        </figure>
+                        <a href="#" class="more" title="더보기">더보기 &gt;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section 1 -->
+
+        <section id="sec2">
+            <h2 class="ir_so">NUGU 개발 가이드</h2>
+            <div class="container">
+                <div class="guide">
+                    <h3>NUGU 개발 가이드</h3>
+                    <article class="box1">
+                        <div class="title">NUGU <em>SDK</em></div>
+                        <p>NUGU SDK 사용하기</p>
+                        <a href="#" class="more" title="더보기">더보기 &gt;</a>
+                    </article>
+                    <article class="box2">
+                        <div class="title">NUGU <em>Play</em></div>
+                        <p>Play Builder로 Play만들기</p>
+                        <a href="#" class="more" title="더보기">더보기 &gt;</a>
+                    </article>
+                    <article class="box3">
+                        <div class="title">NUGU <em>biz</em></div>
+                        <p>Setup Tool 설치 및 디바이스 등록</p>
+                        <a href="#" class="more" title="더보기">더보기 &gt;</a>
+                    </article>
+                    <article class="box4">
+                        <div class="title">NUGU <em>Play</em></div>
+                        <p>Play Builder지원 도구</p>
+                        <a href="#" class="more" title="더보기">더보기 &gt;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+    </section>
+</body>
+</html>

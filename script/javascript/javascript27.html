@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //선언적 함수
+        function func1(){
+            document.write("1. 함수가 실행되었습니다.","<br><br>");
+        }
+        func1();
+
+        //익명 함수
+        let func2 = function(){
+            document.write("2. 함수가 실행되었습니다.","<br><br>");
+        }
+        func2();
+
+        //매개 변수가 있는 함수
+        function func3(text){
+            document.write(text,"<br><br>");
+        }
+        func3("3. 함수가 실행되었습니다.");
+
+        //리턴값이 있는 함수
+        function func4(){
+            let str = "4. 함수가 실행되었습니다."
+            return str;
+        }
+        let value = func4();
+        document.write(value,"<br><br>");
+
+        //화살표 함수
+        func5 = () => {
+            document.write("5. 함수가 실행되었습니다.","<br><br>");
+        }
+        func5();
+
+        //화살표 함수(익명)
+        const func6 = () => {
+            document.write("6. 함수가 실행되었습니다.","<br><br>");
+        }
+        func6();
+
+        //화살표 함수(리턴문)
+        const func7 = () => {
+            let str = "7. 함수가 실행되었습니다."
+            return str;
+        }
+        document.write(func7(),"<br><br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

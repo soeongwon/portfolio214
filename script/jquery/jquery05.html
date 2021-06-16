@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery05</title>
+</head>
+<body>
+    <h2>기본필터 선택자</h2>
+    <div class="list">
+        <ul>
+            <li>:eq()</li>
+            <li style="opacity: 0;">:last</li>
+            <li>:gt()</li>
+            <li style="display: none;">:lt()</li>
+            <li>:header</li>
+            <li>:first</li>                                  
+            <li style="visibility: hidden;">:last</li>
+            <li>:even</li>
+            <li>:not()</li>
+        </ul>
+    </div>
+    
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        $(".list li:visible").css("color","blue");        //보여진건 파란색
+        $(".list li:hidden").show().css("color","red");    //display: none; 만 보여줌 
+    </script>
+</body>
+</html>

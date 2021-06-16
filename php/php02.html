@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP 02</title>
+    <script>
+        let javascript = "javascript"
+
+        document.write(javascript, "<br>");
+        document.write("나는 "+ javascript +"를 배우고 있습니다. <br>");
+        document.write(`나는 ${javascript} 를 배우고 있습니다. <br><br>`); //템플릿 리터럴
+    </script>
+</head>
+<body>
+    <?php 
+        $php = "php";
+
+        echo $php;
+        echo "<br>";
+        echo "나는 " .$php. "를 배우고 있습니다.";
+        echo "<br>";
+        echo "나는 {$php}를 배우고 있습니다."
+    ?>
+</body>
+</html>

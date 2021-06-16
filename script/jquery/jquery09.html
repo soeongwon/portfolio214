@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+   
+</head>
+
+<body>
+    <h1>필터링</h1> 
+    <div class="list">
+        <ul>
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10
+                <ul>
+                    <li>sublist1</li>
+                    <li>sublist2</li>
+                    <li>sublist3</li>
+                    <li>sublist4</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- jQuery -->
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        //리스트2의 글씨 색을 빨간 색으로 변경
+        // $(".list2").css("color","red");
+        // $(".list li:nth-child(2)").css("color","red");
+        // $(".list1+li").css("color","red");
+        // $(".list li[class|='list2']").css("color","red");
+        // $(".list li[class*='list2'").css("color","red");
+        // $(".list li[class$='list2']").css("color","red");
+        // $(".list li[class~='list2']").css("color","red");
+        // $(".list li:eq(1)").css("color","red");
+        // $(".list li").eq(1).css("color","red");
+        // $(".list li:nth-last-child(9)").css("color","red");
+        // $(".list li:nth-of-type(2)").css("color","red");
+        // $(".list li.list1").nextUntil(".list3").css("color","red");
+        // $(".list li.list3").prev().css("color","red");
+        // $(".list li.list3").prevUntil(".list1").css("color","red");
+        // $(".list li").filter(".list2").css("color","red");
+        $(".list li").slice(1,2).css("color","red");
+
+    </script>
+
+</body>
+
+</html>

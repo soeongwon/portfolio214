@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery04</title>
+</head>
+<body>
+    <h2>기본필터 선택자</h2>
+    <div class="list">
+        <ul>
+            <li>:eq()</li>
+            <li>:gt()</li>
+            <li>:lt()</li>
+            <li>:header</li>
+            <li>:first</li>
+            <li>:last</li>
+            <li></li>
+            <li>:even</li>
+            <li>:not()</li>
+        </ul>
+    </div>
+
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        // $(".list li:contains(:last)").css("color","red");
+        // $(".list li:empty)").css("color","red");
+        // $(".list li:parent").css("color","red");
+        $(".list ul:has(li)").css("color","red");  //ul에서 li를 찾음 : 태그를 찾음
+    </script>
+</body>
+</html>

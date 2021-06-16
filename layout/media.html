@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>mediaQuery</title>
+	<style>
+		body {background-color: #ff4081; color: #fff;}
+		h1::before {content: '1';}
+		h1::after {content: ' - 기본';}
+
+		/* 화면 너비가 0 ~ 1280 이상 데스크탑, tv, 레티나*/
+		@media (max-width: 1280px){
+			body {background-color: #4a148c;}
+			h1::before {content: '2';}
+			h1::after {content: ' - 1280px';}
+		}
+
+		/* 화면 너비가 0 ~ 1024 이상 노트북*/
+		@media (max-width: 1024px){
+			body {background-color: #1a237e;}
+			h1::before {content: '3';}
+			h1::after {content: ' - 1024px';}
+		}
+		
+
+		/* 화면 너비가 0 ~ 960 이상 노트북*/
+		@media (max-width: 960px){
+			body {background-color: #1de9b6;}
+			h1::before {content: '4';}
+			h1::after {content: ' - 960px';}
+		}
+		
+
+		/* 화면 너비가 0 ~ 768 이상 태블릿*/
+		@media (max-width: 768px){
+			body {background-color: #d4e157;}
+			h1::before {content: '5';}
+			h1::after {content: ' - 768px';}
+		}
+		
+
+		/* 화면 너비가 0 ~ 480 이상 모바일*/
+		@media (max-width: 480px){
+			body {background-color: #2e7d32;}
+			h1::before {content: '6';}
+			h1::after {content: ' - 480px';}
+		}
+			
+	</style>
+</head>
+<body>
+	<h1>미디어 쿼리</h1>
+	<p>미디어 쿼리는 화면 크기에 따른 각각의 속성 값을 지정하여, 여러가지 화면을 구성하는 기술입니다. CSS2에서는 'print','screen'에서 사용하던 것을 CSS3에서는 확대되어 스크린 폭/높이 등 여러가지 관련 정보를 이용하여 스타일 속성을 바꿀 수 있습니다</p>
+</body>
+</html>
