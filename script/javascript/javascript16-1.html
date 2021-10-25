@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let site2 = prompt("방은영, 김길록, 서경민, 홍예라 중 자주 가는 사이트는?");
+        let url2;
+
+        if(site2 == "방은영"){
+            url2 = "http://mine002.dothome.co.kr/"
+        } else if (site2 == "김길록") {
+            url2 = "http://loga301.dothome.co.kr/"
+        } else if (site2 == "서경민") {
+            url2 = "http://mr1011.dothome.co.kr/"
+        } else if (site2 == "홍예라") {
+            url2 = "http://dpfk1994.dothome.co.kr/"
+        } else {
+            document.write("그런 사이트는 없습니다.")
+        }
+        console.log(url2);
+
+        location.href = url2;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

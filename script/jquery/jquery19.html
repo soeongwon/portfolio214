@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style> 
+        .circle {width: 100px; height: 100px; line-height: 100px; color: #c7254e; background: #f9f2f4; border: 1px dashed #a51a3d; text-align: center; border-radius: 5px;}
+    </style>
+</head>
+<body>
+    <h1>offset</h1>
+
+    <div class="circle">
+        circle
+    </div>
+
+    <p class="desc">
+        <span>offset().left :</span> <span class="ol">0</span>px<br>
+        <span>offset().top :</span> <span class="ot">0</span>px<br>
+        <span>position().left :</span> <span class="pl">0</span>px<br>
+        <span>position().top :</span> <span class="pt">0</span>px<br>
+    </p>
+    <button class="btn1">btn1</button>
+    <!-- jQuery -->
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="jquery-ui-1.12.1.min.js"></script>
+    <script>
+        $(".desc .ol").text($(".circle").offset().left);
+        $(".desc .ot").text($(".circle").offset().top);
+        $(".desc .pl").text($(".circle").position().left);
+        $(".desc .pt").text($(".circle").position().top);
+
+        $(".circle").draggable({
+            start: function() {
+                $('.circle').css("borderRadius","40px")
+            },
+            drag: function() {
+                $('.circle').css("borderRadius","100px")
+                $(".desc .ol").text($(".circle").offset().left);
+                $(".desc .ot").text($(".circle").offset().top);
+                $(".desc .pl").text($(".circle").position().left);
+                $(".desc .pt").text($(".circle").position().top);
+            },
+            stop: function() {
+                $('.circle').css("borderRadius","10px")
+            }
+        });
+
+        $(".btn1").click(function(){
+            $(".circle").offset({top: "500", left: "500" });
+        });
+    </script>
+</body>
+</html>

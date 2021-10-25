@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>속성</h1>
+    <div class="list">
+        <img src="img/1 (1).jpg" alt="이미지">
+    </div>
+    <p class="desc"></p>
+    
+    <button class="btn1">이미지 주소 알아내기</button>
+    <button class="btn2">alt값 알아내기</button>
+    <button class="btn3">이미지 바꾸기</button>
+
+    <button class="btn4">alt값 바꾸기</button>
+    <button class="btn5">이미지 크기 변경하기</button>
+    <!-- jQuery -->
+    <script src="jquery-1.12.4.min.js"></script>
+
+    <script>
+        //버튼을 클릭 -> 이미지 -> 주소 값을 가져온다
+        let img = $(".list img").attr("src");
+        let alt = $(".list img").attr("alt");
+
+        $(".btn1").click(function(){
+            $(".desc").text(img)
+        });
+        //버튼2를 클릭 -> 이미지 -> alt값을 가져온다
+        $(".btn2").click(function(){
+            $(".desc").text(alt)
+        });
+
+        //버튼3을 클릭 -> 이미지속성을 변경
+        $(".btn3").click(function(){
+            $(".list img").attr("src", "img/1 (2).jpg")
+        });
+
+        //버튼4 클릭 -> alt값을 변경
+        $(".btn4").click(function(){
+            $(".list img").attr("alt","이미지2")
+        });
+
+        //버튼5 클릭 -> 이미지 크기 변경
+        $(".btn5").click(function(){
+            $(".list img").attr("width","300")
+        });
+    </script>
+</body>
+</html>

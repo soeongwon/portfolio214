@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .red > li {font-size: 90%; color: #c7254e; white-space: normal; 
+        background: #f9f2f4; border: 1px dashed #a51a3d; border-radius: 4px;
+        padding: 10px; margin: 10px;}
+        .blue {font-size: 90%; color: #3d90b7; white-space: normal; 
+        background: #e7f6fd; border: 1px dashed #3d90b7; border-radius: 4px;
+        padding: 0px 6px 2px 6px;}
+    </style>
+</head>
+<body>
+    <div class="list">
+        <ul class="red">
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+    </div>
+    <p class="desc"></p>
+    <button class="btn1">btn1</button>
+    <button class="btn2">btn2</button>
+    <button class="btn3">btn3</button>
+    <button class="btn4">btn4</button>
+    <button class="btn5">btn5</button>
+    <button class="btn6">btn6</button>
+
+    <!-- jQuery -->
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+       function he(el, height){
+           $(".desc").text(el + "은 " + height + "px");
+       }
+       $(".btn1").click(function(){
+           const h = $("li").height();
+           he("리스트의 height값",h)
+       });
+       $(".btn2").click(function(){
+           const h = $("li").innerHeight();
+           he("리스트의 innerHeight값",h)
+       });
+       $(".btn3").click(function(){
+           const h = $("li").outerHeight();
+           he("리스트의 outerHeight값",h)
+       });
+
+    </script>
+</body>
+</html>

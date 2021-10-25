@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1분 = 1000(ms)
+        //1분(60초) = 1000 * 60 //60,000
+        //1시간(60분) = 1000 * 60 * 60 //3,600,000
+        //1일(60분 * 24) = 1000 * 60 * 60 *24 //86,400,000 
+
+        window.onload = function(){
+            let today = new Date();
+            let dDay = new Date("Feb 27, 2020");
+
+            let interval = today.getTime() - dDay.getTime();
+            interval = Math.floor(interval / (1000 * 60 * 60 * 24));
+
+            document.write("앞으로 수료일은 "+ interval + "일 남았습니다.");
+        }
+    </script>
+    
+</body>
+</html>

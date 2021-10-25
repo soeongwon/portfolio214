@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        span {text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <h1 id="h1">나를 비춰주는 찬란한 빛 동쪽하늘 내 줄리엣은 태양 오 태양아 달님을 죽여다오</h1>
+    <script>
+        let text = document.getElementById("h1").textContent;
+
+        let spanText = text.split(" ").join("</span><span>");
+            spanText = "<span>" + spanText + "</span>";
+        
+        let spanText2 = text.split(" ").join("</span> <span>");
+            spanText2 = "<span>" + spanText2 + "</span>";
+
+        document.write(spanText, "<br>");
+        document.write(spanText2);
+    </script>
+</body>
+</html>

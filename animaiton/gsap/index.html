@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="seongwon">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, publisher, css3, html, markup">
+    <title>황성원 | Study | GSAP ANIMATION</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon_114.png">
+    <link rel="icon" href="../../assets/ico/icon.png">
+    <link rel="icon" href="../../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="128x128">
+
+     <!-- Facebook meta tags -->
+     <meta property="og:type" content="article" />
+     <meta property="og:title" content="seongwon" />
+     <meta property="og:url" content="https://soeongwon.github.io/portfolio214/index.html" />
+     <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+     <meta property="og:site_name" content="seongwon" />
+     <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet:800&display=swap" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+        .abox {background: #f4f8fa; padding: 10px; } 
+        .circle {width: 60px; height: 60px; text-align: center; line-height: 60px; border-radius: 50%; margin: 10px; position: relative; background: #000; background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); color: #fff;}
+        .btn {background: #f6d365; border-radius: 3px; color: #fff;}
+    </style>
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../../index.html" class="navbar-brand">seongwon'S&lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://20124310.tistory.com/">tistory</a></li>
+                    <li><a href="https://github.com/soeongwon">github</a></li>
+                    <li><a href="https://wtss.tistory.com/">Tutor</a></li>
+                    <li><a href="https://wess.tistory.com/">Edu</a></li>
+                    <li><a href="https://wsss.tistory.com/">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs5" id="content">
+        <div class="container">
+            <h1>SVG Animation Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="https://soeongwon.github.io/portfolio214/index.html" target="_blank">https://soeongwon.github.io/portfolio214/index.html</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+
+            <div class="col-md-9" role="main">
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">GSAP</h2>
+                    <p>The GreenSock Animation Platform (GSAP)는 프론트엔드 개발자와 디자이너들이 쉽게 사용할 수 있는 아주 강력한 타임라인기반의 애니메이션 자바스크립트 라이브러리 입니다. 이 GSAP는 애니메이션 시퀀스에 관련해서 CSS의 keyframe과 animation 보다 더 정밀한 컨트롤을 할 수 있어요.</p>
+
+                    <p>기존의 CSS 애니메이션과 javaScript 애니메이션보다 사용성이 편하고, 탁월한 퍼포먼스가 돋보이는 애니메이션 전용 라이브러리입니다.</p>
+
+                    <h3>GSAP 구성</h3>
+                    <ul>
+                        <li>Tweenlite : GSAP의 애니메이션 객체와 그 속성을 조절하는 코어 엔진입니다. 이 파일은 필수 객체만 포함하고 있는 경량화 파일이지만. 기본적인 애니메이션을 모두 처리할 수 있으며, 다른 특수한 기능을 추가로 로드해서 사용할 수도 있습니다.
+                        </li>
+                        <li>TweenMax : Tweenlite가 반드시 필요한 기능만 묶은 경량화 코어 파일이라면, TweenMax는 TweenLite 기능은 물론이고, 애니메이션 작업에 필요한 대부분의 기능을 커버하는 다양한 플러그인도 다수 포함하고 있는 풀버전 파일입니다. 유료 기능은 포함하고 있지 않습니다.
+                        </li>
+                        <li>TimelineLite : GSAP의 핵심 기능이라고 할 수 있으며, CSS가 오직 지연시간만을 이용해서 각 애니메이션의 타이밍을 결정한다고 하면, GSAP는 타임라인에 기초한 시퀀싱, 즉 순차재생이 가능하기 때문에 여러 애니메이션을 유기적으로 연결하거나 수정하기가 편리합니다.
+                        </li>
+                        <li>TimelineMax : TimelineLite의 확장된 파일이며, repeat, repeatDelay, yoyo 등의 부가기능이 포함되어 있습니다.</li>
+                    </ul>
+                    <p>gsap 사용하기</p>
+<pre class="line-numbers language-markup"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;GSAP&lt;/title&gt;
+
+    &lt;!-- CDN GSAP3 --&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- CDN TweenLite --&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- CDN jQuery + GSAP --&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/jquery.gsap.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- CDN CSS Plugin --&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+                </div>
+                <!-- //Intro1 -->
+
+
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">TweenMaox.to
+                        <span class="btn" id="btn1-1">jQeury click</span>
+                        <span class="btn" id="btn1-2">GSAP click</span>
+                        <span class="btn" id="reset1">reset</span>
+                    </h2> 
+
+                    <div class="abox box1">
+                        <div class="circle circle1">circle</div>
+                    </div>
+                    <h4>TweenMaox.to</h4>
+<pre class="line-numbers language-js"><code>$("#reset1").click(function(){
+    $(".circle1").animate({left: "0"},0);
+});
+//jQuery
+$("#btn1-1").click(function(){
+    $(".circle1").animate({left: "80%"},1000);
+});
+//jQuery + GSAP
+$("#btn1-2").click(function(){
+     TweenMax.to(".circle1", 1, {left: "80%"});
+});
+
+//javaScript
+const btn1_2 = document.getElementById("btn1-2");
+
+btn1_2.addEventListener("click", moveStart1);
+
+function moveStart1(){
+    TweenMax.to(".circle1", 1, {left: "80%"});
+};
+</code></pre>
+                </div>
+                <!-- //Intro2 -->
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">TweenMaox.to
+                        <span class="btn" id="btn3-1">jQeury click</span>
+                        <span class="btn" id="btn3-2">GSAP click</span>
+                        <span class="btn" id="reset3">reset</span>
+                    </h2> 
+
+                    <div class="abox box3">
+                        <div class="circle circle3-1">circle</div>
+                        <div class="circle circle3-2">circle</div>
+                        <div class="circle circle3-3">circle</div>
+                    </div>
+                    <h4>여러개 움직이기</h4>
+<pre class="line-numbers language-js"><code>//reset
+$("#reset3").click(function(){
+    $(".circle3-1, .circle3-2, .circle3-3").animate({left: "0"},0);
+});
+
+//jQuery
+$("#btn3-1").click(function(){
+    $(".circle3-1, .circle3-2, .circle3-3").animate({left: "80%"},1000);
+});
+
+//jQuery + GSAP
+$("#btn3-2").click(function(){
+        TweenMax.to([".circle3-1, .circle3-2, .circle3-3"], 1, {left : "80%"});
+});
+
+//javaScript
+const btn3_2 = document.getElementById("btn3-2");
+
+btn3_2.addEventListener("click",moveStart3);
+
+function moveStart3(){
+    TweenMax.to(".circle3-1, .circle3-2, .circle3-3", 1, {left: "80%"});
+};
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">TweenMaox.to
+                        <span class="btn" id="btn4-1">jQeury click</span>
+                        <span class="btn" id="btn4-2">GSAP click</span>
+                        <span class="btn" id="reset4">reset</span>
+                    </h2> 
+
+                    <div class="abox box4">
+                        <div class="circle circle4">circle</div>
+                    </div>
+                    <h4>100px씩 움직이기</h4>
+<pre class="line-numbers language-js"><code>//reset
+$("#reset4").click(function(){
+    $(".circle4").animate({left: "0"},0);
+});
+
+//jQuery
+$("#btn4-1").click(function(){
+    $(".circle4").animate({left: "+=100"},1000);
+});
+
+//jQuery + GSAP
+$("#btn4-2").click(function(){
+     TweenMax.to([".circle4"], 1, {left : "+=100"});
+});
+
+//javaScript
+const btn4_2 = document.getElementById("btn4-2");
+
+btn4_2.addEventListener("click",moveStart4);
+
+function moveStart4(){
+    TweenMax.to(".circle4", 1, {left: "+=100"});
+};
+</code></pre>
+                </div>
+                <!-- //Intro4 -->
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">TweenMaox.from
+                        <span class="btn" id="btn5-1">jQeury click</span>
+                        <span class="btn" id="btn5-2">GSAP click</span>
+                        <span class="btn" id="reset5">reset</span>
+                    </h2> 
+
+                    <div class="abox box5">
+                        <div class="circle circle5">circle</div>
+                    </div>
+                    <h4>TweenMaox.from</h4>
+<pre class="line-numbers language-js"><code>//reset
+$("#reset5").click(function(){
+    $(".circle5").animate({left: "0"},0);
+});
+
+//jQuery
+$("#btn5-1").click(function(){
+    alert("제이쿼리에는 이런 기능이 없음");
+});
+
+//jQuery + GSAP
+$("#btn5-2").click(function(){
+    TweenMax.from([".circle5"], 1, {left : "80%"});
+});
+</code></pre>
+                </div>
+                <!-- //Intro5 -->
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">Transform - scale
+                        <span class="btn" id="btn6-1">jQeury click</span>
+                        <span class="btn" id="btn6-2">GSAP click</span>
+                        <span class="btn" id="reset6">reset</span>
+                    </h2> 
+
+                    <div class="abox box6">
+                        <div class="circle circle6">circle</div>
+                    </div>
+                    <h4>Transform - scale</h4>
+<pre class="line-numbers language-js"><code> //reset
+$("#reset6").click(function(){
+    $(".circle6").animate({left: "0"},0);
+    $(".circle6").css({transform: "scale(1)"});
+});
+
+//jQuery
+$("#btn6-1").click(function(){
+    $(".circle6").animate({left: "80%"},1000);
+    $(".circle6").css({transform: "scale(2)"}); //animate는 transform작동 안됨
+});
+
+//jQuery + GSAP
+$("#btn6-2").click(function(){
+    TweenMax.to([".circle6"], 1, {left : "80%", scale: "2" });
+});
+</code></pre>
+                </div>
+                <!-- //Intro6 -->
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">Transform - radius
+                        <span class="btn" id="btn7-1">jQeury click</span>
+                        <span class="btn" id="btn7-2">GSAP click</span>
+                        <span class="btn" id="reset7">reset</span>
+                    </h2> 
+
+                    <div class="abox box7">
+                        <div class="circle circle7">circle</div>
+                    </div>
+                    <h4>Transform - radius</h4>
+<pre class="line-numbers language-js"><code>//reset
+$("#reset7").click(function(){
+    $(".circle7").animate({left: "0", borderRadius: "50%"},0);
+});
+
+//jQuery
+$("#btn7-1").click(function(){
+    $(".circle7").animate({left: "80%", borderRadius: "0%"},1000);
+});
+
+//jQuery + GSAP
+$("#btn7-2").click(function(){
+    TweenMax.to([".circle7"], 1, {left : "80%", borderRadius: "0%" });
+});
+</code></pre>
+                </div>
+                <!-- //Intro7 -->
+                <!-- Intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">Transform - skewX
+                        <span class="btn" id="btn8-1">jQeury click</span>
+                        <span class="btn" id="btn8-2">GSAP click</span>
+                        <span class="btn" id="reset8">reset</span>
+                    </h2> 
+
+                    <div class="abox box8">
+                        <div class="circle circle8-1">circle</div>
+                        <div class="circle circle8-2">circle</div>
+                        <div class="circle circle8-3">circle</div>
+                    </div>
+                    <h4>Transform - skewX</h4>
+<pre class="line-numbers language-js"><code>//reset
+$("#reset8").click(function(){
+    $(".circle8-1, .circle8-2, .circle8-3").animate({left: "0"},0).css({transform: "skewX(0deg)"});
+    TweenMax.to([".circle8-1"], 0, {left : "0", skewX: "0" });
+    TweenMax.to([".circle8-2"], 0, {left : "0", skewX: "0" });
+    TweenMax.to([".circle8-3"], 0, {left : "0", skewX: "0" });
+});
+
+//jQuery
+$("#btn8-1").click(function(){
+    $(".circle8-1").animate({left: "80%"},2000).css({transform: "skewX(30deg)"});
+    $(".circle8-2").animate({left: "80%"},2000).css({transform: "skewX(330deg)"});
+    $(".circle8-3").animate({left: "80%"},2000).css({transform: "skewX(660deg)"});
+    
+});
+
+//jQuery + GSAP
+$("#btn8-2").click(function(){
+    TweenMax.to([".circle8-1"], 2, {left : "80%", skewX: "30deg" });
+    TweenMax.to([".circle8-2"], 2, {left : "80%", skewX: "330deg" });
+    TweenMax.to([".circle8-3"], 2, {left : "80%", skewX: "660deg" });
+});
+</code></pre>
+                </div>
+                <!-- //Intro8 -->
+                <!-- Intro9 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro9" class="page-header">Delay
+                        <span class="btn" id="btn9-1">jQeury click</span>
+                        <span class="btn" id="btn9-2">GSAP click</span>
+                        <span class="btn" id="reset9">reset</span>
+                    </h2> 
+
+                    <div class="abox box9">
+                        <div class="circle circle9-1">circle</div>
+                        <div class="circle circle9-2">circle</div>
+                        <div class="circle circle9-3">circle</div>
+                    </div>
+                    <h4>Delay</h4>
+<pre class="line-numbers language-js"><code>//reset
+$("#reset9").click(function(){
+    $(".circle9-1, .circle9-2, .circle9-3").animate({left: "0"},0);
+    TweenMax.to([".circle9-1"], 0, {left : "0%",rotationY: "0deg" });
+    TweenMax.to([".circle9-2"], 0, {left : "0%",rotationY: "0deg" });
+    TweenMax.to([".circle9-3"], 0, {left : "0%",rotationY: "0deg" });
+});
+
+//jQuery
+$("#btn9-1").click(function(){
+    $(".circle9-1").delay(500).animate({left: "80%"},1000);
+    $(".circle9-2").delay(700).animate({left: "80%"},1000);
+    $(".circle9-3").delay(900).animate({left: "80%"},1000);
+    
+});
+
+//jQuery + GSAP
+$("#btn9-2").click(function(){
+    TweenMax.to([".circle9-1"], 2, {left : "80%", delay: 1, rotationY: "360deg" });
+    TweenMax.to([".circle9-2"], 2, {left : "80%", delay: 2, rotationY: "720deg" });
+    TweenMax.to([".circle9-3"], 2, {left : "80%", delay: 3, rotationY: "1080deg" });
+});
+</code></pre>
+                </div>
+                <!-- //Intro9 -->
+                <!-- Intro10 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro10" class="page-header">Easing
+                        <span class="btn" id="btn10-1">jQeury click</span>
+                        <span class="btn" id="btn10-2">GSAP click</span>
+                        <span class="btn" id="reset10">reset</span>
+                    </h2> 
+
+                    <div class="abox box10">
+                        <div class="circle circle10-1">circle</div>
+                        <div class="circle circle10-2">circle</div>
+                        <div class="circle circle10-3">circle</div>
+                        <div class="circle circle10-4">circle</div>
+                        <div class="circle circle10-5">circle</div>
+                        <div class="circle circle10-6">circle</div>
+                        <div class="circle circle10-7">circle</div>
+                        <div class="circle circle10-8">circle</div>
+                    </div>
+                    <h4>Easing</h4>
+<pre class="line-numbers language-js"><code>//reset
+$("#reset10").click(function(){
+    $(".box10>div").animate({left: "0"},0);
+    TweenMax.to([".box10>div"], 0, {left : "0%", ease: "none"});
+});
+
+//jQuery
+$("#btn10-1").click(function(){
+    $(".circle10-1").animate({left: "80%"},1000, "easeOutQuart");
+    $(".circle10-2").animate({left: "80%"},1000, "easeOutBounce");
+    $(".circle10-3").animate({left: "80%"},1000, "easeOutElastic");
+    $(".circle10-4").animate({left: "80%"},1000, "easeOutCirc");
+    $(".circle10-5").animate({left: "80%"},1000, "easeInCirc");
+    $(".circle10-6").animate({left: "80%"},1000, "easeInOutExpo");
+    $(".circle10-7").animate({left: "80%"},1000, "easeInExpo");
+    $(".circle10-8").animate({left: "80%"},1000, "easeInOutQuint");
+});
+
+//jQuery + GSAP
+$("#btn10-2").click(function(){
+    TweenMax.to([".circle10-1"], 2, {left : "80%", ease: "power1"});
+    TweenMax.to([".circle10-2"], 2, {left : "80%", ease: "back"});
+    TweenMax.to([".circle10-3"], 2, {left : "80%", ease: "bounce.out"});
+    TweenMax.to([".circle10-4"], 2, {left : "80%", ease: "power2"});
+    TweenMax.to([".circle10-5"], 2, {left : "80%", ease: "steps(12)"});
+    TweenMax.to([".circle10-6"], 2, {left : "80%", ease: "expo"});
+    TweenMax.to([".circle10-7"], 2, {left : "80%", ease: "power3"});
+    TweenMax.to([".circle10-8"], 2, {left : "80%", ease: "elastic"});
+});
+</code></pre>
+                </div>
+                <!-- //Intro10 -->
+                <!-- Intro11 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro11" class="page-header">Callacks
+                        <span class="btn" id="btn11-1">jQeury click</span>
+                        <span class="btn" id="btn11-2">GSAP click</span>
+                        <span class="btn" id="reset11">reset</span>
+                    </h2> 
+
+                    <ul>
+                        <li>onComplete: 애니메이션이 완료되었을 때</li>
+                        <li>onStart: 애니메이션이 시작할 때</li>
+                        <li>onUpdate: 애니메이션이 업데이트 될 때마다</li>
+                        <li>onRepeat: 애니메이션이 반복될 때</li>
+                        <li>onReverseComplete: 애니메이션이 리버스되고 완료되었을 때</li>
+                    </ul>
+
+                    <div class="abox box11">
+                        <div class="circle circle11">circle</div>
+                    </div>
+                    <h4>Easing</h4>
+<pre class="line-numbers language-js"><code>//reset
+$("#reset11").click(function(){
+    $(".circle11").animate({left: "0"},0);
+});
+
+//jQuery
+$("#btn11-1").click(function(){
+    $(".circle11").animate({left: "80%"},1000, "easeOutQuart", function(){
+        $(".circle11").animate({left: "0"},1000,"easeOutQuart");
+    });
+});
+
+//jQuery + GSAP
+$("#btn11-2").click(function(){
+    TweenMax.to([".circle11"], 2, {left : "80%", rotationX: "360deg", ease: "power1.out",onComplete: complete});
+});
+function complete(){
+    TweenMax.to(".circle11",1,{left: "0", rotationX: "0deg"});
+};
+</code></pre>
+                </div>
+                <!-- //Intro11 -->
+                <!-- Intro12 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro12" class="page-header">Controlling
+                        <span class="btn" id="btn12-1">play</span>
+                        <span class="btn" id="btn12-2">pause</span>
+                        <span class="btn" id="btn12-3">resume</span>
+                        <span class="btn" id="btn12-4">reverse</span>
+                        <span class="btn" id="btn12-5">seek(0.5)</span>
+                        <span class="btn" id="btn12-6">timeScale(0.5)</span>
+                        <span class="btn" id="btn12-7">timeScale(2)</span>
+                        <span class="btn" id="btn12-8">kill()</span>
+                        <span class="btn" id="btn12-9">restart()</span>
+                        <span class="btn" id="reset12">reset</span>
+                    </h2> 
+
+
+                    <div class="abox box12">
+                        <div class="circle circle12">circle</div>
+                    </div>
+                    <h4>Controlling</h4>
+<pre class="line-numbers language-js"><code>const tween = TweenMax.to(".circle12",10,{left: "90%", borderRadius: "0%", rotation: "720deg"});
+tween.pause();
+
+$("#reset12").click(function(){
+    TweenMax.to(".circle12",0,{left: "0%", borderRadius: "50%", rotation: "0deg"});
+});
+
+
+$("#btn12-1").click(function(){tween.play()});
+$("#btn12-2").click(function(){tween.pause()});
+$("#btn12-3").click(function(){tween.resume()});
+$("#btn12-4").click(function(){tween.reverse()});
+$("#btn12-5").click(function(){tween.seek(0.5)});
+$("#btn12-6").click(function(){tween.timeScale(0.5)});
+$("#btn12-7").click(function(){tween.timeScale(2)});
+$("#btn12-8").click(function(){tween.kill()});
+$("#btn12-9").click(function(){tween.restart()});
+</code></pre>
+                </div>
+                <!-- //Intro12 -->
+                <!-- Intro13 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro13" class="page-header">Timeline1
+                        <span class="btn" id="btn13-1">jQeury click</span>
+                        <span class="btn" id="btn13-2">GSAP click</span>
+                        <span class="btn" id="btn13-3">GSAP click2</span>
+                        <span class="btn" id="reset13">reset</span>
+                    </h2> 
+
+
+                    <div class="abox box13">
+                        <div class="circle circle13">circle</div>
+                    </div>
+                    <h4>Timeline1</h4>
+<pre class="line-numbers language-js"><code>//reset
+$("#reset13").click(function(){
+    $(".circle13").animate({ left : "0", borderRadius: "50%"}, 0);
+    $(".circle13").css({ "background-image" : "linear-gradient(120deg, #f6d365 0%, #fda085 100%)"})
+});
+//jquery
+$("#btn13-1").click(function(){
+    $('.circle13')
+        .animate({ left: "80%"}, 500)
+        .animate({ height: "300px"}, 500, "easeOutQuad")
+        .animate({ opacity: "0.5", borderRadius: "0%"}, 500, "easeOutElastic")
+        .animate({ height: "60px"}, 500, "easeOutQuad")
+        .animate({ opacity: "1", left: "0", borderRadius: "50%"}, 500)
+});
+//jquery + GSAP
+$("#btn13-2").click(function(){
+    const tl = new TimelineLite();
+    tl.to(".circle13", 0.5, {left: "80%"});
+    tl.to(".circle13", 0.5, {height: "300px", ease : "power4.out"});
+    tl.to(".circle13", 0.5, {opacity: "0.5", borderRadius: "0", ease : "power2.out"});
+    tl.to(".circle13", 0.5, {height: "60px", ease : "power2.out"});
+    tl.to(".circle13", 0.5, {opacity: "1", left: "0", borderRadius: "50%"});
+});
+//jquery + GSAP
+$("#btn13-3").click(function(){
+    const tl = new TimelineLite();
+    tl.to(".circle13", 1, {left: "80%", scale: "0.5", rotation:"100deg" });
+    tl.to(".circle13", 2, {left: "0%", opacity: 0.5, skewY: "720deg", rotation:"300deg", scale: "1" });
+    tl.to(".circle13", 1, {left: "90%", rotation:"1000deg" , borderRadius: "0%", 
+        scale: "0.5", backgroundImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"});
+    tl.to(".circle13", 1, {rotation:"-2000deg"});
+    tl.to(".circle13", 1, {opacity:1, left: "0", scale: "1", rotation:"-0deg"});
+});
+</code></pre>
+                </div>
+                <!-- //Intro13 -->
+
+                
+
+            
+            </div>
+            <!-- //col-md-9 -->
+
+            <!-- //col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#intro1">GSAP</a></li>
+                        <li><a href="#intro2">TweenMaox.to</a></li>
+                        <li><a href="#intro3">TweenMaox.to - 여러개 움직이기</a></li>
+                        <li><a href="#intro4">TweenMaox.to - 100px씩 움직이기</a></li>
+                        <li><a href="#intro5">TweenMaox.from</a></li>
+                        <li><a href="#intro6">Transform - scale</a></li>
+                        <li><a href="#intro7">Transform - radius</a></li>
+                        <li><a href="#intro8">Transform - skewX</a></li>
+                        <li><a href="#intro9">Delay</a></li>
+                        <li><a href="#intro10">Easing</a></li>
+                        <li><a href="#intro11">Callbacks</a></li>
+                        <li><a href="#intro12">Controlling</a></li>
+                        <li><a href="#intro13">Timeline1</a></li>
+                        
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+    <!-- CDN GSAP3 -->
+    <script src="js/gsap.min.js"></script>
+
+    <!-- CDN TweenLite -->
+    <script src="js/TimelineLite.min.js"></script>
+    <script src="js/TimelineMax.min.js"></script>
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+
+    <!-- CDN jQuery + GSAP -->
+    <script src="js/jquery.gsap.min.js"></script>
+
+    <!-- CDN CSS Plugin -->
+    <script src="js/CSSPlugin.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <script src="../../assets/js/prism.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        
+
+        //reset
+        $("#reset1").click(function(){
+            $(".circle1").animate({left: "0"},0);
+        });
+        //jQuery
+        $("#btn1-1").click(function(){
+            $(".circle1").animate({left: "80%"},1000);
+        });
+        //jQuery + GSAP
+        // $("#btn1-2").click(function(){
+        //     TweenMax.to(".circle1", 1, {left: "80%"});
+        // });
+
+        //javaScript
+        const btn1_2 = document.getElementById("btn1-2");
+
+        btn1_2.addEventListener("click", moveStart1);
+
+        function moveStart1(){
+            TweenMax.to(".circle1", 1, {left: "80%"});
+        };
+
+        //sample3__________________________________
+        //reset
+        $("#reset3").click(function(){
+            $(".circle3-1, .circle3-2, .circle3-3").animate({left: "0"},0);
+        });
+        
+        //jQuery
+        $("#btn3-1").click(function(){
+            $(".circle3-1, .circle3-2, .circle3-3").animate({left: "80%"},1000);
+        });
+        
+        //jQuery + GSAP
+        // $("#btn3-2").click(function(){
+        //     TweenMax.to([".circle3-1, .circle3-2, .circle3-3"], 1, {left : "80%"});
+        // });
+
+        //javaScript
+        const btn3_2 = document.getElementById("btn3-2");
+
+        btn3_2.addEventListener("click",moveStart3);
+
+        function moveStart3(){
+            TweenMax.to(".circle3-1, .circle3-2, .circle3-3", 1, {left: "80%"});
+        };
+
+        //sample4__________________________________
+        //reset
+        $("#reset4").click(function(){
+            $(".circle4").animate({left: "0"},0);
+        });
+
+        //jQuery
+        $("#btn4-1").click(function(){
+            $(".circle4").animate({left: "+=100"},1000);
+        });
+        
+        //jQuery + GSAP
+        // $("#btn4-2").click(function(){
+        //     TweenMax.to([".circle4"], 1, {left : "+=100"});
+        // });
+
+        //javaScript
+        const btn4_2 = document.getElementById("btn4-2");
+
+        btn4_2.addEventListener("click",moveStart4);
+
+        function moveStart4(){
+            TweenMax.to(".circle4", 1, {left: "+=100"});
+        };
+
+
+        //sample5__________________________________
+        //reset
+        $("#reset5").click(function(){
+            $(".circle5").animate({left: "0"},0);
+        });
+
+        //jQuery
+        $("#btn5-1").click(function(){
+            alert("제이쿼리에는 이런 기능이 없음");
+        });
+
+        //jQuery + GSAP
+        $("#btn5-2").click(function(){
+            TweenMax.from([".circle5"], 1, {left : "80%"});
+        });
+
+        //sample6__________________________________
+        //reset
+        $("#reset6").click(function(){
+            $(".circle6").animate({left: "0"},0);
+            $(".circle6").css({transform: "scale(1)"});
+        });
+        
+        //jQuery
+        $("#btn6-1").click(function(){
+            $(".circle6").animate({left: "80%"},1000);
+            $(".circle6").css({transform: "scale(2)"});
+        });
+
+        //jQuery + GSAP
+        $("#btn6-2").click(function(){
+            TweenMax.to([".circle6"], 1, {left : "80%", scale: "2" });
+        });
+
+        //sample7__________________________________
+        //reset
+        $("#reset7").click(function(){
+            $(".circle7").animate({left: "0", borderRadius: "50%"},0);
+        });
+        
+        //jQuery
+        $("#btn7-1").click(function(){
+            $(".circle7").animate({left: "80%", borderRadius: "0%"},1000);
+        });
+
+        //jQuery + GSAP
+        $("#btn7-2").click(function(){
+            TweenMax.to([".circle7"], 1, {left : "80%", borderRadius: "0%" });
+        });
+
+        //sample8__________________________________
+        //reset
+        $("#reset8").click(function(){
+            $(".circle8-1, .circle8-2, .circle8-3").animate({left: "0"},0).css({transform: "skewX(0deg)"});
+            TweenMax.to([".circle8-1"], 0, {left : "0", skewX: "0" });
+            TweenMax.to([".circle8-2"], 0, {left : "0", skewX: "0" });
+            TweenMax.to([".circle8-3"], 0, {left : "0", skewX: "0" });
+        });
+        
+        //jQuery
+        $("#btn8-1").click(function(){
+            $(".circle8-1").animate({left: "80%"},2000).css({transform: "skewX(30deg)"});
+            $(".circle8-2").animate({left: "80%"},2000).css({transform: "skewX(330deg)"});
+            $(".circle8-3").animate({left: "80%"},2000).css({transform: "skewX(660deg)"});
+            
+        });
+
+        //jQuery + GSAP
+        $("#btn8-2").click(function(){
+            TweenMax.to([".circle8-1"], 2, {left : "80%", skewX: "30deg" });
+            TweenMax.to([".circle8-2"], 2, {left : "80%", skewX: "330deg" });
+            TweenMax.to([".circle8-3"], 2, {left : "80%", skewX: "660deg" });
+        });
+
+        //sample9__________________________________
+        //reset
+        $("#reset9").click(function(){
+            $(".circle9-1, .circle9-2, .circle9-3").animate({left: "0"},0);
+            TweenMax.to([".circle9-1"], 0, {left : "0%",rotationY: "0deg" });
+            TweenMax.to([".circle9-2"], 0, {left : "0%",rotationY: "0deg" });
+            TweenMax.to([".circle9-3"], 0, {left : "0%",rotationY: "0deg" });
+        });
+        
+        //jQuery
+        $("#btn9-1").click(function(){
+            $(".circle9-1").delay(500).animate({left: "80%"},1000);
+            $(".circle9-2").delay(700).animate({left: "80%"},1000);
+            $(".circle9-3").delay(900).animate({left: "80%"},1000);
+            
+        });
+
+        //jQuery + GSAP
+        $("#btn9-2").click(function(){
+            TweenMax.to([".circle9-1"], 2, {left : "80%", delay: 1, rotationY: "360deg" });
+            TweenMax.to([".circle9-2"], 2, {left : "80%", delay: 2, rotationY: "720deg" });
+            TweenMax.to([".circle9-3"], 2, {left : "80%", delay: 3, rotationY: "1080deg" });
+        });
+
+        //sample10__________________________________
+        //reset
+        $("#reset10").click(function(){
+            $(".box10>div").animate({left: "0"},0);
+            TweenMax.to([".box10>div"], 0, {left : "0%", ease: "none"});
+        });
+        
+        //jQuery
+        $("#btn10-1").click(function(){
+            $(".circle10-1").animate({left: "80%"},1000, "easeOutQuart");
+            $(".circle10-2").animate({left: "80%"},1000, "easeOutBounce");
+            $(".circle10-3").animate({left: "80%"},1000, "easeOutElastic");
+            $(".circle10-4").animate({left: "80%"},1000, "easeOutCirc");
+            $(".circle10-5").animate({left: "80%"},1000, "easeInCirc");
+            $(".circle10-6").animate({left: "80%"},1000, "easeInOutExpo");
+            $(".circle10-7").animate({left: "80%"},1000, "easeInExpo");
+            $(".circle10-8").animate({left: "80%"},1000, "easeInOutQuint");
+        });
+
+        //jQuery + GSAP
+        $("#btn10-2").click(function(){
+            TweenMax.to([".circle10-1"], 2, {left : "80%", ease: "power1"});
+            TweenMax.to([".circle10-2"], 2, {left : "80%", ease: "back"});
+            TweenMax.to([".circle10-3"], 2, {left : "80%", ease: "bounce.out"});
+            TweenMax.to([".circle10-4"], 2, {left : "80%", ease: "power2"});
+            TweenMax.to([".circle10-5"], 2, {left : "80%", ease: "steps(12)"});
+            TweenMax.to([".circle10-6"], 2, {left : "80%", ease: "expo"});
+            TweenMax.to([".circle10-7"], 2, {left : "80%", ease: "power3"});
+            TweenMax.to([".circle10-8"], 2, {left : "80%", ease: "elastic"});
+        });
+
+        //sample11__________________________________
+        //reset
+        $("#reset11").click(function(){
+            $(".circle11").animate({left: "0"},0);
+        });
+        
+        //jQuery
+        $("#btn11-1").click(function(){
+            $(".circle11").animate({left: "80%"},1000, "easeOutQuart", function(){
+                $(".circle11").animate({left: "0"},1000,"easeOutQuart");
+            });
+        });
+
+        //jQuery + GSAP
+        $("#btn11-2").click(function(){
+            TweenMax.to([".circle11"], 2, {left : "80%", rotationX: "360deg", ease: "power1.out",onComplete: complete});
+        });
+        function complete(){
+            TweenMax.to(".circle11",1,{left: "0", rotationX: "0deg"});
+        };
+
+        //sample12__________________________________
+        const tween = TweenMax.to(".circle12",10,{left: "90%", borderRadius: "0%", rotation: "720deg"});
+        tween.pause();
+
+        $("#reset12").click(function(){
+            TweenMax.to(".circle12",0,{left: "0%", borderRadius: "50%", rotation: "0deg"});
+        });
+
+
+        $("#btn12-1").click(function(){tween.play()});
+        $("#btn12-2").click(function(){tween.pause()});
+        $("#btn12-3").click(function(){tween.resume()});
+        $("#btn12-4").click(function(){tween.reverse()});
+        $("#btn12-5").click(function(){tween.seek(0.5)});
+        $("#btn12-6").click(function(){tween.timeScale(0.5)});
+        $("#btn12-7").click(function(){tween.timeScale(2)});
+        $("#btn12-8").click(function(){tween.kill()});
+        $("#btn12-9").click(function(){tween.restart()});
+
+        //sample13__________________________________
+        //reset
+        $("#reset13").click(function(){
+            $(".circle13").animate({ left : "0", borderRadius: "50%"}, 0);
+            $(".circle13").css({ "background-image" : "linear-gradient(120deg, #f6d365 0%, #fda085 100%)"})
+        });
+        //jquery
+        $("#btn13-1").click(function(){
+            $('.circle13')
+                .animate({ left: "80%"}, 500)
+                .animate({ height: "300px"}, 500, "easeOutQuad")
+                .animate({ opacity: "0.5", borderRadius: "0%"}, 500, "easeOutElastic")
+                .animate({ height: "60px"}, 500, "easeOutQuad")
+                .animate({ opacity: "1", left: "0", borderRadius: "50%"}, 500)
+        });
+        //jquery + GSAP
+        $("#btn13-2").click(function(){
+            const tl = new TimelineLite();
+            tl.to(".circle13", 0.5, {left: "80%"});
+            tl.to(".circle13", 0.5, {height: "300px", ease : "power4.out"});
+            tl.to(".circle13", 0.5, {opacity: "0.5", borderRadius: "0", ease : "power2.out"});
+            tl.to(".circle13", 0.5, {height: "60px", ease : "power2.out"});
+            tl.to(".circle13", 0.5, {opacity: "1", left: "0", borderRadius: "50%"});
+        });
+        //jquery + GSAP
+        $("#btn13-3").click(function(){
+            const tl = new TimelineLite();
+            tl.to(".circle13", 1, {left: "80%", scale: "0.5", rotation:"100deg" });
+            tl.to(".circle13", 2, {left: "0%", opacity: 0.5, skewY: "720deg", rotation:"300deg", scale: "1" });
+            tl.to(".circle13", 1, {left: "90%", rotation:"1000deg" , borderRadius: "0%", 
+                scale: "0.5", backgroundImage: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"});
+            tl.to(".circle13", 1, {rotation:"-2000deg"});
+            tl.to(".circle13", 1, {opacity:1, left: "0", scale: "1", rotation:"-0deg"});
+        });
+
+    </script>
+
+
+</body>
+
+</html>

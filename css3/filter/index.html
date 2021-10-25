@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords"
+        content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>황성원 | Study | Filter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon_114.png">
+    <link rel="icon" href="../../assets/ico/icon.png">
+    <link rel="icon" href="../../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="128x128">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="웹스토리보이" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="웹스토리보이" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .abox {background: #f4f8fa; padding: 5px; overflow: hidden; display: flex; flex-wrap: wrap;}
+        .abox > div {width: 33.3333%; transition: all 0.4s ease}
+        .abox > div:hover {filter: none;}
+        .abox > div img {width: 100%;}
+        .abox.height > div {min-height: 200px;}
+        .abox.height > div:hover {filter: none; background-blend-mode: normal; }
+        .btn {float: right; background: #ccc; margin-left: 10px; color: #fff;}
+    </style>
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../../index.html" class="navbar-brand">황성원 &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://wiss.tistory.com/">Design</a></li>
+                    <li><a href="https://webzz.tistory.com/">Coding</a></li>
+                    <li><a href="https://wtss.tistory.com/">Tutor</a></li>
+                    <li><a href="https://wtss.tistory.com/">Tutor</a></li>
+                    <li><a href="https://wess.tistory.com/">Edu</a></li>
+                    <li><a href="https://wsss.tistory.com/">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs5" id="content">
+        <div class="container">
+            <h1>Filter Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="portfolio214.dothome.co.kr" target="_blank">portfolio214.dothome.co.kr</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+
+            <div class="col-md-9" role="main">
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="Intro1" class="page-header">filter</h2>
+                    <div class="well">filter : none | blur() | brihgtness() | contrast | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url()</div>
+            <table class="table table-striped table-bordered table-hover">
+               <thead>
+                  <tr>
+                     <th>Porperty</th>
+                     <th>Description</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>none</td>
+                     <td>이미지의 아무런 효과를 주지 않습니다.</td>
+                  </tr>
+                  <tr>
+                     <td>blur(px)</td>
+                     <td>이미지의 블러 효과를 설정합니다.</td>
+                  </tr>
+                  <tr>
+                     <td>brihgtness(%)</td>
+                     <td>이미지의 밝고 어두움 정도를 설정합니다.</td>
+                  </tr>
+                  <tr>
+                     <td>contrast(%)</td>
+                     <td>이미지의 대비를 설정합니다.</td>
+                  </tr>
+                  <tr>
+                     <td>drop-shadow()</td>
+                     <td>이미지의 그림자를 설정합니다.</td>
+                  </tr>
+                  <tr>
+                     <td>grayscale(%)</td>
+                     <td>이미지의 그레이스케일을 설정합니다.</td>
+                  </tr>
+                  <tr>
+                     <td>hue-ratate(deg)</td>
+                     <td>이미지의 색조를 설정합니다.</td>
+                  </tr>
+                  <tr>
+                     <td>invert(%)</td>
+                     <td>이미지의  반전색상을 설정합니다.</td>
+                  </tr>
+                  <tr>
+                     <td>opacity(%)</td>
+                     <td>이미지의 투명도를 설정합니다.</td>
+                  </tr>
+                  <tr>
+                     <td>saturate(%)</td>
+                     <td>이미지의 채도를 설정합니다.</td>
+                  </tr>
+                  <tr>
+                     <td>sepia(%)</td>
+                     <td>이미지의 세피아 효과를 설정합니다.</td>
+                  </tr>
+                  <tr>
+                     <td>url()</td>
+                     <td>이미지의 경로를 설정합니다.</td>
+                  </tr>
+                  
+               </tbody>
+            </table>
+            
+                </div>
+                <!-- //Intro1 -->    
+                <style>
+                    .bulr1 {filter: blur(1px);}
+                    .bulr2 {filter: blur(3px);}
+                    .bulr3 {filter: blur(5px);}
+                    .bulr4 {filter: blur(7px);}
+                    .bulr5 {filter: blur(10px);}
+                    .bulr6 {filter: blur(20px);}
+                </style>
+                <!-- Sample1 -->
+                <div class="bs-docs-section">
+                    <h2 id="Sample1" class="page-header">blur
+                        <a href="#c" class="btn btn1">IMG1</a>
+                        <a href="#c" class="btn btn2">IMG2</a>
+                        <a href="#c" class="btn btn3">IMG3</a>
+                        <a href="#c" class="btn btn4">IMG4</a>
+                        <a href="#c" class="btn btn5">IMG5</a>
+                    </h2>
+                    <div class="abox">
+                        <div class="bulr1"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        <div class="bulr2"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        <div class="bulr3"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        <div class="bulr4"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        <div class="bulr5"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        <div class="bulr6"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                    </div>
+<pre class="line-numbers language-css"><code>.bulr1 {filter: blur(1px);}
+.bulr2 {filter: blur(3px);}
+.bulr3 {filter: blur(5px);}
+.bulr4 {filter: blur(7px);}
+.bulr5 {filter: blur(10px);}
+.bulr6 {filter: blur(20px);} 
+</code></pre>
+                </div>
+                <!-- //Sample1 -->
+                <style>
+                    .brightness1 {filter: brightness(10%);}
+                    .brightness2 {filter: brightness(20%);}
+                    .brightness3 {filter: brightness(30%);}
+                    .brightness4 {filter: brightness(40%);}
+                    .brightness5 {filter: brightness(50%);}
+                    .brightness6 {filter: brightness(60%);}
+                </style>
+                <!-- Sample2 -->
+                <div class="bs-docs-section">
+                        <h2 id="Sample2" class="page-header">brightness
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="brightness1"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="brightness2"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="brightness3"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="brightness4"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="brightness5"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="brightness6"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.brightness1 {filter: brightness(10%);}
+.brightness2 {filter: brightness(20%);}
+.brightness3 {filter: brightness(30%);}
+.brightness4 {filter: brightness(40%);}
+.brightness5 {filter: brightness(50%);}
+.brightness6 {filter: brightness(60%);}
+</code></pre>
+                </div>
+                <!-- //Sample2 -->
+                <style>
+                    .contrast1 {filter: contrast(10%);}
+                    .contrast2 {filter: contrast(20%);}
+                    .contrast3 {filter: contrast(30%);}
+                    .contrast4 {filter: contrast(40%);}
+                    .contrast5 {filter: contrast(50%);}
+                    .contrast6 {filter: contrast(60%);}
+                    .contrast7 {filter: contrast(0);} /* 완전히 회색 */
+                    .contrast8 {filter: contrast(1);} /* 대비 변화없음 */
+                    .contrast9 {filter: contrast(200%);} /* 대비 2배 */
+                </style>
+                <!-- Sample3 -->
+                <div class="bs-docs-section">
+                        <h2 id="Sample3" class="page-header">contrast
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="contrast1"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="contrast2"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="contrast3"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="contrast4"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="contrast5"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="contrast6"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="contrast7"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="contrast8"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="contrast9"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.contrast1 {filter: contrast(10%);}
+.contrast2 {filter: contrast(20%);}
+.contrast3 {filter: contrast(30%);}
+.contrast4 {filter: contrast(40%);}
+.contrast5 {filter: contrast(50%);}
+.contrast6 {filter: contrast(60%);}
+.contrast7 {filter: contrast(0);} /* 완전히 회색 */
+.contrast8 {filter: contrast(1);} /* 대비 변화없음 */
+.contrast9 {filter: contrast(200%);} /* 대비 2배 */
+</code></pre>
+                </div>
+                <!-- //Sample3 -->
+                <style>
+                    .grayscale1 {filter: grayscale(10%);}
+                    .grayscale2 {filter: grayscale(20%);}
+                    .grayscale3 {filter: grayscale(40%);}
+                    .grayscale4 {filter: grayscale(60%);}
+                    .grayscale5 {filter: grayscale(80%);}
+                    .grayscale6 {filter: grayscale(100%);}
+                </style>
+                <!-- Sample4 -->
+                <div class="bs-docs-section">
+                        <h2 id="Sample4" class="page-header">grayscale
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="grayscale1"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="grayscale2"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="grayscale3"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="grayscale4"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="grayscale5"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="grayscale6"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.grayscale1 {filter: grayscale(10%);}
+.grayscale2 {filter: grayscale(20%);}
+.grayscale3 {filter: grayscale(40%);}
+.grayscale4 {filter: grayscale(60%);}
+.grayscale5 {filter: grayscale(80%);}
+.grayscale6 {filter: grayscale(100%);}
+</code></pre>
+                </div>
+                <!-- //Sample4 -->
+                <style>
+                    .hue1 {filter: hue-rotate(10deg);}
+                    .hue2 {filter: hue-rotate(20deg);}
+                    .hue3 {filter: hue-rotate(30deg);}
+                    .hue4 {filter: hue-rotate(40deg);}
+                    .hue5 {filter: hue-rotate(50deg);}
+                    .hue6 {filter: hue-rotate(460deg);} /* 100deg 같음 */
+                    .hue7 {filter: hue-rotate(-90deg);} /* 270deg 같음 */
+                    .hue8 {filter: hue-rotate(0);} /* 효과 없음 */
+                    .hue9 {filter: hue-rotate(.5turn);} /* 180deg 같음 */
+                </style>
+                <!-- Sample5 -->
+                <div class="bs-docs-section">
+                        <h2 id="Sample5" class="page-header">hue-rotate
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="hue1"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="hue2"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="hue3"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="hue4"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="hue5"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="hue6"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="hue7"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="hue8"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="hue9"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.hue1 {filter: hue-rotate(10deg);}
+.hue2 {filter: hue-rotate(20deg);}
+.hue3 {filter: hue-rotate(30deg);}
+.hue4 {filter: hue-rotate(40deg);}
+.hue5 {filter: hue-rotate(50deg);}
+.hue6 {filter: hue-rotate(460deg);} /* 100deg 같음 */
+.hue7 {filter: hue-rotate(-90deg);} /* 270deg 같음 */
+.hue8 {filter: hue-rotate(0);} /* 효과 없음 */
+.hue9 {filter: hue-rotate(.5turn);} /* 180deg 같음 */
+</code></pre>
+                </div>
+                <!-- //Sample5 -->
+                <style>
+                    .invert1 {filter: invert(10%);}
+                    .invert2 {filter: invert(20%);}
+                    .invert3 {filter: invert(40%);}
+                    .invert4 {filter: invert(60%);}
+                    .invert5 {filter: invert(80%);}
+                    .invert6 {filter: invert(100%);}
+                </style>
+                <!-- Sample6 -->
+                <div class="bs-docs-section">
+                        <h2 id="Sample6" class="page-header">invert
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="invert1"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="invert2"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="invert3"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="invert4"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="invert5"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="invert6"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.invert1 {filter: invert(10%);}
+.invert2 {filter: invert(20%);}
+.invert3 {filter: invert(40%);}
+.invert4 {filter: invert(60%);}
+.invert5 {filter: invert(80%);}
+.invert6 {filter: invert(100%);}
+</code></pre>
+                </div>
+                <!-- //Sample6 -->
+                <style>
+                    .opacity1 {filter: opacity(10%);}
+                    .opacity2 {filter: opacity(20%);}
+                    .opacity3 {filter: opacity(40%);}
+                    .opacity4 {filter: opacity(60%);}
+                    .opacity5 {filter: opacity(80%);}
+                    .opacity6 {filter: opacity(100%);}
+                </style>
+                <!-- Sample7 -->
+                <div class="bs-docs-section">
+                        <h2 id="Sample7" class="page-header">opacity
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="opacity1"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="opacity2"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="opacity3"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="opacity4"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="opacity5"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="opacity6"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.opacity1 {filter: invert(10%);}
+.opacity2 {filter: opacity(20%);}
+.opacity3 {filter: opacity(40%);}
+.opacity4 {filter: opacity(60%);}
+.opacity5 {filter: opacity(80%);}
+.opacity6 {filter: opacity(100%);}
+</code></pre>
+                </div>
+                <!-- //Sample7 -->
+                <style>
+                    .saturate1 {filter: saturate(0%);} /* 무채색 */
+                    .saturate2 {filter: saturate(40%);}
+                    .saturate3 {filter: saturate(80%);}
+                    .saturate4 {filter: saturate(100%);} /* 효과 없음 */
+                    .saturate5 {filter: saturate(200%);} /* 효과 2배 */
+                    .saturate6 {filter: saturate(300%);} /* 효과 3배 */
+                </style>
+                <!-- Sample8 -->
+                <div class="bs-docs-section">
+                        <h2 id="Sample8" class="page-header">saturate
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="saturate1"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="saturate2"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="saturate3"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="saturate4"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="saturate5"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="saturate6"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.saturate1 {filter: saturate(0%);} /* 무채색 */
+.saturate2 {filter: saturate(40%);}
+.saturate3 {filter: saturate(80%);}
+.saturate4 {filter: saturate(100%);} /* 효과 없음 */
+.saturate5 {filter: saturate(200%);} /* 효과 2배 */
+.saturate6 {filter: saturate(300%);} /* 효과 3배 */
+</code></pre>
+                </div>
+                <!-- //Sample8 -->
+                <style>
+                    .sepia1 {filter: sepia(0%);} 
+                    .sepia2 {filter: sepia(20%);}
+                    .sepia3 {filter: sepia(50%);}
+                    .sepia4 {filter: sepia(70%);} 
+                    .sepia5 {filter: sepia(100%);} 
+                    .sepia6 {filter: sepia(140%);} 
+                </style>
+                <!-- Sample9 -->
+                <div class="bs-docs-section">
+                        <h2 id="Sample9" class="page-header">sepia
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="sepia1"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="sepia2"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="sepia3"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="sepia4"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="sepia5"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="sepia6"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.sepia1 {filter: sepia(0%);} 
+.sepia2 {filter: sepia(20%);}
+.sepia3 {filter: sepia(50%);}
+.sepia4 {filter: sepia(70%);} 
+.sepia5 {filter: sepia(100%);} 
+.sepia6 {filter: sepia(140%);} 
+</code></pre>
+                </div>
+                <!-- //Sample9 -->
+                <style>
+                    .mix1 {filter: invert(20%) sepia(30%);}
+                    .mix2 {filter: contrast(50%) grayscale(90%);}
+                    .mix3 {filter: hue-rotate(140deg) contrast(50%);}
+                    .mix4 {filter: opacity(50%) hue-rotate(152deg);}
+                    .mix5 {filter: sepia(50%) hue-rotate(120deg);}
+                    .mix6 {filter: grayscale(45%) hue-rotate(147deg);}
+                </style>
+                <!-- Sample10 -->
+                <div class="bs-docs-section">
+                        <h2 id="Sample10" class="page-header">Mix filter
+                            <a href="#c" class="btn btn1">IMG1</a>
+                            <a href="#c" class="btn btn2">IMG2</a>
+                            <a href="#c" class="btn btn3">IMG3</a>
+                            <a href="#c" class="btn btn4">IMG4</a>
+                            <a href="#c" class="btn btn5">IMG5</a>
+                        </h2>
+                        <div class="abox">
+                            <div class="mix1"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="mix2"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="mix3"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="mix4"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="mix5"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                            <div class="mix6"><img src="https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg" alt="이미지1"></div>
+                        </div>
+<pre class="line-numbers language-css"><code>.mix1 {filter: invert(20%) sepia(30%);}
+.mix2 {filter: contrast(50%) grayscale(90%);}
+.mix3 {filter: hue-rotate(140deg) contrast(50%);}
+.mix4 {filter: opacity(50%) hue-rotate(152deg);}
+.mix5 {filter: sepia(50%) hue-rotate(120deg);}
+.mix6 {filter: grayscale(45%) hue-rotate(147deg);}
+</code></pre>
+                </div>
+                <!-- //Sample10 -->
+                
+                
+                <!-- intro2 -->
+                <h2 id="Intro2" class="page-header">blend mode</h2>
+                <div class="well">normal | multiply | screen | overlay | darken | lighten | color-dodge | saturation | color | luminosity</div>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                     <th>Porperty</th>
+                     <th>Description</th>
+                    </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>normal</td>
+                       <td>배경색의 기본 값을 정의합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>multiply</td>
+                        <td>더 어두운 색으로 변경됩니다.</td>
+                  </tr>
+                  <tr>
+                      <td>screen</td>
+                      <td>더 밝은 색으로 변경됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td>overlay</td>
+                        <td>원래 색상의 농도와 밝기를 변경합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>darken</td>
+                        <td>어두운 색으로 변경됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td>lighten</td>
+                        <td>밝은 색으로 변경됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td>color-dodge</td>
+                        <td>기본 색상을 밝게 합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>saturation</td>
+                        <td>채도의 변화로 색상이 변경됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td>color</td>
+                        <td>색을 통해 색상을 변경합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>luminosity</td>
+                        <td>밝기를/ 통해 색상을 변경합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- //intro2 -->
+            
+            <style>
+                .multiply1 {
+                    background-blend-mode: multiply; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                }
+                .multiply2 {
+                    background-blend-mode: multiply; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: aqua;
+                }
+                .multiply3 {
+                    background-blend-mode: multiply; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: blueviolet;
+                }
+                .multiply4 {
+                    background-blend-mode: multiply; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: coral;
+                }
+                .multiply5 {
+                    background-blend-mode: multiply; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: darkseagreen;
+                }
+                .multiply6 {
+                    background-blend-mode: multiply; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: hotpink;
+                }
+            </style>
+            <!-- Sample20 -->
+            <div class="bs-docs-section">
+                    <h2 id="Sample20" class="page-header">multiply
+                        <a href="#c" class="btn color1">color1</a>
+                        <a href="#c" class="btn color2">color2</a>
+                        <a href="#c" class="btn color3">color3</a>
+                        <a href="#c" class="btn color4">color4</a>
+                        <a href="#c" class="btn color5">color5</a>
+                    </h2>
+                    <div class="abox height">
+                        <div class="multiply1"></div>
+                        <div class="multiply2"></div>
+                        <div class="multiply3"></div>
+                        <div class="multiply4"></div>
+                        <div class="multiply5"></div>
+                        <div class="multiply6"></div>
+                    </div>
+<pre class="line-numbers language-css"><code>.multiply1 {
+background-blend-mode: multiply; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+}
+.multiply2 {
+background-blend-mode: multiply; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: aqua;
+}
+.multiply3 {
+background-blend-mode: multiply; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: blueviolet;
+}
+.multiply4 {
+background-blend-mode: multiply; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: coral;
+}
+.multiply5 {
+background-blend-mode: multiply; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: darkseagreen;
+}
+.multiply6 {
+background-blend-mode: multiply; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: hotpink;
+}
+</code></pre>
+            </div>
+            <!-- //Sample20 -->
+            <style>
+                .screen1 {
+                    background-blend-mode: screen; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                }
+                .screen2 {
+                    background-blend-mode: screen; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: aqua;
+                }
+                .screen3 {
+                    background-blend-mode: screen; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: blueviolet;
+                }
+                .screen4 {
+                    background-blend-mode: screen; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: coral;
+                }
+                .screen5 {
+                    background-blend-mode: screen; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: darkseagreen;
+                }
+                .screen6 {
+                    background-blend-mode: screen; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: hotpink;
+                }
+            </style>
+            <!-- Sample21 -->
+            <div class="bs-docs-section">
+                    <h2 id="Sample21" class="page-header">screen
+                        <a href="#c" class="btn color1">color1</a>
+                        <a href="#c" class="btn color2">color2</a>
+                        <a href="#c" class="btn color3">color3</a>
+                        <a href="#c" class="btn color4">color4</a>
+                        <a href="#c" class="btn color5">color5</a>
+                    </h2>
+                    <div class="abox height">
+                        <div class="screen1"></div>
+                        <div class="screen2"></div>
+                        <div class="screen3"></div>
+                        <div class="screen4"></div>
+                        <div class="screen5"></div>
+                        <div class="screen6"></div>
+                    </div>
+<pre class="line-numbers language-css"><code>.screen1 {
+background-blend-mode: screen; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+}
+.screen2 {
+background-blend-mode: screen; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: aqua;
+}
+.screen3 {
+background-blend-mode: screen; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: blueviolet;
+}
+.screen4 {
+background-blend-mode: screen; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: coral;
+}
+.screen5 {
+background-blend-mode: screen; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: darkseagreen;
+}
+.screen6 {
+background-blend-mode: screen; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: hotpink;
+}
+</code></pre>
+            </div>
+            <!-- //Sample21 -->
+            <style>
+                .overlay1 {
+                    background-blend-mode: overlay; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                }
+                .overlay2 {
+                    background-blend-mode: overlay; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: aqua;
+                }
+                .overlay3 {
+                    background-blend-mode: overlay; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: blueviolet;
+                }
+                .overlay4 {
+                    background-blend-mode: overlay; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: coral;
+                }
+                .overlay5 {
+                    background-blend-mode: overlay; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: darkseagreen;
+                }
+                .overlay6 {
+                    background-blend-mode: overlay; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: hotpink;
+                }
+            </style>
+            <!-- Sample22 -->
+            <div class="bs-docs-section">
+                    <h2 id="Sample22" class="page-header">overlay
+                        <a href="#c" class="btn color1">color1</a>
+                        <a href="#c" class="btn color2">color2</a>
+                        <a href="#c" class="btn color3">color3</a>
+                        <a href="#c" class="btn color4">color4</a>
+                        <a href="#c" class="btn color5">color5</a>
+                    </h2>
+                    <div class="abox height">
+                        <div class="overlay1"></div>
+                        <div class="overlay2"></div>
+                        <div class="overlay3"></div>
+                        <div class="overlay4"></div>
+                        <div class="overlay5"></div>
+                        <div class="overlay6"></div>
+                    </div>
+<pre class="line-numbers language-css"><code>.overlay1 {
+background-blend-mode: overlay; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+}
+.overlay2 {
+background-blend-mode: overlay; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: aqua;
+}
+.overlay3 {
+background-blend-mode: overlay; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: blueviolet;
+}
+.overlay4 {
+background-blend-mode: overlay; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: coral;
+}
+.overlay5 {
+background-blend-mode: overlay; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: darkseagreen;
+}
+.overlay6 {
+background-blend-mode: overlay; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: hotpink;
+}
+</code></pre>
+            </div>
+            <!-- //Sample22 -->
+            <style>
+                .dark1 {
+                    background-blend-mode: darken; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: dark;
+                }
+                .dark2 {
+                    background-blend-mode: darken; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: aqua;
+                }
+                .dark3 {
+                    background-blend-mode: darken; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: blueviolet;
+                }
+                .dark4 {
+                    background-blend-mode: darken; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: coral;
+                }
+                .dark5 {
+                    background-blend-mode: darken; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: darkseagreen;
+                }
+                .dark6 {
+                    background-blend-mode: darken; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: hotpink;
+                }
+            </style>
+            <!-- Sample23 -->
+            <div class="bs-docs-section">
+                    <h2 id="Sample23" class="page-header">darken
+                        <a href="#c" class="btn color1">color1</a>
+                        <a href="#c" class="btn color2">color2</a>
+                        <a href="#c" class="btn color3">color3</a>
+                        <a href="#c" class="btn color4">color4</a>
+                        <a href="#c" class="btn color5">color5</a>
+                    </h2>
+                    <div class="abox height">
+                        <div class="dark1"></div>
+                        <div class="dark2"></div>
+                        <div class="dark3"></div>
+                        <div class="dark4"></div>
+                        <div class="dark5"></div>
+                        <div class="dark6"></div>
+                    </div>
+<pre class="line-numbers language-css"><code>.dark1 {
+background-blend-mode: darken; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+}
+.dark2 {
+background-blend-mode: darken; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: aqua;
+}
+.dark3 {
+background-blend-mode: darken; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: blueviolet;
+}
+.dark4 {
+background-blend-mode: darken; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: coral;
+}
+.dark5 {
+background-blend-mode: darken; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: darkseagreen;
+}
+.dark6 {
+background-blend-mode: darken; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: hotpink;
+}
+</code></pre>
+            </div>
+            <!-- //Sample23 -->
+            <style>
+                .lighten1 {
+                    background-blend-mode: lighten; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: dark;
+                }
+                .lighten2 {
+                    background-blend-mode: lighten; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: aqua;
+                }
+                .lighten3 {
+                    background-blend-mode: lighten; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: blueviolet;
+                }
+                .lighten4 {
+                    background-blend-mode: lighten; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: coral;
+                }
+                .lighten5 {
+                    background-blend-mode: lighten; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: darkseagreen;
+                }
+                .lighten6 {
+                    background-blend-mode: lighten; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: hotpink;
+                }
+            </style>
+            <!-- Sample24 -->
+            <div class="bs-docs-section">
+                    <h2 id="Sample24" class="page-header">lighten
+                        <a href="#c" class="btn color1">color1</a>
+                        <a href="#c" class="btn color2">color2</a>
+                        <a href="#c" class="btn color3">color3</a>
+                        <a href="#c" class="btn color4">color4</a>
+                        <a href="#c" class="btn color5">color5</a>
+                    </h2>
+                    <div class="abox height">
+                        <div class="lighten1"></div>
+                        <div class="lighten2"></div>
+                        <div class="lighten3"></div>
+                        <div class="lighten4"></div>
+                        <div class="lighten5"></div>
+                        <div class="lighten6"></div>
+                    </div>
+<pre class="line-numbers language-css"><code>.lighten1 {
+background-blend-mode: lighten; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+}
+.lighten2 {
+background-blend-mode: lighten; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: aqua;
+}
+.lighten3 {
+background-blend-mode: lighten; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: blueviolet;
+}
+.dark4 {
+background-blend-mode: lighten; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: coral;
+}
+.lighten5 {
+background-blend-mode: lighten; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: darkseagreen;
+}
+.lighten6 {
+background-blend-mode: lighten; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: hotpink;
+}
+</code></pre>
+            </div>
+            <!-- //Sample24 -->
+            <style>
+                .color-dodge1 {
+                    background-blend-mode: color-dodge; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: dark;
+                }
+                .color-dodge2 {
+                    background-blend-mode: color-dodge; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: aqua;
+                }
+                .color-dodge3 {
+                    background-blend-mode:color-dodge; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: blueviolet;
+                }
+                .color-dodge4 {
+                    background-blend-mode: color-dodge; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: coral;
+                }
+                .color-dodge5 {
+                    background-blend-mode: color-dodge; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: darkseagreen;
+                }
+                .color-dodge6 {
+                    background-blend-mode: color-dodge; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: hotpink;
+                }
+            </style>
+            <!-- Sample25 -->
+            <div class="bs-docs-section">
+                    <h2 id="Sample25" class="page-header">color-dodge
+                        <a href="#c" class="btn color1">color1</a>
+                        <a href="#c" class="btn color2">color2</a>
+                        <a href="#c" class="btn color3">color3</a>
+                        <a href="#c" class="btn color4">color4</a>
+                        <a href="#c" class="btn color5">color5</a>
+                    </h2>
+                    <div class="abox height">
+                        <div class="color-dodge1"></div>
+                        <div class="color-dodge2"></div>
+                        <div class="color-dodge3"></div>
+                        <div class="color-dodge4"></div>
+                        <div class="color-dodge5"></div>
+                        <div class="color-dodge6"></div>
+                    </div>
+<pre class="line-numbers language-css"><code>.color-dodge1 {
+background-blend-mode: color-dodge; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+}
+.color-dodge2 {
+background-blend-mode: color-dodge; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: aqua;
+}
+.color-dodge3 {
+background-blend-mode: color-dodge; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: blueviolet;
+}
+.color-dodge4 {
+background-blend-mode: color-dodge; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: coral;
+}
+.color-dodge5 {
+background-blend-mode: color-dodge; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: darkseagreen;
+}
+.color-dodge6 {
+background-blend-mode: color-dodge; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: hotpink;
+}
+</code></pre>
+            </div>
+            <!-- //Sample25 -->
+            <style>
+                .saturation1 {
+                    background-blend-mode: saturation; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: dark;
+                }
+                .saturation2 {
+                    background-blend-mode: saturation; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: aqua;
+                }
+                .saturation3 {
+                    background-blend-mode:saturation; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: blueviolet;
+                }
+                .saturation4 {
+                    background-blend-mode: saturation; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: coral;
+                }
+                .saturation5 {
+                    background-blend-mode: saturation; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: darkseagreen;
+                }
+                .saturation6 {
+                    background-blend-mode: saturation; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: hotpink;
+                }
+            </style>
+            <!-- Sample26 -->
+            <div class="bs-docs-section">
+                    <h2 id="Sample26" class="page-header">saturation
+                        <a href="#c" class="btn color1">color1</a>
+                        <a href="#c" class="btn color2">color2</a>
+                        <a href="#c" class="btn color3">color3</a>
+                        <a href="#c" class="btn color4">color4</a>
+                        <a href="#c" class="btn color5">color5</a>
+                    </h2>
+                    <div class="abox height">
+                        <div class="saturation1"></div>
+                        <div class="saturation2"></div>
+                        <div class="saturation3"></div>
+                        <div class="saturation4"></div>
+                        <div class="saturation5"></div>
+                        <div class="saturation6"></div>
+                    </div>
+<pre class="line-numbers language-css"><code>.saturation1 {
+background-blend-mode: saturation; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+}
+.saturation2 {
+background-blend-mode: saturation; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: aqua;
+}
+.saturation3 {
+background-blend-mode: saturation; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: blueviolet;
+}
+.saturation4 {
+background-blend-mode: saturation; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: coral;
+}
+.saturation5 {
+background-blend-mode: saturation; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: darkseagreen;
+}
+.saturation6 {
+background-blend-mode: saturation; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: hotpink;
+}
+</code></pre>
+            </div>
+            <!-- //Sample26 -->
+            <style>
+                .col1 {
+                    background-blend-mode: color; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: dark;
+                }
+                .col2 {
+                    background-blend-mode: color; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: aqua;
+                }
+                .col3 {
+                    background-blend-mode:color; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: blueviolet;
+                }
+                .col4 {
+                    background-blend-mode: color; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: coral;
+                }
+                .col5 {
+                    background-blend-mode: color; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: darkseagreen;
+                }
+                .col6 {
+                    background-blend-mode: color; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: hotpink;
+                }
+            </style>
+            <!-- Sample27 -->
+            <div class="bs-docs-section">
+                    <h2 id="Sample27" class="page-header">color
+                        <a href="#c" class="btn color1">color1</a>
+                        <a href="#c" class="btn color2">color2</a>
+                        <a href="#c" class="btn color3">color3</a>
+                        <a href="#c" class="btn color4">color4</a>
+                        <a href="#c" class="btn color5">color5</a>
+                    </h2>
+                    <div class="abox height">
+                        <div class="col1"></div>
+                        <div class="col2"></div>
+                        <div class="col3"></div>
+                        <div class="col4"></div>
+                        <div class="col5"></div>
+                        <div class="col6"></div>
+                    </div>
+<pre class="line-numbers language-css"><code>.col1 {
+background-blend-mode: color; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+}
+.col2 {
+background-blend-mode: color; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: aqua;
+}
+.col3 {
+background-blend-mode: color; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: blueviolet;
+}
+.col4 {
+background-blend-mode: color; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: coral;
+}
+.col5 {
+background-blend-mode: color; 
+background: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: darkseagreen;
+}
+.col6 {
+background-blend-mode: color; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: hotpink;
+}
+</code></pre>
+            </div>
+            <!-- //Sample27 -->
+            <style>
+                .luminosity1 {
+                    background-blend-mode: luminosity; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: dark;
+                }
+                .luminosity2 {
+                    background-blend-mode: luminosity; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: aqua;
+                }
+                .luminosity3 {
+                    background-blend-mode:luminosity; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: blueviolet;
+                }
+                .luminosity4 {
+                    background-blend-mode: luminosity; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: coral;
+                }
+                .luminosity5 {
+                    background-blend-mode: luminosity; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: darkseagreen;
+                }
+                .luminosity6 {
+                    background-blend-mode: luminosity; 
+                    background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+                    background-size: cover;
+                    background-color: hotpink;
+                }
+            </style>
+            <!-- Sample28 -->
+            <div class="bs-docs-section">
+                    <h2 id="Sample28" class="page-header">luminosity
+                        <a href="#c" class="btn color1">color1</a>
+                        <a href="#c" class="btn color2">color2</a>
+                        <a href="#c" class="btn color3">color3</a>
+                        <a href="#c" class="btn color4">color4</a>
+                        <a href="#c" class="btn color5">color5</a>
+                    </h2>
+                    <div class="abox height">
+                        <div class="luminosity1"></div>
+                        <div class="luminosity2"></div>
+                        <div class="luminosity3"></div>
+                        <div class="luminosity4"></div>
+                        <div class="luminosity5"></div>
+                        <div class="luminosity6"></div>
+                    </div>
+<pre class="line-numbers language-css"><code>.luminosity1 {
+background-blend-mode: luminosity; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+}
+.luminosity2 {
+background-blend-mode: luminosity; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: aqua;
+}
+.luminosity3 {
+background-blend-mode: luminosity; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: blueviolet;
+}
+.luminosity4 {
+background-blend-mode: luminosity; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: coral;
+}
+.luminosity5 {
+background-blend-mode: luminosity; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: darkseagreen;
+}
+.luminosity6 {
+background-blend-mode: luminosity; 
+background-image: url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter1.jpg);
+background-size: cover;
+background-color: hotpink;
+}
+</code></pre>
+            </div>
+            <!-- //Sample28 -->
+
+
+
+
+
+
+            </div>
+            <!-- //col-md-9 -->
+
+
+            <!-- //col-md-3 -->
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li><a href="#Intro1">filter effect</a></li>
+                        <li><a href="#Sample1">Sample1 blur</a></li>
+                        <li><a href="#Sample2">Sample2 brihgtness</a></li>
+                        <li><a href="#Sample3">Sample3 contrast</a></li>
+                        <li><a href="#Sample4">Sample4 grayscale</a></li>
+                        <li><a href="#Sample5">Sample5 hue-rotate</a></li>
+                        <li><a href="#Sample6">Sample6 invert</a></li>
+                        <li><a href="#Sample7">Sample7 opacity</a></li>
+                        <li><a href="#Sample8">Sample8 saturation</a></li>
+                        <li><a href="#Sample9">Sample9 sepia</a></li>
+                        <li><a href="#Sample10">Sample10 mix filter</a></li>
+                        <li><a href="#Intro2">blend mode</a></li>
+                        <li><a href="#Sample20">Sample20 blend mode</a></li>
+                        <li><a href="#Sample21">Sample21 screen</a></li>
+                        <li><a href="#Sample22">Sample22 overlay</a></li>
+                        <li><a href="#Sample23">Sample23 darken</a></li>
+                        <li><a href="#Sample24">Sample24 lighten</a></li>
+                        <li><a href="#Sample25">Sample25 color-dodge</a></li>
+                        <li><a href="#Sample26">Sample26 saturation</a></li>
+                        <li><a href="#Sample27">Sample27 luminosity</a></li>
+                        
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!--//col-md-3 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <script src="../../assets/js/prism.js"></script>
+    <script>
+        //.btn1 버튼을 클릭 했을 때 
+        $(".btn1").click(function(){
+            $(".abox > div img").attr("src","https://tistory4.daumcdn.net/tistory/3344049/skin/images/fliter2.jpg");
+        });
+        $(".btn2").click(function(){
+            $(".abox > div img").attr("src","https://tistory1.daumcdn.net/tistory/3344049/skin/images/fliter3.jpg");
+        });
+        $(".btn3").click(function(){
+            $(".abox > div img").attr("src","https://tistory4.daumcdn.net/tistory/3344049/skin/images/fliter4.jpg");
+        });
+        $(".btn4").click(function(){
+            $(".abox > div img").attr("src","https://tistory3.daumcdn.net/tistory/3344049/skin/images/fliter5.jpg");
+        });
+        $(".btn5").click(function(){
+            $(".abox > div img").attr("src","https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter6.jpg");
+        });
+        //.color1 버튼을 클릭 했을 때 
+        $(".color1").click(function(){
+            $(".abox > div").css("background-image","url(https://tistory4.daumcdn.net/tistory/3344049/skin/images/fliter2.jpg)");
+        });
+        $(".color2").click(function(){
+            $(".abox > div").css("background-image","url(https://tistory1.daumcdn.net/tistory/3344049/skin/images/fliter3.jpg)");
+        });
+        $(".color3").click(function(){
+            $(".abox > div").css("background-image","url(https://tistory4.daumcdn.net/tistory/3344049/skin/images/fliter4.jpg)");
+        });
+        $(".color4").click(function(){
+            $(".abox > div").css("background-image","url(https://tistory3.daumcdn.net/tistory/3344049/skin/images/fliter5.jpg)");
+        });
+        $(".color5").click(function(){
+            $(".abox > div").css("background-image","url(https://tistory2.daumcdn.net/tistory/3344049/skin/images/fliter6.jpg)");
+        });
+    </script>
+</body>
+
+</html>

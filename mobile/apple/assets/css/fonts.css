@@ -1,0 +1,22 @@
+/* webfonts */
+
+@font-face {
+    font-family: "SF Display";
+    font-weight: 300;
+    src: url(../font/SFProDisplay-Light.ttf);
+}
+@font-face {
+    font-family: "SF Display";
+    font-weight: 500;
+    src: url(../font/SFProDisplay-Medium.ttf);
+}
+@font-face {
+    font-family: "SF Display";
+    font-weight: 400;
+    src: url(../font/SFProDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: "SF Display";
+    font-weight: 600;
+    src: url(../font/SFProDisplay-Semibold.ttf);
+}

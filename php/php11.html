@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP 11</title>
+</head>
+<body>
+    <?php
+        ini_set('date.timezone','Asia/Seoul');
+        echo "2020년 2월 20일 11시 38분 38초의 타임스탬프는?<br>";
+        echo mktime(11, 38, 38, 2, 20, 2020);
+
+
+        $startTime = mktime(11, 38, 38, 2, 20, 2020);
+        $endTime= mktime(11, 45, 38, 2, 20, 2020);
+
+        if($startTime <= time() && $endTime > time()) {
+            echo "이벤트에 당첨되었습니다.";
+        } else {
+            echo "이벤트 당첨대상이 아닙니다.";
+        }
+    ?>
+</body>
+</html>

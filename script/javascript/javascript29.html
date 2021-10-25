@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let today = new Date();  //날짜 객체를 생성하고 변수에 저장
+        let nowMonth = today.getMonth(); //현재 월을 변수에 저장
+        let nowDate = today.getDate(); //현재 일을 변수에 저장
+        let nowDay = today.getDay(); //현재 요일을 변수에 저장
+        let nowFullYear = today.getFullYear(); //현재 년도를 변수에 저장
+        let nowHours = today.getHours(); //현재 시간을 변수에 저장
+        let nowMinutes = today.getMinutes(); //현재 분을 변수에 저장
+        let nowSeconds = today.getSeconds(); //현재 초를 변수에 저장
+        let nowMilliseconds = today.getMilliseconds(); //현재 초(1/1000초 단위)를 변수에 저장
+        let nowTime = today.getTime(); //1970년 1월 1일 자정 이후의 초 정보를 저장
+        
+        let nowDateString = today.toDateString(); //날짜를 문자열로 변수에 저장
+        let nowGMTString = today.toGMTString(); //날짜를 문자열로 변수에 저장
+        var nowLocaleDateString = today.toLocaleDateString();   //날짜를 문자열로 변수에 저장
+        var nowLocaleString = today.toLocaleString();           //날짜를 문자열로 변수에 저장
+        var nowLocaleTimeString = today.toLocaleTimeString();   //날짜를 문자열로 변수에 저장
+        var nowString = today.toString();                       //날짜를 문자열로 변수에 저장
+        var nowTimeString = today.toTimeString();               //날짜를 문자열로 변수에 저장
+        var nowUTCString = today.toUTCString();                 //날짜를 문자열로 변수에 저장
+
+        document.write(today, "<br>");
+        document.write("현재 월[getMonth()] : " + nowMonth,"<br>");
+        document.write("현재 일[getDate()] : " + nowDate,"<br>");
+        document.write("현재 요일[getDay()] : " + nowDay,"<br>");
+        document.write("현재 년도[getFullYear()] : " + nowFullYear,"<br>");
+        document.write("현재 시간[getHours()] : " + nowHours,"<br>");
+        document.write("현재 분[getMinutes()] : " + nowMinutes,"<br>");
+        document.write("현재 초[getSeconds()] : " + nowSeconds,"<br>");
+        document.write("현재 초[getMilliseconds()] : " + nowMilliseconds,"<br>");
+        document.write("현재 초[getTime()] : " + nowTime,"<br><br>");
+
+        document.write("날짜 문자열[toDateString()] : " + nowDateString,"<br>");
+        document.write("날짜 문자열[toGMTString()] : " + nowGMTString,"<br>");
+        document.write("날짜 문자열[toLocaleDateString()] : " + nowLocaleDateString,"<br>");
+        document.write("날짜 문자열[toLocaleString()] : " + nowLocaleString,"<br>");
+        document.write("날짜 문자열[toLocaleTimeString()] : " + nowLocaleTimeString,"<br>");
+        document.write("날짜 문자열[toString()] : " + nowString,"<br>");
+        document.write("날짜 문자열[toTimeString()] : " + nowTimeString,"<br>");
+        document.write("날짜 문자열[toUTCString()] : " + nowUTCString,"<br>");
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

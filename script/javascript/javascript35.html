@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let userName = prompt("영문 이름을 입력하세요","");
+        let userNumber = prompt("핸드폰 번호를 입력하세요", "");
+
+        let upper = userName.toUpperCase();
+        let star = userNumber.substring(0, userNumber.length-4)+"****";
+
+        document.write(upper, "<br>");
+        document.write(star, "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

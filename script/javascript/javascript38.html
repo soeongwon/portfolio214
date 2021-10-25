@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //두 숫자의 차이 구하기
+        let num1 = parseInt(prompt("첫번째 숫자를 입력해주세요","0"));
+        let num2 = parseInt(prompt("두번째 숫자를 입력해주세요","0"));
+
+        document.write("두 숫자의 차이는 " + Math.abs(num1-num2) + " 입니다");
+
+        //1초에 한 번씩 랜덤숫자 구하기
+        setInterval(function(){
+            let num = Math.floor(Math.random() * 100);
+            document.write(num);
+        }, 1000);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

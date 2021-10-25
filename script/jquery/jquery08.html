@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <style>
+        .span {font-size: 90%; color: #c7254e; white-space: normal; background: #f9f2f4; border: 1px dashed #a51a3d; border-radius: 4px; padding: 0px 6px 2px 6px;}
+        .span2 {font-size: 90%; color: #3d90b7; white-space: normal; background: #e7f6fd; border: 1px dashed #3d90b7; border-radius: 4px; padding: 0px 6px 2px 6px;}
+    </style>
+</head>
+
+<body>
+    <h1>비주얼 콘셉트(Visual Concept)</h1> 
+    <p class="text" aria-label="디자인리서치를 한 후 디자이너가 전달하고자하는 주제인 잘 표현될 수 있도록 여러가지 시각적인 표현 방법 및 접근 방법을 비주얼을 정하여 나타내는 것을 비주얼콘셉트라고 한다. 웹 사이트의 성격에 따라 정보 전달 형, 서비스 제공 형, 커뮤니티 형 등으로 분류한다. 웹 사이트의 사용자의 방문을 분류 및 분석하여 개발 전략을 수립하고 전개한다. 디자이너가 기획 단계에서부터 분석을 통한 방향을 제기하고 구현 전략 및 구체적인 구현 계획을 수립하여야 한다. 따라서 메인 비주얼 전략 수립 과정을 거처 비주얼 영역 콘셉트를 정하고, 카피 라이팅 및 이미지 제작을 한다. 단순한 텍스트와 이미지의 결합이 아닌 시각 언어로서 사이트의 성격에 맞게 구현한다.">디자인리서치를 한 후 디자이너가 전달하고자하는 주제인 잘 표현될 수 있도록 여러가지 시각적인 표현 방법 및 접근 방법을 비주얼을 정하여 나타내는 것을 비주얼콘셉트라고 한다. 웹 사이트의 성격에 따라 정보 전달 형, 서비스 제공 형, 커뮤니티 형 등으로 분류한다. 웹 사이트의 사용자의 방문을 분류 및 분석하여 개발 전략을 수립하고 전개한다. 디자이너가 기획 단계에서부터 분석을 통한 방향을 제기하고 구현 전략 및 구체적인 구현 계획을 수립하여야 한다. 따라서 메인 비주얼 전략 수립 과정을 거처 비주얼 영역 콘셉트를 정하고, 카피 라이팅 및 이미지 제작을 한다. 단순한 텍스트와 이미지의 결합이 아닌 시각 언어로서 사이트의 성격에 맞게 구현한다.</p>
+    <button class="btn">이게 중요합니다.</button>
+    <button class="btn2">취소합니다.</button>
+
+    <!-- jQuery -->
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        let txt = $(".text").text().split(" ").join("</span> <span aria-hidden='true'>");
+            txt = "<span aria-hidden='true'>" + txt + "</span>";
+        // alert(txt);
+
+        $(".text").html(txt).find("span").hover(function(){
+            $(this).addClass("span");
+        }, function(){
+            $(this).removeClass("span");
+        });
+        
+        //디자인 리서치 단어를 서치 -> 강조 -> 버튼을 클릭
+        //:contains()
+        $(".btn").click(function(){
+            $(".text").find(":contains('디자인리서치')").addClass("span2");
+        });
+        //취소합니다. 클릭 시 -> 강조표시를 삭제 ->버튼을 클릭
+        $(".btn2").click(function(){
+            $(".text span").removeClass("span2");
+        });
+    </script>
+
+</body>
+
+</html>

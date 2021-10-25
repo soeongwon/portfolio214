@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> jQuery02</title>
+    <style>
+     #list1 li {color: blue;}
+    </style>
+</head>
+<body>
+    <h1>jQuery</h1>
+    <div>
+        <ul id="list1" class="list">
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+        <ul id="list2" class="list">
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+        <ul id="list3" class="list">
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+    </div>
+    <script src="jquery.min.1.12.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#list2 li").css("color","red");      //제이쿼리방법
+        });
+    </script>
+    <script>
+        window.onload = function(){
+            let list3 = document.getElementById("list3");      //변수에 저장해야함
+            let liList = list3.getElementsByTagName("li");            //list3 밑의 li 찾기
+            for(var i=0;i<liList.length;i++){
+                let li = liList[i];
+                li.style.color = "#18ba2b";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="list">
+        <ul>
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+    </div>
+    <p class="desc"></p>
+    <button class="btn1">btn1</button>
+    <button class="btn2">btn2</button>
+    <button class="btn3">btn3</button>
+    <button class="btn4">btn4</button>
+    <button class="btn5">btn5</button>
+    <button class="btn6">btn6</button>
+
+    <!-- jQuery -->
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        function showHeight(element, height){
+            $(".desc").text(element + "의 하이트값은 :" + height + "px 입니다")
+        }
+        //버튼 1을 클릭하면 하이트 값 가져오기
+        // $(".btn1").click(function(){
+        //     const height = $("li").height();
+        //     $(".desc").text("리스트의 하이트값은 " + height + "px입니다.")            
+        // });
+        $(".btn1").click(function(){
+            showHeight("리스트",$("li").height());
+        });
+
+        //버튼 2을 클릭하면 .list 하이트 값 가져오기
+        // $(".btn2").click(function(){
+        //     const height = $(".list").height();
+        //     $(".desc").text("리스트 집합의 하이트값은 " + height + "px입니다.")            
+        // });
+        $(".btn2").click(function(){
+            showHeight("리스트 집합",$(".list").height());
+        });
+        //버튼 3을 클릭하면 문서의 하이트 값 가져오기
+        // $(".btn3").click(function(){
+        //     const height = $(document).height();
+        //     $(".desc").text("문서 의 하이트값은 " + height + "px입니다.")            
+        // });
+        $(".btn3").click(function(){
+            showHeight("문서",$(document).height());
+        });
+        //버튼 4을 클릭하면 브라우저의 하이트 값 가져오기
+        // $(".btn4").click(function(){
+        //     const height = $(window).height();
+        //     $(".desc").text("브러우저의 하이트값은 " + height + "px입니다.")            
+        // });
+        $(".btn4").click(function(){
+            showHeight("브라우저",$(window).height());
+        });
+        
+        
+        //버튼 5을 클릭하면 하이트값 크기 50, 보더 주기
+        $(".btn5").click(function(){
+            $("li").height(50).css("border","1px dashed #f00");
+        });
+        
+
+        $(".btn6").click(function(){
+            $("li").height(function(index){
+                return (index + 1) *20;
+            }).css("border","1px dashed #f00");
+        });
+    </script>
+</body>
+</html>

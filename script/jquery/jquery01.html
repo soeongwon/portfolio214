@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #list1 li {color: blue;}
+    </style>
+</head>
+<body>
+
+    <h1>jQuery</h1>
+    <div>
+        <ul id="list1" class="list">
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+        <ul id="list2" class="list">
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+        <ul id="list3" class="list">
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+            <li class="list5">list5</li>
+            <li class="list6">list6</li>
+            <li class="list7">list7</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li class="list10">list10</li>
+        </ul>
+    </div>
+
+    <script src="jquery-1.12.4.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            //#list1 li {color: blue;}
+            $("#list2 li").css("color","red");
+        });
+    </script>
+    
+    <!-- javascript -->
+    <script>
+       
+            let list3 = document.getElementById("list3");
+            let liList = list3.getElementsByTagName("li");
+
+            liList.style.color = "#18ba2b";
+       
+    </script>
+</body>
+</html>
